@@ -46,1756 +46,1757 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="http://expressjs.com/"
-        
+
     >express (v4.15.2)</a>
 </h1>
+<h4>Fast, unopinionated, minimalist web framework</h4>
 <div class="apidocSectionDiv"><a
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express">module express</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route">
             function <span class="apidocSignatureSpan">express.</span>Route
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router">
             function <span class="apidocSignatureSpan">express.</span>Router
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.query">
             function <span class="apidocSignatureSpan">express.</span>query
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.static">
             function <span class="apidocSignatureSpan">express.</span>static
             <span class="apidocSignatureSpan">(root, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.view">
             function <span class="apidocSignatureSpan">express.</span>view
             <span class="apidocSignatureSpan">(name, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>Route.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>application</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>request</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>response</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>utils</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>view.prototype</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.Route">module express.Route</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.Route">
             function <span class="apidocSignatureSpan">express.</span>Route
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.Route.prototype">module express.Route.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype._handles_method">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>_handles_method
             <span class="apidocSignatureSpan">(method)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype._options">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>_options
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.acl">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>acl
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.all">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>all
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.bind">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>bind
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.checkout">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>checkout
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.connect">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>connect
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.copy">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>copy
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.delete">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>delete
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.dispatch">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>dispatch
             <span class="apidocSignatureSpan">(req, res, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.get">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>get
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.head">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>head
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.link">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>link
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.lock">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>lock
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.m-search">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>m-search
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.merge">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>merge
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.mkactivity">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>mkactivity
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.mkcalendar">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>mkcalendar
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.mkcol">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>mkcol
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.move">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>move
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.notify">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>notify
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.options">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>options
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.patch">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>patch
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.post">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>post
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.propfind">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>propfind
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.proppatch">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>proppatch
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.purge">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>purge
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.put">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>put
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.rebind">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>rebind
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.report">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>report
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.search">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>search
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.subscribe">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>subscribe
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.trace">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>trace
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.unbind">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>unbind
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.unlink">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>unlink
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.unlock">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>unlock
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.unsubscribe">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>unsubscribe
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.Router">module express.Router</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.Router">
             function <span class="apidocSignatureSpan">express.</span>Router
             <span class="apidocSignatureSpan">(options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.acl">
             function <span class="apidocSignatureSpan">express.Router.</span>acl
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.all">
             function <span class="apidocSignatureSpan">express.Router.</span>all
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.bind">
             function <span class="apidocSignatureSpan">express.Router.</span>bind
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.checkout">
             function <span class="apidocSignatureSpan">express.Router.</span>checkout
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.connect">
             function <span class="apidocSignatureSpan">express.Router.</span>connect
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.copy">
             function <span class="apidocSignatureSpan">express.Router.</span>copy
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.delete">
             function <span class="apidocSignatureSpan">express.Router.</span>delete
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.get">
             function <span class="apidocSignatureSpan">express.Router.</span>get
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.handle">
             function <span class="apidocSignatureSpan">express.Router.</span>handle
             <span class="apidocSignatureSpan">(req, res, out)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.head">
             function <span class="apidocSignatureSpan">express.Router.</span>head
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.link">
             function <span class="apidocSignatureSpan">express.Router.</span>link
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.lock">
             function <span class="apidocSignatureSpan">express.Router.</span>lock
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.m-search">
             function <span class="apidocSignatureSpan">express.Router.</span>m-search
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.merge">
             function <span class="apidocSignatureSpan">express.Router.</span>merge
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.mkactivity">
             function <span class="apidocSignatureSpan">express.Router.</span>mkactivity
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.mkcalendar">
             function <span class="apidocSignatureSpan">express.Router.</span>mkcalendar
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.mkcol">
             function <span class="apidocSignatureSpan">express.Router.</span>mkcol
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.move">
             function <span class="apidocSignatureSpan">express.Router.</span>move
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.notify">
             function <span class="apidocSignatureSpan">express.Router.</span>notify
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.options">
             function <span class="apidocSignatureSpan">express.Router.</span>options
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.param">
             function <span class="apidocSignatureSpan">express.Router.</span>param
             <span class="apidocSignatureSpan">(name, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.patch">
             function <span class="apidocSignatureSpan">express.Router.</span>patch
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.post">
             function <span class="apidocSignatureSpan">express.Router.</span>post
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.process_params">
             function <span class="apidocSignatureSpan">express.Router.</span>process_params
             <span class="apidocSignatureSpan">(layer, called, req, res, done)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.propfind">
             function <span class="apidocSignatureSpan">express.Router.</span>propfind
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.proppatch">
             function <span class="apidocSignatureSpan">express.Router.</span>proppatch
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.purge">
             function <span class="apidocSignatureSpan">express.Router.</span>purge
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.put">
             function <span class="apidocSignatureSpan">express.Router.</span>put
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.rebind">
             function <span class="apidocSignatureSpan">express.Router.</span>rebind
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.report">
             function <span class="apidocSignatureSpan">express.Router.</span>report
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.route">
             function <span class="apidocSignatureSpan">express.Router.</span>route
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.search">
             function <span class="apidocSignatureSpan">express.Router.</span>search
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.subscribe">
             function <span class="apidocSignatureSpan">express.Router.</span>subscribe
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.trace">
             function <span class="apidocSignatureSpan">express.Router.</span>trace
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.unbind">
             function <span class="apidocSignatureSpan">express.Router.</span>unbind
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.unlink">
             function <span class="apidocSignatureSpan">express.Router.</span>unlink
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.unlock">
             function <span class="apidocSignatureSpan">express.Router.</span>unlock
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.unsubscribe">
             function <span class="apidocSignatureSpan">express.Router.</span>unsubscribe
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.use">
             function <span class="apidocSignatureSpan">express.Router.</span>use
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.application">module express.application</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.acl">
             function <span class="apidocSignatureSpan">express.application.</span>acl
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.all">
             function <span class="apidocSignatureSpan">express.application.</span>all
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.bind">
             function <span class="apidocSignatureSpan">express.application.</span>bind
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.checkout">
             function <span class="apidocSignatureSpan">express.application.</span>checkout
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.connect">
             function <span class="apidocSignatureSpan">express.application.</span>connect
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.copy">
             function <span class="apidocSignatureSpan">express.application.</span>copy
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.defaultConfiguration">
             function <span class="apidocSignatureSpan">express.application.</span>defaultConfiguration
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.del">
             function <span class="apidocSignatureSpan">express.application.</span>del
             <span class="apidocSignatureSpan">(arg0)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.delete">
             function <span class="apidocSignatureSpan">express.application.</span>delete
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.disable">
             function <span class="apidocSignatureSpan">express.application.</span>disable
             <span class="apidocSignatureSpan">(setting)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.disabled">
             function <span class="apidocSignatureSpan">express.application.</span>disabled
             <span class="apidocSignatureSpan">(setting)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.enable">
             function <span class="apidocSignatureSpan">express.application.</span>enable
             <span class="apidocSignatureSpan">(setting)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.enabled">
             function <span class="apidocSignatureSpan">express.application.</span>enabled
             <span class="apidocSignatureSpan">(setting)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.engine">
             function <span class="apidocSignatureSpan">express.application.</span>engine
             <span class="apidocSignatureSpan">(ext, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.get">
             function <span class="apidocSignatureSpan">express.application.</span>get
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.handle">
             function <span class="apidocSignatureSpan">express.application.</span>handle
             <span class="apidocSignatureSpan">(req, res, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.head">
             function <span class="apidocSignatureSpan">express.application.</span>head
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.init">
             function <span class="apidocSignatureSpan">express.application.</span>init
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.lazyrouter">
             function <span class="apidocSignatureSpan">express.application.</span>lazyrouter
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.link">
             function <span class="apidocSignatureSpan">express.application.</span>link
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.listen">
             function <span class="apidocSignatureSpan">express.application.</span>listen
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.lock">
             function <span class="apidocSignatureSpan">express.application.</span>lock
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.m-search">
             function <span class="apidocSignatureSpan">express.application.</span>m-search
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.merge">
             function <span class="apidocSignatureSpan">express.application.</span>merge
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.mkactivity">
             function <span class="apidocSignatureSpan">express.application.</span>mkactivity
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.mkcalendar">
             function <span class="apidocSignatureSpan">express.application.</span>mkcalendar
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.mkcol">
             function <span class="apidocSignatureSpan">express.application.</span>mkcol
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.move">
             function <span class="apidocSignatureSpan">express.application.</span>move
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.notify">
             function <span class="apidocSignatureSpan">express.application.</span>notify
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.options">
             function <span class="apidocSignatureSpan">express.application.</span>options
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.param">
             function <span class="apidocSignatureSpan">express.application.</span>param
             <span class="apidocSignatureSpan">(name, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.patch">
             function <span class="apidocSignatureSpan">express.application.</span>patch
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.path">
             function <span class="apidocSignatureSpan">express.application.</span>path
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.post">
             function <span class="apidocSignatureSpan">express.application.</span>post
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.propfind">
             function <span class="apidocSignatureSpan">express.application.</span>propfind
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.proppatch">
             function <span class="apidocSignatureSpan">express.application.</span>proppatch
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.purge">
             function <span class="apidocSignatureSpan">express.application.</span>purge
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.put">
             function <span class="apidocSignatureSpan">express.application.</span>put
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.rebind">
             function <span class="apidocSignatureSpan">express.application.</span>rebind
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.render">
             function <span class="apidocSignatureSpan">express.application.</span>render
             <span class="apidocSignatureSpan">(name, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.report">
             function <span class="apidocSignatureSpan">express.application.</span>report
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.route">
             function <span class="apidocSignatureSpan">express.application.</span>route
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.search">
             function <span class="apidocSignatureSpan">express.application.</span>search
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.set">
             function <span class="apidocSignatureSpan">express.application.</span>set
             <span class="apidocSignatureSpan">(setting, val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.subscribe">
             function <span class="apidocSignatureSpan">express.application.</span>subscribe
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.trace">
             function <span class="apidocSignatureSpan">express.application.</span>trace
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.unbind">
             function <span class="apidocSignatureSpan">express.application.</span>unbind
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.unlink">
             function <span class="apidocSignatureSpan">express.application.</span>unlink
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.unlock">
             function <span class="apidocSignatureSpan">express.application.</span>unlock
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.unsubscribe">
             function <span class="apidocSignatureSpan">express.application.</span>unsubscribe
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.use">
             function <span class="apidocSignatureSpan">express.application.</span>use
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.request">module express.request</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.accepts">
             function <span class="apidocSignatureSpan">express.request.</span>accepts
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.acceptsCharset">
             function <span class="apidocSignatureSpan">express.request.</span>acceptsCharset
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.acceptsCharsets">
             function <span class="apidocSignatureSpan">express.request.</span>acceptsCharsets
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.acceptsEncoding">
             function <span class="apidocSignatureSpan">express.request.</span>acceptsEncoding
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.acceptsEncodings">
             function <span class="apidocSignatureSpan">express.request.</span>acceptsEncodings
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.acceptsLanguage">
             function <span class="apidocSignatureSpan">express.request.</span>acceptsLanguage
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.acceptsLanguages">
             function <span class="apidocSignatureSpan">express.request.</span>acceptsLanguages
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.get">
             function <span class="apidocSignatureSpan">express.request.</span>get
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.header">
             function <span class="apidocSignatureSpan">express.request.</span>header
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.is">
             function <span class="apidocSignatureSpan">express.request.</span>is
             <span class="apidocSignatureSpan">(types)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.param">
             function <span class="apidocSignatureSpan">express.request.</span>param
             <span class="apidocSignatureSpan">(name, defaultValue)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.request.range">
             function <span class="apidocSignatureSpan">express.request.</span>range
             <span class="apidocSignatureSpan">(size, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.response">module express.response</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.append">
             function <span class="apidocSignatureSpan">express.response.</span>append
             <span class="apidocSignatureSpan">(field, val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.attachment">
             function <span class="apidocSignatureSpan">express.response.</span>attachment
             <span class="apidocSignatureSpan">(filename)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.clearCookie">
             function <span class="apidocSignatureSpan">express.response.</span>clearCookie
             <span class="apidocSignatureSpan">(name, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.contentType">
             function <span class="apidocSignatureSpan">express.response.</span>contentType
             <span class="apidocSignatureSpan">(type)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.cookie">
             function <span class="apidocSignatureSpan">express.response.</span>cookie
             <span class="apidocSignatureSpan">(name, value, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.download">
             function <span class="apidocSignatureSpan">express.response.</span>download
             <span class="apidocSignatureSpan">(path, filename, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.format">
             function <span class="apidocSignatureSpan">express.response.</span>format
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.get">
             function <span class="apidocSignatureSpan">express.response.</span>get
             <span class="apidocSignatureSpan">(field)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.header">
             function <span class="apidocSignatureSpan">express.response.</span>header
             <span class="apidocSignatureSpan">(field, val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.json">
             function <span class="apidocSignatureSpan">express.response.</span>json
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.jsonp">
             function <span class="apidocSignatureSpan">express.response.</span>jsonp
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.links">
             function <span class="apidocSignatureSpan">express.response.</span>links
             <span class="apidocSignatureSpan">(links)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.location">
             function <span class="apidocSignatureSpan">express.response.</span>location
             <span class="apidocSignatureSpan">(url)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.redirect">
             function <span class="apidocSignatureSpan">express.response.</span>redirect
             <span class="apidocSignatureSpan">(url)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.render">
             function <span class="apidocSignatureSpan">express.response.</span>render
             <span class="apidocSignatureSpan">(view, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.send">
             function <span class="apidocSignatureSpan">express.response.</span>send
             <span class="apidocSignatureSpan">(body)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.sendFile">
             function <span class="apidocSignatureSpan">express.response.</span>sendFile
             <span class="apidocSignatureSpan">(path, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.sendStatus">
             function <span class="apidocSignatureSpan">express.response.</span>sendStatus
             <span class="apidocSignatureSpan">(statusCode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.sendfile">
             function <span class="apidocSignatureSpan">express.response.</span>sendfile
             <span class="apidocSignatureSpan">(arg0, arg1, arg2)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.set">
             function <span class="apidocSignatureSpan">express.response.</span>set
             <span class="apidocSignatureSpan">(field, val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.status">
             function <span class="apidocSignatureSpan">express.response.</span>status
             <span class="apidocSignatureSpan">(code)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.type">
             function <span class="apidocSignatureSpan">express.response.</span>type
             <span class="apidocSignatureSpan">(type)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.response.vary">
             function <span class="apidocSignatureSpan">express.response.</span>vary
             <span class="apidocSignatureSpan">(field)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.utils">module express.utils</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.compileETag">
             function <span class="apidocSignatureSpan">express.utils.</span>compileETag
             <span class="apidocSignatureSpan">(val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.compileQueryParser">
             function <span class="apidocSignatureSpan">express.utils.</span>compileQueryParser
             <span class="apidocSignatureSpan">(val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.compileTrust">
             function <span class="apidocSignatureSpan">express.utils.</span>compileTrust
             <span class="apidocSignatureSpan">(val)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.contentDisposition">
             function <span class="apidocSignatureSpan">express.utils.</span>contentDisposition
             <span class="apidocSignatureSpan">(arg0, arg1)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.etag">
             function <span class="apidocSignatureSpan">express.utils.</span>etag
             <span class="apidocSignatureSpan">(body, encoding)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.flatten">
             function <span class="apidocSignatureSpan">express.utils.</span>flatten
             <span class="apidocSignatureSpan">(arg0, arg1)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.isAbsolute">
             function <span class="apidocSignatureSpan">express.utils.</span>isAbsolute
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.normalizeType">
             function <span class="apidocSignatureSpan">express.utils.</span>normalizeType
             <span class="apidocSignatureSpan">(type)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.normalizeTypes">
             function <span class="apidocSignatureSpan">express.utils.</span>normalizeTypes
             <span class="apidocSignatureSpan">(types)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.setCharset">
             function <span class="apidocSignatureSpan">express.utils.</span>setCharset
             <span class="apidocSignatureSpan">(type, charset)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.utils.wetag">
             function <span class="apidocSignatureSpan">express.utils.</span>wetag
             <span class="apidocSignatureSpan">(body, encoding)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.view">module express.view</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.view.view">
             function <span class="apidocSignatureSpan">express.</span>view
             <span class="apidocSignatureSpan">(name, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.express.view.prototype">module express.view.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.view.prototype.lookup">
             function <span class="apidocSignatureSpan">express.view.prototype.</span>lookup
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.view.prototype.render">
             function <span class="apidocSignatureSpan">express.view.prototype.</span>render
             <span class="apidocSignatureSpan">(options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.express.view.prototype.resolve">
             function <span class="apidocSignatureSpan">express.view.prototype.</span>resolve
             <span class="apidocSignatureSpan">(dir, file)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express" id="apidoc.module.express">module express</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.Route" id="apidoc.element.express.Route">
         function <span class="apidocSignatureSpan">express.</span>Route
@@ -1814,9 +1815,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router" id="apidoc.element.express.Router">
         function <span class="apidocSignatureSpan">express.</span>Router
@@ -1845,9 +1846,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.query" id="apidoc.element.express.query">
         function <span class="apidocSignatureSpan">express.</span>query
@@ -1880,9 +1881,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.static" id="apidoc.element.express.static">
         function <span class="apidocSignatureSpan">express.</span>static
@@ -1982,9 +1983,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.view" id="apidoc.element.express.view">
         function <span class="apidocSignatureSpan">express.</span>view
@@ -2030,26 +2031,26 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.Route" id="apidoc.module.express.Route">module express.Route</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.Route.Route" id="apidoc.element.express.Route.Route">
         function <span class="apidocSignatureSpan">express.</span>Route
@@ -2068,14 +2069,14 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.Route.prototype" id="apidoc.module.express.Route.prototype">module express.Route.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype._handles_method" id="apidoc.element.express.Route.prototype._handles_method">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>_handles_method
@@ -2098,9 +2099,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype._options" id="apidoc.element.express.Route.prototype._options">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>_options
@@ -2125,9 +2126,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.acl" id="apidoc.element.express.Route.prototype.acl">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>acl
@@ -2160,9 +2161,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.all" id="apidoc.element.express.Route.prototype.all">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>all
@@ -2193,9 +2194,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.bind" id="apidoc.element.express.Route.prototype.bind">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>bind
@@ -2228,9 +2229,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.checkout" id="apidoc.element.express.Route.prototype.checkout">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>checkout
@@ -2263,9 +2264,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.connect" id="apidoc.element.express.Route.prototype.connect">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>connect
@@ -2298,9 +2299,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.copy" id="apidoc.element.express.Route.prototype.copy">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>copy
@@ -2333,9 +2334,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.delete" id="apidoc.element.express.Route.prototype.delete">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>delete
@@ -2368,9 +2369,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.dispatch" id="apidoc.element.express.Route.prototype.dispatch">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>dispatch
@@ -2423,9 +2424,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.get" id="apidoc.element.express.Route.prototype.get">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>get
@@ -2474,9 +2475,9 @@ app.listen(3000)
 ## Installation
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.head" id="apidoc.element.express.Route.prototype.head">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>head
@@ -2509,9 +2510,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.link" id="apidoc.element.express.Route.prototype.link">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>link
@@ -2544,9 +2545,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.lock" id="apidoc.element.express.Route.prototype.lock">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>lock
@@ -2579,9 +2580,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.m-search" id="apidoc.element.express.Route.prototype.m-search">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>m-search
@@ -2614,9 +2615,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.merge" id="apidoc.element.express.Route.prototype.merge">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>merge
@@ -2649,9 +2650,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.mkactivity" id="apidoc.element.express.Route.prototype.mkactivity">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>mkactivity
@@ -2684,9 +2685,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.mkcalendar" id="apidoc.element.express.Route.prototype.mkcalendar">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>mkcalendar
@@ -2719,9 +2720,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.mkcol" id="apidoc.element.express.Route.prototype.mkcol">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>mkcol
@@ -2754,9 +2755,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.move" id="apidoc.element.express.Route.prototype.move">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>move
@@ -2789,9 +2790,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.notify" id="apidoc.element.express.Route.prototype.notify">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>notify
@@ -2824,9 +2825,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.options" id="apidoc.element.express.Route.prototype.options">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>options
@@ -2859,9 +2860,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.patch" id="apidoc.element.express.Route.prototype.patch">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>patch
@@ -2894,9 +2895,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.post" id="apidoc.element.express.Route.prototype.post">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>post
@@ -2929,9 +2930,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.propfind" id="apidoc.element.express.Route.prototype.propfind">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>propfind
@@ -2964,9 +2965,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.proppatch" id="apidoc.element.express.Route.prototype.proppatch">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>proppatch
@@ -2999,9 +3000,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.purge" id="apidoc.element.express.Route.prototype.purge">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>purge
@@ -3034,9 +3035,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.put" id="apidoc.element.express.Route.prototype.put">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>put
@@ -3069,9 +3070,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.rebind" id="apidoc.element.express.Route.prototype.rebind">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>rebind
@@ -3104,9 +3105,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.report" id="apidoc.element.express.Route.prototype.report">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>report
@@ -3139,9 +3140,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.search" id="apidoc.element.express.Route.prototype.search">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>search
@@ -3174,9 +3175,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.subscribe" id="apidoc.element.express.Route.prototype.subscribe">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>subscribe
@@ -3209,9 +3210,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.trace" id="apidoc.element.express.Route.prototype.trace">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>trace
@@ -3244,9 +3245,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.unbind" id="apidoc.element.express.Route.prototype.unbind">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>unbind
@@ -3279,9 +3280,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.unlink" id="apidoc.element.express.Route.prototype.unlink">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>unlink
@@ -3314,9 +3315,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.unlock" id="apidoc.element.express.Route.prototype.unlock">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>unlock
@@ -3349,9 +3350,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Route.prototype.unsubscribe" id="apidoc.element.express.Route.prototype.unsubscribe">
         function <span class="apidocSignatureSpan">express.Route.prototype.</span>unsubscribe
@@ -3384,14 +3385,14 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.Router" id="apidoc.module.express.Router">module express.Router</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.Router.Router" id="apidoc.element.express.Router.Router">
         function <span class="apidocSignatureSpan">express.</span>Router
@@ -3420,9 +3421,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.acl" id="apidoc.element.express.Router.acl">
         function <span class="apidocSignatureSpan">express.Router.</span>acl
@@ -3437,9 +3438,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.all" id="apidoc.element.express.Router.all">
         function <span class="apidocSignatureSpan">express.Router.</span>all
@@ -3454,9 +3455,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.bind" id="apidoc.element.express.Router.bind">
         function <span class="apidocSignatureSpan">express.Router.</span>bind
@@ -3471,9 +3472,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.checkout" id="apidoc.element.express.Router.checkout">
         function <span class="apidocSignatureSpan">express.Router.</span>checkout
@@ -3488,9 +3489,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.connect" id="apidoc.element.express.Router.connect">
         function <span class="apidocSignatureSpan">express.Router.</span>connect
@@ -3505,9 +3506,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.copy" id="apidoc.element.express.Router.copy">
         function <span class="apidocSignatureSpan">express.Router.</span>copy
@@ -3522,9 +3523,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.delete" id="apidoc.element.express.Router.delete">
         function <span class="apidocSignatureSpan">express.Router.</span>delete
@@ -3539,9 +3540,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.get" id="apidoc.element.express.Router.get">
         function <span class="apidocSignatureSpan">express.Router.</span>get
@@ -3572,9 +3573,9 @@ app.listen(3000)
 ## Installation
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.handle" id="apidoc.element.express.Router.handle">
         function <span class="apidocSignatureSpan">express.Router.</span>handle
@@ -3752,9 +3753,9 @@ app.listen(3000)
         slashAdded = true; ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.head" id="apidoc.element.express.Router.head">
         function <span class="apidocSignatureSpan">express.Router.</span>head
@@ -3769,9 +3770,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.link" id="apidoc.element.express.Router.link">
         function <span class="apidocSignatureSpan">express.Router.</span>link
@@ -3786,9 +3787,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.lock" id="apidoc.element.express.Router.lock">
         function <span class="apidocSignatureSpan">express.Router.</span>lock
@@ -3803,9 +3804,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.m-search" id="apidoc.element.express.Router.m-search">
         function <span class="apidocSignatureSpan">express.Router.</span>m-search
@@ -3820,9 +3821,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.merge" id="apidoc.element.express.Router.merge">
         function <span class="apidocSignatureSpan">express.Router.</span>merge
@@ -3837,9 +3838,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.mkactivity" id="apidoc.element.express.Router.mkactivity">
         function <span class="apidocSignatureSpan">express.Router.</span>mkactivity
@@ -3854,9 +3855,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.mkcalendar" id="apidoc.element.express.Router.mkcalendar">
         function <span class="apidocSignatureSpan">express.Router.</span>mkcalendar
@@ -3871,9 +3872,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.mkcol" id="apidoc.element.express.Router.mkcol">
         function <span class="apidocSignatureSpan">express.Router.</span>mkcol
@@ -3888,9 +3889,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.move" id="apidoc.element.express.Router.move">
         function <span class="apidocSignatureSpan">express.Router.</span>move
@@ -3905,9 +3906,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.notify" id="apidoc.element.express.Router.notify">
         function <span class="apidocSignatureSpan">express.Router.</span>notify
@@ -3922,9 +3923,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.options" id="apidoc.element.express.Router.options">
         function <span class="apidocSignatureSpan">express.Router.</span>options
@@ -3939,9 +3940,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.param" id="apidoc.element.express.Router.param">
         function <span class="apidocSignatureSpan">express.Router.</span>param
@@ -3963,8 +3964,8 @@ app.listen(3000)
   var ret;
 
   if (name[0] === &#x27;:&#x27;) {
-    deprecate(&#x27;router.param(&#x27; + JSON.stringify(name) + &#x27;, fn): Use router.param(&#x27; + JSON.stringify(name.substr(1)) + &#x27;, fn) inst\
-ead&#x27;);
+    deprecate(&#x27;router.param(&#x27; + JSON.stringify(name) + &#x27;, fn): Use router.param(&#x27; + JSON.stringify(name.substr(1)) + &#x27;, fn) instead
+&#x27;);
     name = name.substr(1);
   }
 
@@ -3985,9 +3986,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.patch" id="apidoc.element.express.Router.patch">
         function <span class="apidocSignatureSpan">express.Router.</span>patch
@@ -4002,9 +4003,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.post" id="apidoc.element.express.Router.post">
         function <span class="apidocSignatureSpan">express.Router.</span>post
@@ -4019,9 +4020,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.process_params" id="apidoc.element.express.Router.process_params">
         function <span class="apidocSignatureSpan">express.Router.</span>process_params
@@ -4116,9 +4117,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.propfind" id="apidoc.element.express.Router.propfind">
         function <span class="apidocSignatureSpan">express.Router.</span>propfind
@@ -4133,9 +4134,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.proppatch" id="apidoc.element.express.Router.proppatch">
         function <span class="apidocSignatureSpan">express.Router.</span>proppatch
@@ -4150,9 +4151,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.purge" id="apidoc.element.express.Router.purge">
         function <span class="apidocSignatureSpan">express.Router.</span>purge
@@ -4167,9 +4168,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.put" id="apidoc.element.express.Router.put">
         function <span class="apidocSignatureSpan">express.Router.</span>put
@@ -4184,9 +4185,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.rebind" id="apidoc.element.express.Router.rebind">
         function <span class="apidocSignatureSpan">express.Router.</span>rebind
@@ -4201,9 +4202,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.report" id="apidoc.element.express.Router.report">
         function <span class="apidocSignatureSpan">express.Router.</span>report
@@ -4218,9 +4219,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.route" id="apidoc.element.express.Router.route">
         function <span class="apidocSignatureSpan">express.Router.</span>route
@@ -4244,9 +4245,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.search" id="apidoc.element.express.Router.search">
         function <span class="apidocSignatureSpan">express.Router.</span>search
@@ -4261,9 +4262,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.subscribe" id="apidoc.element.express.Router.subscribe">
         function <span class="apidocSignatureSpan">express.Router.</span>subscribe
@@ -4278,9 +4279,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.trace" id="apidoc.element.express.Router.trace">
         function <span class="apidocSignatureSpan">express.Router.</span>trace
@@ -4295,9 +4296,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.unbind" id="apidoc.element.express.Router.unbind">
         function <span class="apidocSignatureSpan">express.Router.</span>unbind
@@ -4312,9 +4313,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.unlink" id="apidoc.element.express.Router.unlink">
         function <span class="apidocSignatureSpan">express.Router.</span>unlink
@@ -4329,9 +4330,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.unlock" id="apidoc.element.express.Router.unlock">
         function <span class="apidocSignatureSpan">express.Router.</span>unlock
@@ -4346,9 +4347,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.unsubscribe" id="apidoc.element.express.Router.unsubscribe">
         function <span class="apidocSignatureSpan">express.Router.</span>unsubscribe
@@ -4363,9 +4364,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.Router.use" id="apidoc.element.express.Router.use">
         function <span class="apidocSignatureSpan">express.Router.</span>use
@@ -4424,14 +4425,14 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.application" id="apidoc.module.express.application">module express.application</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.application.acl" id="apidoc.element.express.application.acl">
         function <span class="apidocSignatureSpan">express.application.</span>acl
@@ -4453,9 +4454,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.all" id="apidoc.element.express.application.all">
         function <span class="apidocSignatureSpan">express.application.</span>all
@@ -4477,9 +4478,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.bind" id="apidoc.element.express.application.bind">
         function <span class="apidocSignatureSpan">express.application.</span>bind
@@ -4501,9 +4502,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.checkout" id="apidoc.element.express.application.checkout">
         function <span class="apidocSignatureSpan">express.application.</span>checkout
@@ -4525,9 +4526,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.connect" id="apidoc.element.express.application.connect">
         function <span class="apidocSignatureSpan">express.application.</span>connect
@@ -4549,9 +4550,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.copy" id="apidoc.element.express.application.copy">
         function <span class="apidocSignatureSpan">express.application.</span>copy
@@ -4573,9 +4574,9 @@ ead&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.defaultConfiguration" id="apidoc.element.express.application.defaultConfiguration">
         function <span class="apidocSignatureSpan">express.application.</span>defaultConfiguration
@@ -4637,16 +4638,16 @@ ead&#x27;);
 
   Object.defineProperty(this, &#x27;router&#x27;, {
     get: function() {
-      throw new Error(&#x27;\&#x27;app.router\&#x27; is deprecated!\nPlease see the 3.x to 4.x migration guide for details on how to update you\
-r app.&#x27;);
+      throw new Error(&#x27;\&#x27;app.router\&#x27; is deprecated!\nPlease see the 3.x to 4.x migration guide for details on how to update your
+ app.&#x27;);
     }
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.del" id="apidoc.element.express.application.del">
         function <span class="apidocSignatureSpan">express.application.</span>del
@@ -4661,9 +4662,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.delete" id="apidoc.element.express.application.delete">
         function <span class="apidocSignatureSpan">express.application.</span>delete
@@ -4685,9 +4686,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.disable" id="apidoc.element.express.application.disable">
         function <span class="apidocSignatureSpan">express.application.</span>disable
@@ -4700,9 +4701,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.disabled" id="apidoc.element.express.application.disabled">
         function <span class="apidocSignatureSpan">express.application.</span>disabled
@@ -4715,9 +4716,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.enable" id="apidoc.element.express.application.enable">
         function <span class="apidocSignatureSpan">express.application.</span>enable
@@ -4730,9 +4731,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.enabled" id="apidoc.element.express.application.enabled">
         function <span class="apidocSignatureSpan">express.application.</span>enabled
@@ -4745,9 +4746,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.engine" id="apidoc.element.express.application.engine">
         function <span class="apidocSignatureSpan">express.application.</span>engine
@@ -4788,9 +4789,9 @@ View.prototype.render = function render(options, callback) {
 * @param {string} file
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.get" id="apidoc.element.express.application.get">
         function <span class="apidocSignatureSpan">express.application.</span>get
@@ -4828,9 +4829,9 @@ app.listen(3000)
 ## Installation
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.handle" id="apidoc.element.express.application.handle">
         function <span class="apidocSignatureSpan">express.application.</span>handle
@@ -4858,9 +4859,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.head" id="apidoc.element.express.application.head">
         function <span class="apidocSignatureSpan">express.application.</span>head
@@ -4882,9 +4883,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.init" id="apidoc.element.express.application.init">
         function <span class="apidocSignatureSpan">express.application.</span>init
@@ -4901,9 +4902,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.lazyrouter" id="apidoc.element.express.application.lazyrouter">
         function <span class="apidocSignatureSpan">express.application.</span>lazyrouter
@@ -4924,9 +4925,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.link" id="apidoc.element.express.application.link">
         function <span class="apidocSignatureSpan">express.application.</span>link
@@ -4948,9 +4949,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.listen" id="apidoc.element.express.application.listen">
         function <span class="apidocSignatureSpan">express.application.</span>listen
@@ -4980,9 +4981,9 @@ $ npm install express
 ```
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.lock" id="apidoc.element.express.application.lock">
         function <span class="apidocSignatureSpan">express.application.</span>lock
@@ -5004,9 +5005,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.m-search" id="apidoc.element.express.application.m-search">
         function <span class="apidocSignatureSpan">express.application.</span>m-search
@@ -5028,9 +5029,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.merge" id="apidoc.element.express.application.merge">
         function <span class="apidocSignatureSpan">express.application.</span>merge
@@ -5052,9 +5053,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.mkactivity" id="apidoc.element.express.application.mkactivity">
         function <span class="apidocSignatureSpan">express.application.</span>mkactivity
@@ -5076,9 +5077,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.mkcalendar" id="apidoc.element.express.application.mkcalendar">
         function <span class="apidocSignatureSpan">express.application.</span>mkcalendar
@@ -5100,9 +5101,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.mkcol" id="apidoc.element.express.application.mkcol">
         function <span class="apidocSignatureSpan">express.application.</span>mkcol
@@ -5124,9 +5125,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.move" id="apidoc.element.express.application.move">
         function <span class="apidocSignatureSpan">express.application.</span>move
@@ -5148,9 +5149,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.notify" id="apidoc.element.express.application.notify">
         function <span class="apidocSignatureSpan">express.application.</span>notify
@@ -5172,9 +5173,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.options" id="apidoc.element.express.application.options">
         function <span class="apidocSignatureSpan">express.application.</span>options
@@ -5196,9 +5197,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.param" id="apidoc.element.express.application.param">
         function <span class="apidocSignatureSpan">express.application.</span>param
@@ -5223,9 +5224,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.patch" id="apidoc.element.express.application.patch">
         function <span class="apidocSignatureSpan">express.application.</span>patch
@@ -5247,9 +5248,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.path" id="apidoc.element.express.application.path">
         function <span class="apidocSignatureSpan">express.application.</span>path
@@ -5264,9 +5265,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.post" id="apidoc.element.express.application.post">
         function <span class="apidocSignatureSpan">express.application.</span>post
@@ -5288,9 +5289,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.propfind" id="apidoc.element.express.application.propfind">
         function <span class="apidocSignatureSpan">express.application.</span>propfind
@@ -5312,9 +5313,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.proppatch" id="apidoc.element.express.application.proppatch">
         function <span class="apidocSignatureSpan">express.application.</span>proppatch
@@ -5336,9 +5337,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.purge" id="apidoc.element.express.application.purge">
         function <span class="apidocSignatureSpan">express.application.</span>purge
@@ -5360,9 +5361,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.put" id="apidoc.element.express.application.put">
         function <span class="apidocSignatureSpan">express.application.</span>put
@@ -5384,9 +5385,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.rebind" id="apidoc.element.express.application.rebind">
         function <span class="apidocSignatureSpan">express.application.</span>rebind
@@ -5408,9 +5409,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.render" id="apidoc.element.express.application.render">
         function <span class="apidocSignatureSpan">express.application.</span>render
@@ -5483,9 +5484,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.report" id="apidoc.element.express.application.report">
         function <span class="apidocSignatureSpan">express.application.</span>report
@@ -5507,9 +5508,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.route" id="apidoc.element.express.application.route">
         function <span class="apidocSignatureSpan">express.application.</span>route
@@ -5523,9 +5524,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.search" id="apidoc.element.express.application.search">
         function <span class="apidocSignatureSpan">express.application.</span>search
@@ -5547,9 +5548,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.set" id="apidoc.element.express.application.set">
         function <span class="apidocSignatureSpan">express.application.</span>set
@@ -5592,9 +5593,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.subscribe" id="apidoc.element.express.application.subscribe">
         function <span class="apidocSignatureSpan">express.application.</span>subscribe
@@ -5616,9 +5617,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.trace" id="apidoc.element.express.application.trace">
         function <span class="apidocSignatureSpan">express.application.</span>trace
@@ -5640,9 +5641,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.unbind" id="apidoc.element.express.application.unbind">
         function <span class="apidocSignatureSpan">express.application.</span>unbind
@@ -5664,9 +5665,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.unlink" id="apidoc.element.express.application.unlink">
         function <span class="apidocSignatureSpan">express.application.</span>unlink
@@ -5688,9 +5689,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.unlock" id="apidoc.element.express.application.unlock">
         function <span class="apidocSignatureSpan">express.application.</span>unlock
@@ -5712,9 +5713,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.unsubscribe" id="apidoc.element.express.application.unsubscribe">
         function <span class="apidocSignatureSpan">express.application.</span>unsubscribe
@@ -5736,9 +5737,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.application.use" id="apidoc.element.express.application.use">
         function <span class="apidocSignatureSpan">express.application.</span>use
@@ -5804,14 +5805,14 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.request" id="apidoc.module.express.request">module express.request</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.request.accepts" id="apidoc.element.express.request.accepts">
         function <span class="apidocSignatureSpan">express.request.</span>accepts
@@ -5825,9 +5826,9 @@ $ npm install express
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.acceptsCharset" id="apidoc.element.express.request.acceptsCharset">
         function <span class="apidocSignatureSpan">express.request.</span>acceptsCharset
@@ -5842,9 +5843,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.acceptsCharsets" id="apidoc.element.express.request.acceptsCharsets">
         function <span class="apidocSignatureSpan">express.request.</span>acceptsCharsets
@@ -5858,9 +5859,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.acceptsEncoding" id="apidoc.element.express.request.acceptsEncoding">
         function <span class="apidocSignatureSpan">express.request.</span>acceptsEncoding
@@ -5875,9 +5876,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.acceptsEncodings" id="apidoc.element.express.request.acceptsEncodings">
         function <span class="apidocSignatureSpan">express.request.</span>acceptsEncodings
@@ -5891,9 +5892,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.acceptsLanguage" id="apidoc.element.express.request.acceptsLanguage">
         function <span class="apidocSignatureSpan">express.request.</span>acceptsLanguage
@@ -5908,9 +5909,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.acceptsLanguages" id="apidoc.element.express.request.acceptsLanguages">
         function <span class="apidocSignatureSpan">express.request.</span>acceptsLanguages
@@ -5924,9 +5925,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.get" id="apidoc.element.express.request.get">
         function <span class="apidocSignatureSpan">express.request.</span>get
@@ -5972,9 +5973,9 @@ app.listen(3000)
 ## Installation
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.header" id="apidoc.element.express.request.header">
         function <span class="apidocSignatureSpan">express.request.</span>header
@@ -6004,9 +6005,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.is" id="apidoc.element.express.request.is">
         function <span class="apidocSignatureSpan">express.request.</span>is
@@ -6029,9 +6030,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.param" id="apidoc.element.express.request.param">
         function <span class="apidocSignatureSpan">express.request.</span>param
@@ -6057,9 +6058,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.request.range" id="apidoc.element.express.request.range">
         function <span class="apidocSignatureSpan">express.request.</span>range
@@ -6074,14 +6075,14 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.response" id="apidoc.module.express.response">module express.response</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.response.append" id="apidoc.element.express.response.append">
         function <span class="apidocSignatureSpan">express.response.</span>append
@@ -6104,9 +6105,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.attachment" id="apidoc.element.express.response.attachment">
         function <span class="apidocSignatureSpan">express.response.</span>attachment
@@ -6125,9 +6126,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.clearCookie" id="apidoc.element.express.response.clearCookie">
         function <span class="apidocSignatureSpan">express.response.</span>clearCookie
@@ -6142,9 +6143,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.contentType" id="apidoc.element.express.response.contentType">
         function <span class="apidocSignatureSpan">express.response.</span>contentType
@@ -6161,9 +6162,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.cookie" id="apidoc.element.express.response.cookie">
         function <span class="apidocSignatureSpan">express.response.</span>cookie
@@ -6203,9 +6204,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.download" id="apidoc.element.express.response.download">
         function <span class="apidocSignatureSpan">express.response.</span>download
@@ -6235,9 +6236,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.format" id="apidoc.element.express.response.format">
         function <span class="apidocSignatureSpan">express.response.</span>format
@@ -6291,9 +6292,9 @@ app.listen(3000)
 * @private
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.get" id="apidoc.element.express.response.get">
         function <span class="apidocSignatureSpan">express.response.</span>get
@@ -6322,9 +6323,9 @@ app.listen(3000)
 ## Installation
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.header" id="apidoc.element.express.response.header">
         function <span class="apidocSignatureSpan">express.response.</span>header
@@ -6354,9 +6355,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.json" id="apidoc.element.express.response.json">
         function <span class="apidocSignatureSpan">express.response.</span>json
@@ -6395,9 +6396,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.jsonp" id="apidoc.element.express.response.jsonp">
         function <span class="apidocSignatureSpan">express.response.</span>jsonp
@@ -6462,9 +6463,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.links" id="apidoc.element.express.response.links">
         function <span class="apidocSignatureSpan">express.response.</span>links
@@ -6481,9 +6482,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.location" id="apidoc.element.express.response.location">
         function <span class="apidocSignatureSpan">express.response.</span>location
@@ -6504,9 +6505,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.redirect" id="apidoc.element.express.response.redirect">
         function <span class="apidocSignatureSpan">express.response.</span>redirect
@@ -6561,9 +6562,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.render" id="apidoc.element.express.response.render">
         function <span class="apidocSignatureSpan">express.response.</span>render
@@ -6598,9 +6599,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.send" id="apidoc.element.express.response.send">
         function <span class="apidocSignatureSpan">express.response.</span>send
@@ -6735,9 +6736,9 @@ app.listen(3000)
 ## Installation
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.sendFile" id="apidoc.element.express.response.sendFile">
         function <span class="apidocSignatureSpan">express.response.</span>sendFile
@@ -6783,9 +6784,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.sendStatus" id="apidoc.element.express.response.sendStatus">
         function <span class="apidocSignatureSpan">express.response.</span>sendStatus
@@ -6803,9 +6804,9 @@ app.listen(3000)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.sendfile" id="apidoc.element.express.response.sendfile">
         function <span class="apidocSignatureSpan">express.response.</span>sendfile
@@ -6820,9 +6821,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.set" id="apidoc.element.express.response.set">
         function <span class="apidocSignatureSpan">express.response.</span>set
@@ -6852,9 +6853,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.status" id="apidoc.element.express.response.status">
         function <span class="apidocSignatureSpan">express.response.</span>status
@@ -6868,9 +6869,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.type" id="apidoc.element.express.response.type">
         function <span class="apidocSignatureSpan">express.response.</span>type
@@ -6887,9 +6888,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.response.vary" id="apidoc.element.express.response.vary">
         function <span class="apidocSignatureSpan">express.response.</span>vary
@@ -6910,14 +6911,14 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.utils" id="apidoc.module.express.utils">module express.utils</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.utils.compileETag" id="apidoc.element.express.utils.compileETag">
         function <span class="apidocSignatureSpan">express.utils.</span>compileETag
@@ -6952,9 +6953,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.compileQueryParser" id="apidoc.element.express.utils.compileQueryParser">
         function <span class="apidocSignatureSpan">express.utils.</span>compileQueryParser
@@ -6990,9 +6991,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.compileTrust" id="apidoc.element.express.utils.compileTrust">
         function <span class="apidocSignatureSpan">express.utils.</span>compileTrust
@@ -7022,9 +7023,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.contentDisposition" id="apidoc.element.express.utils.contentDisposition">
         function <span class="apidocSignatureSpan">express.utils.</span>contentDisposition
@@ -7039,9 +7040,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.etag" id="apidoc.element.express.utils.etag">
         function <span class="apidocSignatureSpan">express.utils.</span>etag
@@ -7058,9 +7059,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.flatten" id="apidoc.element.express.utils.flatten">
         function <span class="apidocSignatureSpan">express.utils.</span>flatten
@@ -7075,9 +7076,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.isAbsolute" id="apidoc.element.express.utils.isAbsolute">
         function <span class="apidocSignatureSpan">express.utils.</span>isAbsolute
@@ -7092,9 +7093,9 @@ return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.normalizeType" id="apidoc.element.express.utils.normalizeType">
         function <span class="apidocSignatureSpan">express.utils.</span>normalizeType
@@ -7125,9 +7126,9 @@ exports.normalizeTypes = function(types){
 * Generate Content-Disposition header appropriate for the filename.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.normalizeTypes" id="apidoc.element.express.utils.normalizeTypes">
         function <span class="apidocSignatureSpan">express.utils.</span>normalizeTypes
@@ -7146,9 +7147,9 @@ exports.normalizeTypes = function(types){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.setCharset" id="apidoc.element.express.utils.setCharset">
         function <span class="apidocSignatureSpan">express.utils.</span>setCharset
@@ -7172,9 +7173,9 @@ exports.normalizeTypes = function(types){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.utils.wetag" id="apidoc.element.express.utils.wetag">
         function <span class="apidocSignatureSpan">express.utils.</span>wetag
@@ -7191,14 +7192,14 @@ exports.normalizeTypes = function(types){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.view" id="apidoc.module.express.view">module express.view</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.view.view" id="apidoc.element.express.view.view">
         function <span class="apidocSignatureSpan">express.</span>view
@@ -7244,14 +7245,14 @@ exports.normalizeTypes = function(types){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.express.view.prototype" id="apidoc.module.express.view.prototype">module express.view.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.express.view.prototype.lookup" id="apidoc.element.express.view.prototype.lookup">
         function <span class="apidocSignatureSpan">express.view.prototype.</span>lookup
@@ -7297,9 +7298,9 @@ exports.normalizeType = function(type){
 * @return {Array}
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.view.prototype.render" id="apidoc.element.express.view.prototype.render">
         function <span class="apidocSignatureSpan">express.view.prototype.</span>render
@@ -7313,9 +7314,9 @@ exports.normalizeType = function(type){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.express.view.prototype.resolve" id="apidoc.element.express.view.prototype.resolve">
         function <span class="apidocSignatureSpan">express.view.prototype.</span>resolve
@@ -7360,8 +7361,8 @@ exports.normalizeType = function(type){
 * Render with the given options.
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">

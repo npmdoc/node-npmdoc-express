@@ -27,6 +27,7 @@
     background: #eef;
     border: 1px solid;
     color: #777;
+    overflow-wrap: break-word;
     padding: 5px;
     white-space: pre-wrap;
 }
@@ -47,7 +48,7 @@
 }
 </style>
 <h1>api documentation for
-    <a href="http://expressjs.com/">express (v4.15.2)</a>
+    <a href="http://expressjs.com/">express (4.16.3)</a>
 </h1>
 <h4>Fast, unopinionated, minimalist web framework</h4>
 <div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
@@ -83,6 +84,24 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.express.json">
+            function <span class="apidocSignatureSpan">express.</span>json
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express.layer">
+            function <span class="apidocSignatureSpan">express.</span>layer
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.express.query">
             function <span class="apidocSignatureSpan">express.</span>query
             <span class="apidocSignatureSpan">(options)</span>
@@ -95,6 +114,15 @@
             <a class="apidocElementLiA" href="#apidoc.element.express.static">
             function <span class="apidocSignatureSpan">express.</span>static
             <span class="apidocSignatureSpan">(root, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express.urlencoded">
+            function <span class="apidocSignatureSpan">express.</span>urlencoded
+            <span class="apidocSignatureSpan">(options)</span>
             </a>
 
         </li>
@@ -117,6 +145,18 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>application</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>init</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.</span>layer.prototype</span>
 
         </li>
 
@@ -435,6 +475,15 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.search">
             function <span class="apidocSignatureSpan">express.Route.prototype.</span>search
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express.Route.prototype.source">
+            function <span class="apidocSignatureSpan">express.Route.prototype.</span>source
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -790,6 +839,15 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.express.Router.search">
             function <span class="apidocSignatureSpan">express.Router.</span>search
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express.Router.source">
+            function <span class="apidocSignatureSpan">express.Router.</span>source
             <span class="apidocSignatureSpan">(path)</span>
             </a>
 
@@ -1260,6 +1318,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.express.application.source">
+            function <span class="apidocSignatureSpan">express.application.</span>source
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.express.application.subscribe">
             function <span class="apidocSignatureSpan">express.application.</span>subscribe
             <span class="apidocSignatureSpan">(path)</span>
@@ -1323,68 +1390,58 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.express.express">module express.express</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.express.init">module express.init</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.express.express.express">
-            function <span class="apidocSignatureSpan">express.</span>express
-            <span class="apidocSignatureSpan">()</span>
+            <a class="apidocElementLiA" href="#apidoc.element.express.init.init">
+            function <span class="apidocSignatureSpan">express.</span>init
+            <span class="apidocSignatureSpan">(app)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express.layer">module express.layer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express.layer.layer">
+            function <span class="apidocSignatureSpan">express.</span>layer
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express.layer.prototype">module express.layer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express.layer.prototype.handle_error">
+            function <span class="apidocSignatureSpan">express.layer.prototype.</span>handle_error
+            <span class="apidocSignatureSpan">(error, req, res, next)</span>
             </a>
 
         </li>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.express.express.Route">
-            function <span class="apidocSignatureSpan">express.express.</span>Route
+            <a class="apidocElementLiA" href="#apidoc.element.express.layer.prototype.handle_request">
+            function <span class="apidocSignatureSpan">express.layer.prototype.</span>handle_request
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express.layer.prototype.match">
+            function <span class="apidocSignatureSpan">express.layer.prototype.</span>match
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.express.express.Router">
-            function <span class="apidocSignatureSpan">express.express.</span>Router
-            <span class="apidocSignatureSpan">(options)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.express.express.query">
-            function <span class="apidocSignatureSpan">express.express.</span>query
-            <span class="apidocSignatureSpan">(options)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.express.express.static">
-            function <span class="apidocSignatureSpan">express.express.</span>static
-            <span class="apidocSignatureSpan">(root, options)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.express.</span>application</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.express.</span>request</span>
-
-        </li>
-
-        <li>
-
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express.express.</span>response</span>
 
         </li>
 
@@ -1553,7 +1610,7 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.express.response.download">
             function <span class="apidocSignatureSpan">express.response.</span>download
-            <span class="apidocSignatureSpan">(path, filename, callback)</span>
+            <span class="apidocSignatureSpan">(path, filename, options, callback)</span>
             </a>
 
         </li>
@@ -1952,6 +2009,156 @@
 
 
     <h2>
+        <a href="#apidoc.element.express.json" id="apidoc.element.express.json">
+        function <span class="apidocSignatureSpan">express.</span>json
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function json(options) {
+  var opts = options || {}
+
+  var limit = typeof opts.limit !== 'number'
+    ? bytes.parse(opts.limit || '100kb')
+    : opts.limit
+  var inflate = opts.inflate !== false
+  var reviver = opts.reviver
+  var strict = opts.strict !== false
+  var type = opts.type || 'application/json'
+  var verify = opts.verify || false
+
+  if (verify !== false &amp;&amp; typeof verify !== 'function') {
+    throw new TypeError('option verify must be function')
+  }
+
+  // create the appropriate type checking function
+  var shouldParse = typeof type !== 'function'
+    ? typeChecker(type)
+    : type
+
+  function parse (body) {
+    if (body.length === 0) {
+      // special-case empty json body, as it's a common client-side mistake
+      // TODO: maybe make this configurable or part of "strict" option
+      return {}
+    }
+
+    if (strict) {
+      var first = firstchar(body)
+
+      if (first !== '{' &amp;&amp; first !== '[') {
+        debug('strict violation')
+        throw createStrictSyntaxError(body, first)
+      }
+    }
+
+    try {
+      debug('parse json')
+      return JSON.parse(body, reviver)
+    } catch (e) {
+      throw normalizeJsonSyntaxError(e, {
+        stack: e.stack
+      })
+    }
+  }
+
+  return function jsonParser (req, res, next) {
+    if (req._body) {
+      debug('body already parsed')
+      next()
+      return
+    }
+
+    req.body = req.body || {}
+
+    // skip requests without bodies
+    if (!typeis.hasBody(req)) {
+      debug('skip empty body')
+      next()
+      return
+    }
+
+    debug('content-type %j', req.headers['content-type'])
+
+    // determine if request should be parsed
+    if (!shouldParse(req)) {
+      debug('skip parsing')
+      next()
+      return
+    }
+
+    // assert charset per RFC 7159 sec 8.1
+    var charset = getCharset(req) || 'utf-8'
+    if (charset.substr(0, 4) !== 'utf-') {
+      debug('invalid charset')
+      next(createError(415, 'unsupported charset "' + charset.toUpperCase() + '"', {
+        charset: charset,
+        type: 'charset.unsupported'
+      }))
+      return
+    }
+
+    // read
+    read(req, res, next, parse, debug, {
+      encoding: charset,
+      inflate: inflate,
+      limit: limit,
+      verify: verify
+    })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* fix `req.protocol` for proxy-direct connections
+* configurable query parser with `app.set('query parser', parser)`
+  - `app.set('query parser', 'extended')` parse with "qs" module
+  - `app.set('query parser', 'simple')` parse with "querystring" core module
+  - `app.set('query parser', false)` disable query string parsing
+  - `app.set('query parser', true)` enable simple parsing
+* deprecate `res.<span class="apidocCodeKeywordSpan">json</span>(status, obj)` -- use `res.status(status).json(obj)` instead
+* deprecate `res.jsonp(status, obj)` -- use `res.status(status).jsonp(obj)` instead
+* deprecate `res.send(status, body)` -- use `res.status(status).send(body)` instead
+* deps: debug@1.0.4
+* deps: depd@0.4.2
+  - Add `TRACE_DEPRECATION` environment variable
+  - Remove non-standard grey color from color output
+  - Support `--no-deprecation` argument
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express.layer" id="apidoc.element.express.layer">
+        function <span class="apidocSignatureSpan">express.</span>layer
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Layer(path, options, fn) {
+  if (!(this instanceof Layer)) {
+    return new Layer(path, options, fn);
+  }
+
+  debug('new %o', path)
+  var opts = options || {};
+
+  this.handle = fn;
+  this.name = fn.name || '&lt;anonymous&gt;';
+  this.params = undefined;
+  this.path = undefined;
+  this.regexp = pathRegexp(path, this.keys = [], opts);
+
+  // set fast path flags
+  this.regexp.fast_star = path === '*'
+  this.regexp.fast_slash = path === '/' &amp;&amp; opts.end === false
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.express.query" id="apidoc.element.express.query">
         function <span class="apidocSignatureSpan">express.</span>query
         <span class="apidocSignatureSpan">(options)</span>
@@ -1959,7 +2166,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function query(options) {
-  var opts = Object.create(options || null);
+  var opts = merge({}, options)
   var queryparse = qs.parse;
 
   if (typeof options === 'function') {
@@ -2089,6 +2296,100 @@
 
 
     <h2>
+        <a href="#apidoc.element.express.urlencoded" id="apidoc.element.express.urlencoded">
+        function <span class="apidocSignatureSpan">express.</span>urlencoded
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function urlencoded(options) {
+  var opts = options || {}
+
+  // notice because option default will flip in next major
+  if (opts.extended === undefined) {
+    deprecate('undefined extended: provide extended option')
+  }
+
+  var extended = opts.extended !== false
+  var inflate = opts.inflate !== false
+  var limit = typeof opts.limit !== 'number'
+    ? bytes.parse(opts.limit || '100kb')
+    : opts.limit
+  var type = opts.type || 'application/x-www-form-urlencoded'
+  var verify = opts.verify || false
+
+  if (verify !== false &amp;&amp; typeof verify !== 'function') {
+    throw new TypeError('option verify must be function')
+  }
+
+  // create the appropriate query parser
+  var queryparse = extended
+    ? extendedparser(opts)
+    : simpleparser(opts)
+
+  // create the appropriate type checking function
+  var shouldParse = typeof type !== 'function'
+    ? typeChecker(type)
+    : type
+
+  function parse (body) {
+    return body.length
+      ? queryparse(body)
+      : {}
+  }
+
+  return function urlencodedParser (req, res, next) {
+    if (req._body) {
+      debug('body already parsed')
+      next()
+      return
+    }
+
+    req.body = req.body || {}
+
+    // skip requests without bodies
+    if (!typeis.hasBody(req)) {
+      debug('skip empty body')
+      next()
+      return
+    }
+
+    debug('content-type %j', req.headers['content-type'])
+
+    // determine if request should be parsed
+    if (!shouldParse(req)) {
+      debug('skip parsing')
+      next()
+      return
+    }
+
+    // assert charset
+    var charset = getCharset(req) || 'utf-8'
+    if (charset !== 'utf-8') {
+      debug('invalid charset')
+      next(createError(415, 'unsupported charset "' + charset.toUpperCase() + '"', {
+        charset: charset,
+        type: 'charset.unsupported'
+      }))
+      return
+    }
+
+    // read
+    read(req, res, next, parse, debug, {
+      debug: debug,
+      encoding: charset,
+      inflate: inflate,
+      limit: limit,
+      verify: verify
+    })
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.express.view" id="apidoc.element.express.view">
         function <span class="apidocSignatureSpan">express.</span>view
         <span class="apidocSignatureSpan">(name, options)</span>
@@ -2122,7 +2423,15 @@
     // load engine
     var mod = this.ext.substr(1)
     debug('require "%s"', mod)
-    opts.engines[this.ext] = require(mod).__express
+
+    // default engine export
+    var fn = require(mod).__express
+
+    if (typeof fn !== 'function') {
+      throw new Error('Module "' + mod + '" does not provide a view engine.')
+    }
+
+    opts.engines[this.ext] = fn
   }
 
   // store loaded engine
@@ -2133,6 +2442,10 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
+
+
 
 
 
@@ -2199,7 +2512,23 @@
 
   return Boolean(this.methods[name]);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (layerError) {
+  // routes do not match with a pending error
+  match = false;
+  continue;
+}
+
+var method = req.method;
+var has_method = route.<span class="apidocCodeKeywordSpan">_handles_method</span>(method);
+
+// build up automatic options response
+if (!has_method &amp;&amp; method === 'OPTIONS') {
+  appendMethods(options, route._options());
+}
+
+// don't even bother matching route
+...</pre></li>
     </ul>
 
 
@@ -2226,7 +2555,23 @@
 
   return methods;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+var method = req.method;
+var has_method = route._handles_method(method);
+
+// build up automatic options response
+if (!has_method &amp;&amp; method === 'OPTIONS') {
+  appendMethods(options, route.<span class="apidocCodeKeywordSpan">_options</span>());
+}
+
+// don't even bother matching route
+if (!has_method &amp;&amp; method !== 'HEAD') {
+  match = false;
+  continue;
+}
+...</pre></li>
     </ul>
 
 
@@ -2246,7 +2591,7 @@
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2281,7 +2626,7 @@
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.all() requires callback functions but got a ' + type;
+      var msg = 'Route.all() requires a callback function but got a ' + type
       throw new TypeError(msg);
     }
 
@@ -2294,7 +2639,23 @@
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+3.4.5 / 2013-11-27
+==================
+
+* update connect
+* res.location: remove leading ./ #1802 @kapouer
+* res.redirect: fix `res.redirect('toString') #1829 @michaelficarra
+* res.send: always send ETag when content-length &gt; 0
+* router: add Router.<span class="apidocCodeKeywordSpan">all</span>() method
+
+3.4.4 / 2013-10-29
+==================
+
+* update connect
+* update supertest
+* update methods
+...</pre></li>
     </ul>
 
 
@@ -2314,7 +2675,7 @@
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2329,7 +2690,23 @@
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.handle = function handle(req, res, callback) {
+var router = this._router;
+
+// final handler
+var done = callback || finalhandler(req, res, {
+  env: this.get('env'),
+  onerror: logerror.<span class="apidocCodeKeywordSpan">bind</span>(this)
+});
+
+// no routes
+if (!router) {
+  debug('no routes defined on app');
+  done();
+  return;
+...</pre></li>
     </ul>
 
 
@@ -2349,7 +2726,7 @@
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2384,7 +2761,7 @@
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2419,7 +2796,7 @@
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2454,7 +2831,7 @@
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2469,7 +2846,23 @@
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* set proper `charset` in `Content-Type` for `res.send`
+* update type-is to 1.2.0
+  - support suffix matching
+
+4.2.0 / 2014-05-11
+==================
+
+* deprecate `app.del()` -- use `app.<span class="apidocCodeKeywordSpan">delete</span>()` instead
+* deprecate `res.json(obj, status)` -- use `res.json(status, obj)` instead
+  - the edge-case `res.json(status, num)` requires `res.status(status).json(num)`
+* deprecate `res.jsonp(obj, status)` -- use `res.jsonp(status, obj)` instead
+  - the edge-case `res.jsonp(status, num)` requires `res.status(status).jsonp(num)`
+* fix `req.next` when inside router instance
+* include `ETag` header in `HEAD` requests
+* keep previous `Content-Type` for `res.jsonp`
+...</pre></li>
     </ul>
 
 
@@ -2544,7 +2937,7 @@
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2560,21 +2953,21 @@
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  [![Windows Build][appveyor-image]][appveyor-url]
-  [![Test Coverage][coveralls-image]][coveralls-url]
-
-```js
-var express = require('express')
-var app = express()
-
-app.<span class="apidocCodeKeywordSpan">get</span>('/', function (req, res) {
-  res.send('Hello World')
-})
-
-app.listen(3000)
-```
-
-## Installation
+* Add `acceptRanges` option to `res.sendFile`/`res.sendfile`
+* Add `cacheControl` option to `res.sendFile`/`res.sendfile`
+* Add `options` argument to `req.range`
+  - Includes the `combine` option
+* Encode URL in `res.location`/`res.redirect` if not already encoded
+* Fix some redirect handling in `res.sendFile`/`res.sendfile`
+* Fix Windows absolute path check using forward slashes
+* Improve error with invalid arguments to `req.<span class="apidocCodeKeywordSpan">get</span>()`
+* Improve performance for `res.json`/`res.jsonp` in most cases
+* Improve `Range` header handling in `res.sendFile`/`res.sendfile`
+* deps: accepts@~1.3.3
+  - Fix including type extensions in parameters in `Accept` parsing
+  - Fix parsing `Accept` parameters with quoted equals
+  - Fix parsing `Accept` parameters with quoted semicolons
+  - Many performance improvments
 ...</pre></li>
     </ul>
 
@@ -2595,7 +2988,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2630,7 +3023,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2665,7 +3058,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2700,7 +3093,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2735,7 +3128,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2770,7 +3163,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2805,7 +3198,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2840,7 +3233,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2875,7 +3268,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2910,7 +3303,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2925,7 +3318,23 @@ app.listen(3000)
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added `res.type()` to replace `res.contentType()`
+* Changed: `res.redirect()` to add relative support
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
+* Rewrite of all tests with mocha
+* Removed "root" setting
+* Removed `res.redirect('home')` support
+* Removed `req.<span class="apidocCodeKeywordSpan">notify</span>()`
+* Removed `app.register()`
+* Removed `app.redirect()`
+* Removed `app.is()`
+* Removed `app.helpers()`
+* Removed `app.dynamicHelpers()`
+* Fixed `res.sendfile()` with non-GET. Closes #723
+* Fixed express(1) public dir for windows. Closes #866
+...</pre></li>
     </ul>
 
 
@@ -2945,7 +3354,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -2960,7 +3369,23 @@ app.listen(3000)
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+==================
+
+* Fixed bug-ish with `../' in `res.partial()` calls
+
+2.3.8 / 2011-05-24
+==================
+
+* Fixed `app.<span class="apidocCodeKeywordSpan">options</span>()`
+
+2.3.7 / 2011-05-23
+==================
+
+* Added route `Collection`, ex: `app.get('/user/:id').remove();`
+* Added support for `app.param(fn)` to define param logic
+* Removed `app.param()` support for callback with return value
+...</pre></li>
     </ul>
 
 
@@ -2980,7 +3405,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3015,7 +3440,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3050,7 +3475,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3085,7 +3510,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3120,7 +3545,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3155,7 +3580,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3170,7 +3595,22 @@ app.listen(3000)
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  * Performance improved with better view caching
+  * Removed `request` and `response` locals
+  * Changed; errorHandler page title is now `Express` instead of `Connect`
+
+2.2.0 / 2011-03-30
+==================
+
+  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>('/user/:id')`. Closes #606
+  * Added `app.match.VERB()`, ex `app.match.put('/user/12')`. Closes #606
+  * Added `app.VERB(path)` as alias of `app.lookup.VERB()`.
+  * Dependency `connect &gt;= 1.2.0`
+
+2.1.1 / 2011-03-29
+==================
+...</pre></li>
     </ul>
 
 
@@ -3190,7 +3630,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3225,7 +3665,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3260,7 +3700,42 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
+      throw new Error(msg);
+    }
+
+    debug('%s %o', method, this.path)
+
+    var layer = Layer('/', {}, handle);
+    layer.method = method;
+
+    this.methods[method] = true;
+    this.stack.push(layer);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express.Route.prototype.source" id="apidoc.element.express.Route.prototype.source">
+        function <span class="apidocSignatureSpan">express.Route.prototype.</span>source
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">source = function (){
+  var handles = flatten(slice.call(arguments));
+
+  for (var i = 0; i &lt; handles.length; i++) {
+    var handle = handles[i];
+
+    if (typeof handle !== 'function') {
+      var type = toString.call(handle);
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3295,7 +3770,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3330,7 +3805,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3365,7 +3840,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3400,7 +3875,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3435,7 +3910,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3470,7 +3945,7 @@ app.listen(3000)
 
     if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = 'Route.' + method + '() requires callback functions but got a ' + type;
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
@@ -3555,7 +4030,23 @@ app.listen(3000)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+3.4.5 / 2013-11-27
+==================
+
+* update connect
+* res.location: remove leading ./ #1802 @kapouer
+* res.redirect: fix `res.redirect('toString') #1829 @michaelficarra
+* res.send: always send ETag when content-length &gt; 0
+* router: add Router.<span class="apidocCodeKeywordSpan">all</span>() method
+
+3.4.4 / 2013-10-29
+==================
+
+* update connect
+* update supertest
+* update methods
+...</pre></li>
     </ul>
 
 
@@ -3572,7 +4063,23 @@ app.listen(3000)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.handle = function handle(req, res, callback) {
+var router = this._router;
+
+// final handler
+var done = callback || finalhandler(req, res, {
+  env: this.get('env'),
+  onerror: logerror.<span class="apidocCodeKeywordSpan">bind</span>(this)
+});
+
+// no routes
+if (!router) {
+  debug('no routes defined on app');
+  done();
+  return;
+...</pre></li>
     </ul>
 
 
@@ -3640,7 +4147,23 @@ app.listen(3000)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* set proper `charset` in `Content-Type` for `res.send`
+* update type-is to 1.2.0
+  - support suffix matching
+
+4.2.0 / 2014-05-11
+==================
+
+* deprecate `app.del()` -- use `app.<span class="apidocCodeKeywordSpan">delete</span>()` instead
+* deprecate `res.json(obj, status)` -- use `res.json(status, obj)` instead
+  - the edge-case `res.json(status, num)` requires `res.status(status).json(num)`
+* deprecate `res.jsonp(obj, status)` -- use `res.jsonp(status, obj)` instead
+  - the edge-case `res.jsonp(status, num)` requires `res.status(status).jsonp(num)`
+* fix `req.next` when inside router instance
+* include `ETag` header in `HEAD` requests
+* keep previous `Content-Type` for `res.jsonp`
+...</pre></li>
     </ul>
 
 
@@ -3658,21 +4181,21 @@ app.listen(3000)
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  [![Windows Build][appveyor-image]][appveyor-url]
-  [![Test Coverage][coveralls-image]][coveralls-url]
-
-```js
-var express = require('express')
-var app = express()
-
-app.<span class="apidocCodeKeywordSpan">get</span>('/', function (req, res) {
-  res.send('Hello World')
-})
-
-app.listen(3000)
-```
-
-## Installation
+* Add `acceptRanges` option to `res.sendFile`/`res.sendfile`
+* Add `cacheControl` option to `res.sendFile`/`res.sendfile`
+* Add `options` argument to `req.range`
+  - Includes the `combine` option
+* Encode URL in `res.location`/`res.redirect` if not already encoded
+* Fix some redirect handling in `res.sendFile`/`res.sendfile`
+* Fix Windows absolute path check using forward slashes
+* Improve error with invalid arguments to `req.<span class="apidocCodeKeywordSpan">get</span>()`
+* Improve performance for `res.json`/`res.jsonp` in most cases
+* Improve `Range` header handling in `res.sendFile`/`res.sendfile`
+* deps: accepts@~1.3.3
+  - Fix including type extensions in parameters in `Accept` parsing
+  - Fix parsing `Accept` parameters with quoted equals
+  - Fix parsing `Accept` parameters with quoted semicolons
+  - Many performance improvments
 ...</pre></li>
     </ul>
 
@@ -3846,14 +4369,24 @@ app.listen(3000)
       // Trim off the part of the url that matches the route
       // middleware (.use stuff) needs to have the path stripped
       debug('trim prefix (%s) from url %s', layerPath, req.url);
-      removed = layerPath;
-      req.url = protohost + req.url.substr(protohost.length + removed.length);
+      removed = layerP...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ // no routes
+ if (!router) {
+   debug('no routes defined on app');
+   done();
+   return;
+ }
 
-      // Ensure leading slash
-      if (!protohost &amp;&amp; req.url[0] !== '/') {
-        req.url = '/' + req.url;
-        slashAdded = true; ...</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+ router.<span class="apidocCodeKeywordSpan">handle</span>(req, res, done);
+};
+
+/**
+* Proxy `Router#use()` to add middleware to the app router.
+* See Router#use() documentation for details.
+*
+* If the _fn_ parameter is an express app, then it will be
+...</pre></li>
     </ul>
 
 
@@ -4023,7 +4556,23 @@ app.listen(3000)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added `res.type()` to replace `res.contentType()`
+* Changed: `res.redirect()` to add relative support
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
+* Rewrite of all tests with mocha
+* Removed "root" setting
+* Removed `res.redirect('home')` support
+* Removed `req.<span class="apidocCodeKeywordSpan">notify</span>()`
+* Removed `app.register()`
+* Removed `app.redirect()`
+* Removed `app.is()`
+* Removed `app.helpers()`
+* Removed `app.dynamicHelpers()`
+* Fixed `res.sendfile()` with non-GET. Closes #723
+* Fixed express(1) public dir for windows. Closes #866
+...</pre></li>
     </ul>
 
 
@@ -4040,7 +4589,23 @@ app.listen(3000)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+==================
+
+* Fixed bug-ish with `../' in `res.partial()` calls
+
+2.3.8 / 2011-05-24
+==================
+
+* Fixed `app.<span class="apidocCodeKeywordSpan">options</span>()`
+
+2.3.7 / 2011-05-23
+==================
+
+* Added route `Collection`, ex: `app.get('/user/:id').remove();`
+* Added support for `app.param(fn)` to define param logic
+* Removed `app.param()` support for callback with return value
+...</pre></li>
     </ul>
 
 
@@ -4086,7 +4651,23 @@ app.listen(3000)
   (this.params[name] = this.params[name] || []).push(fn);
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  - Fix root path disclosure
+  - deps: send@0.11.1
+
+4.11.0 / 2015-01-13
+===================
+
+* Add `res.append(field, val)` to append headers
+* Deprecate leading `:` in `name` for `app.<span class="apidocCodeKeywordSpan">param</span>(name, fn)`
+* Deprecate `req.param()` -- use `req.params`, `req.body`, or `req.query` instead
+* Deprecate `app.param(fn)`
+* Fix `OPTIONS` responses to include the `HEAD` method properly
+* Fix `res.sendFile` not always detecting aborted connection
+* Match routes iteratively to prevent stack overflows
+* deps: accepts@~1.2.2
+  - deps: mime-types@~2.0.7
+...</pre></li>
     </ul>
 
 
@@ -4217,7 +4798,23 @@ app.listen(3000)
 
   param();
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // Capture one-time layer values
+    req.params = self.mergeParams
+? mergeParams(layer.params, parentParams)
+: layer.params;
+    var layerPath = layer.path;
+
+    // this should be done for the layer
+    self.<span class="apidocCodeKeywordSpan">process_params</span>(layer, paramcalled, req, res, function (err) {
+if (err) {
+  return next(layerError || err);
+}
+
+if (route) {
+  return layer.handle_request(req, res, next);
+}
+...</pre></li>
     </ul>
 
 
@@ -4285,7 +4882,22 @@ app.listen(3000)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  * Performance improved with better view caching
+  * Removed `request` and `response` locals
+  * Changed; errorHandler page title is now `Express` instead of `Connect`
+
+2.2.0 / 2011-03-30
+==================
+
+  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>('/user/:id')`. Closes #606
+  * Added `app.match.VERB()`, ex `app.match.put('/user/12')`. Closes #606
+  * Added `app.VERB(path)` as alias of `app.lookup.VERB()`.
+  * Dependency `connect &gt;= 1.2.0`
+
+2.1.1 / 2011-03-29
+==================
+...</pre></li>
     </ul>
 
 
@@ -4345,7 +4957,23 @@ app.listen(3000)
   this.stack.push(layer);
   return route;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ - `res.headerSent` -&gt; `res.headersSent` to match node.js ServerResponse object
+ * refactor:
+ - `req.accepts*` with [accepts](https://github.com/expressjs/accepts)
+ - `req.is` with [type-is](https://github.com/expressjs/type-is)
+ - [path-to-regexp](https://github.com/component/path-to-regexp)
+ * add:
+ - `app.router()` - returns the app Router instance
+ - `app.<span class="apidocCodeKeywordSpan">route</span>()` - Proxy to the app's `Router#route()` method to create a new route
+ - Router &amp; Route - public API
+
+3.21.2 / 2015-07-31
+===================
+
+* deps: connect@2.30.2
+  - deps: body-parser@~1.13.3
+...</pre></li>
     </ul>
 
 
@@ -4358,6 +4986,23 @@ app.listen(3000)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">search = function (path){
+  var route = this.route(path)
+  route[method].apply(route, slice.call(arguments, 1));
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express.Router.source" id="apidoc.element.express.Router.source">
+        function <span class="apidocSignatureSpan">express.Router.</span>source
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">source = function (path){
   var route = this.route(path)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
@@ -4499,14 +5144,14 @@ app.listen(3000)
   var callbacks = flatten(slice.call(arguments, offset));
 
   if (callbacks.length === 0) {
-    throw new TypeError('Router.use() requires middleware functions');
+    throw new TypeError('Router.use() requires a middleware function')
   }
 
   for (var i = 0; i &lt; callbacks.length; i++) {
     var fn = callbacks[i];
 
     if (typeof fn !== 'function') {
-      throw new TypeError('Router.use() requires middleware function but got a ' + gettype(fn));
+      throw new TypeError('Router.use() requires a middleware function but got a ' + gettype(fn))
     }
 
     // add the middleware
@@ -4525,7 +5170,23 @@ app.listen(3000)
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+4.8.0 / 2014-08-05
+==================
+
+* add `res.sendFile`
+  - accepts a file system path instead of a URL
+  - requires an absolute path or `root` option specified
+* deprecate `res.sendfile` -- use `res.sendFile` instead
+* support mounted app as any argument to `app.<span class="apidocCodeKeywordSpan">use</span>()`
+* deps: qs@1.0.2
+  - Complete rewrite
+  - Limits array length to 20
+  - Limits object depth to 5
+  - Limits parameters to 1,000
+* deps: send@0.8.1
+  - Add `extensions` option
+...</pre></li>
     </ul>
 
 
@@ -4578,7 +5239,23 @@ app.listen(3000)
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+3.4.5 / 2013-11-27
+==================
+
+* update connect
+* res.location: remove leading ./ #1802 @kapouer
+* res.redirect: fix `res.redirect('toString') #1829 @michaelficarra
+* res.send: always send ETag when content-length &gt; 0
+* router: add Router.<span class="apidocCodeKeywordSpan">all</span>() method
+
+3.4.4 / 2013-10-29
+==================
+
+* update connect
+* update supertest
+* update methods
+...</pre></li>
     </ul>
 
 
@@ -4602,7 +5279,23 @@ app.listen(3000)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+app.handle = function handle(req, res, callback) {
+var router = this._router;
+
+// final handler
+var done = callback || finalhandler(req, res, {
+  env: this.get('env'),
+  onerror: logerror.<span class="apidocCodeKeywordSpan">bind</span>(this)
+});
+
+// no routes
+if (!router) {
+  debug('no routes defined on app');
+  done();
+  return;
+...</pre></li>
     </ul>
 
 
@@ -4714,10 +5407,10 @@ app.listen(3000)
     }
 
     // inherit protos
-    setPrototyeOf(this.request, parent.request)
-    setPrototyeOf(this.response, parent.response)
-    setPrototyeOf(this.engines, parent.engines)
-    setPrototyeOf(this.settings, parent.settings)
+    setPrototypeOf(this.request, parent.request)
+    setPrototypeOf(this.response, parent.response)
+    setPrototypeOf(this.engines, parent.engines)
+    setPrototypeOf(this.settings, parent.settings)
   });
 
   // setup locals
@@ -4745,7 +5438,22 @@ app.listen(3000)
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+
+app.init = function init() {
+ this.cache = {};
+ this.engines = {};
+ this.settings = {};
+
+ this.<span class="apidocCodeKeywordSpan">defaultConfiguration</span>();
+};
+
+/**
+* Initialize application configuration.
+* @private
+*/
+...</pre></li>
     </ul>
 
 
@@ -4762,7 +5470,23 @@ app.listen(3000)
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* set proper `charset` in `Content-Type` for `res.send`
+* update type-is to 1.2.0
+  - support suffix matching
+
+4.2.0 / 2014-05-11
+==================
+
+* deprecate `app.<span class="apidocCodeKeywordSpan">del</span>()` -- use `app.delete()` instead
+* deprecate `res.json(obj, status)` -- use `res.json(status, obj)` instead
+  - the edge-case `res.json(status, num)` requires `res.status(status).json(num)`
+* deprecate `res.jsonp(obj, status)` -- use `res.jsonp(status, obj)` instead
+  - the edge-case `res.jsonp(status, num)` requires `res.status(status).jsonp(num)`
+* fix `req.next` when inside router instance
+* include `ETag` header in `HEAD` requests
+* keep previous `Content-Type` for `res.jsonp`
+...</pre></li>
     </ul>
 
 
@@ -4786,7 +5510,23 @@ return fn.apply(this, arguments)
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* set proper `charset` in `Content-Type` for `res.send`
+* update type-is to 1.2.0
+  - support suffix matching
+
+4.2.0 / 2014-05-11
+==================
+
+* deprecate `app.del()` -- use `app.<span class="apidocCodeKeywordSpan">delete</span>()` instead
+* deprecate `res.json(obj, status)` -- use `res.json(status, obj)` instead
+  - the edge-case `res.json(status, num)` requires `res.status(status).json(num)`
+* deprecate `res.jsonp(obj, status)` -- use `res.jsonp(status, obj)` instead
+  - the edge-case `res.jsonp(status, num)` requires `res.status(status).jsonp(num)`
+* fix `req.next` when inside router instance
+* include `ETag` header in `HEAD` requests
+* keep previous `Content-Type` for `res.jsonp`
+...</pre></li>
     </ul>
 
 
@@ -4801,7 +5541,23 @@ return fn.apply(this, arguments)
     <li>description and source-code<pre class="apidocCodePre">function disable(setting) {
   return this.set(setting, false);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+3.0.0rc5 / 2012-09-18
+==================
+
+* update connect
+* add redis search example
+* add static-files example
+* add "x-powered-by" setting (`app.<span class="apidocCodeKeywordSpan">disable</span>('x-powered-by')`)
+* add "application/octet-stream" redirect Accept test case. Closes #1317
+
+3.0.0rc4 / 2012-08-30
+==================
+
+* add `res.jsonp()`. Closes #1307
+* add "verbose errors" option to error-pages example
+...</pre></li>
     </ul>
 
 
@@ -4816,7 +5572,23 @@ return fn.apply(this, arguments)
     <li>description and source-code<pre class="apidocCodePre">function disabled(setting) {
   return !this.set(setting);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added `req.header()` _Referrer_ / _Referer_ special-case, either works
+* Added mount support for `res.redirect()`, now respects the mount-point
+* Added `union()` util, taking place of `merge(clone())` combo
+* Added stylus support to express(1) generated app
+* Added secret to session middleware used in examples and generated app
+* Added `res.local(name, val)` for progressive view locals
+* Added default param support to `req.param(name, default)`
+* Added `app.<span class="apidocCodeKeywordSpan">disabled</span>()` and `app.enabled()`
+* Added `app.register()` support for omitting leading ".", either works
+* Added `res.partial()`, using the same interface as `partial()` within a view. Closes #539
+* Added `app.param()` to map route params to async/sync logic
+* Added; aliased `app.helpers()` as `app.locals()`. Closes #481
+* Added extname with no leading "." support to `res.contentType()`
+* Added `cache views` setting, defaulting to enabled in "production" env
+* Added index file partial resolution, eg: partial('user') may try _views/user/index.jade_.
+...</pre></li>
     </ul>
 
 
@@ -4831,7 +5603,23 @@ return fn.apply(this, arguments)
     <li>description and source-code<pre class="apidocCodePre">function enable(setting) {
   return this.set(setting, true);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @private
+ */
+
+app.defaultConfiguration = function defaultConfiguration() {
+var env = process.env.NODE_ENV || 'development';
+
+// default settings
+this.<span class="apidocCodeKeywordSpan">enable</span>('x-powered-by');
+this.set('etag', 'weak');
+this.set('env', env);
+this.set('query parser', 'extended');
+this.set('subdomain offset', 2);
+this.set('trust proxy', false);
+
+// trust proxy inherit back-compat
+...</pre></li>
     </ul>
 
 
@@ -4846,7 +5634,23 @@ return fn.apply(this, arguments)
     <li>description and source-code<pre class="apidocCodePre">function enabled(setting) {
   return Boolean(this.set(setting));
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added `req.header()` _Referrer_ / _Referer_ special-case, either works
+* Added mount support for `res.redirect()`, now respects the mount-point
+* Added `union()` util, taking place of `merge(clone())` combo
+* Added stylus support to express(1) generated app
+* Added secret to session middleware used in examples and generated app
+* Added `res.local(name, val)` for progressive view locals
+* Added default param support to `req.param(name, default)`
+* Added `app.disabled()` and `app.<span class="apidocCodeKeywordSpan">enabled</span>()`
+* Added `app.register()` support for omitting leading ".", either works
+* Added `res.partial()`, using the same interface as `partial()` within a view. Closes #539
+* Added `app.param()` to map route params to async/sync logic
+* Added; aliased `app.helpers()` as `app.locals()`. Closes #481
+* Added extname with no leading "." support to `res.contentType()`
+* Added `cache views` setting, defaulting to enabled in "production" env
+* Added index file partial resolution, eg: partial('user') may try _views/user/index.jade_.
+...</pre></li>
     </ul>
 
 
@@ -4874,21 +5678,21 @@ return fn.apply(this, arguments)
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-* @param {object} options
-* @param {function} callback
-* @private
-*/
 
-View.prototype.render = function render(options, callback) {
- debug('render "%s"', this.path);
- this.<span class="apidocCodeKeywordSpan">engine</span>(this.path, options, callback);
-};
-
-/**
-* Resolve the file within the given directory.
-*
-* @param {string} dir
-* @param {string} file
+* Added `app.locals.use(callback)`
+* Added `app.locals` object
+* Added `app.locals(obj)`
+* Added `res.locals` object
+* Added `res.locals(obj)`
+* Added `res.format()` for content-negotiation
+* Added `app.<span class="apidocCodeKeywordSpan">engine</span>()`
+* Added `res.cookie()` JSON cookie support
+* Added "trust proxy" setting
+* Added `req.subdomains`
+* Added `req.protocol`
+* Added `req.secure`
+* Added `req.path`
+* Added `req.ips`
 ...</pre></li>
     </ul>
 
@@ -4914,21 +5718,21 @@ View.prototype.render = function render(options, callback) {
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  [![Windows Build][appveyor-image]][appveyor-url]
-  [![Test Coverage][coveralls-image]][coveralls-url]
-
-```js
-var express = require('express')
-var app = express()
-
-app.<span class="apidocCodeKeywordSpan">get</span>('/', function (req, res) {
-  res.send('Hello World')
-})
-
-app.listen(3000)
-```
-
-## Installation
+* Add `acceptRanges` option to `res.sendFile`/`res.sendfile`
+* Add `cacheControl` option to `res.sendFile`/`res.sendfile`
+* Add `options` argument to `req.range`
+  - Includes the `combine` option
+* Encode URL in `res.location`/`res.redirect` if not already encoded
+* Fix some redirect handling in `res.sendFile`/`res.sendfile`
+* Fix Windows absolute path check using forward slashes
+* Improve error with invalid arguments to `req.<span class="apidocCodeKeywordSpan">get</span>()`
+* Improve performance for `res.json`/`res.jsonp` in most cases
+* Improve `Range` header handling in `res.sendFile`/`res.sendfile`
+* deps: accepts@~1.3.3
+  - Fix including type extensions in parameters in `Accept` parsing
+  - Fix parsing `Accept` parameters with quoted equals
+  - Fix parsing `Accept` parameters with quoted semicolons
+  - Many performance improvments
 ...</pre></li>
     </ul>
 
@@ -4959,7 +5763,23 @@ app.listen(3000)
 
   router.handle(req, res, done);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ // no routes
+ if (!router) {
+   debug('no routes defined on app');
+   done();
+   return;
+ }
+
+ router.<span class="apidocCodeKeywordSpan">handle</span>(req, res, done);
+};
+
+/**
+* Proxy `Router#use()` to add middleware to the app router.
+* See Router#use() documentation for details.
+*
+* If the _fn_ parameter is an express app, then it will be
+...</pre></li>
     </ul>
 
 
@@ -5002,7 +5822,23 @@ app.listen(3000)
 
   this.defaultConfiguration();
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ if (!this._router) {
+   this._router = new Router({
+     caseSensitive: this.enabled('case sensitive routing'),
+     strict: this.enabled('strict routing')
+   });
+
+   this._router.use(query(this.get('query parser fn')));
+   this._router.use(middleware.<span class="apidocCodeKeywordSpan">init</span>(this));
+ }
+};
+
+/**
+* Dispatch a req, res pair into the application. Starts pipeline processing.
+*
+* If no callback is provided, then default error handlers will respond
+...</pre></li>
     </ul>
 
 
@@ -5025,7 +5861,23 @@ app.listen(3000)
     this._router.use(middleware.init(this));
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var fns = flatten(slice.call(arguments, offset));
+
+if (fns.length === 0) {
+  throw new TypeError('app.use() requires a middleware function')
+}
+
+// setup router
+this.<span class="apidocCodeKeywordSpan">lazyrouter</span>();
+var router = this._router;
+
+fns.forEach(function (fn) {
+  // non-express app
+  if (!fn || !fn.handle || !fn.set) {
+    return router.use(path, fn);
+  }
+...</pre></li>
     </ul>
 
 
@@ -5078,9 +5930,8 @@ app.<span class="apidocCodeKeywordSpan">listen</span>(3000)
 
 ## Installation
 
-```bash
-$ npm install express
-```
+This is a [Node.js](https://nodejs.org/en/) module available through the
+[npm registry](https://www.npmjs.com/).
 ...</pre></li>
     </ul>
 
@@ -5273,7 +6124,23 @@ $ npm install express
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added `res.type()` to replace `res.contentType()`
+* Changed: `res.redirect()` to add relative support
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
+* Rewrite of all tests with mocha
+* Removed "root" setting
+* Removed `res.redirect('home')` support
+* Removed `req.<span class="apidocCodeKeywordSpan">notify</span>()`
+* Removed `app.register()`
+* Removed `app.redirect()`
+* Removed `app.is()`
+* Removed `app.helpers()`
+* Removed `app.dynamicHelpers()`
+* Fixed `res.sendfile()` with non-GET. Closes #723
+* Fixed express(1) public dir for windows. Closes #866
+...</pre></li>
     </ul>
 
 
@@ -5297,7 +6164,23 @@ $ npm install express
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+==================
+
+* Fixed bug-ish with `../' in `res.partial()` calls
+
+2.3.8 / 2011-05-24
+==================
+
+* Fixed `app.<span class="apidocCodeKeywordSpan">options</span>()`
+
+2.3.7 / 2011-05-23
+==================
+
+* Added route `Collection`, ex: `app.get('/user/:id').remove();`
+* Added support for `app.param(fn)` to define param logic
+* Removed `app.param()` support for callback with return value
+...</pre></li>
     </ul>
 
 
@@ -5324,7 +6207,23 @@ $ npm install express
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  - Fix root path disclosure
+  - deps: send@0.11.1
+
+4.11.0 / 2015-01-13
+===================
+
+* Add `res.append(field, val)` to append headers
+* Deprecate leading `:` in `name` for `app.<span class="apidocCodeKeywordSpan">param</span>(name, fn)`
+* Deprecate `req.param()` -- use `req.params`, `req.body`, or `req.query` instead
+* Deprecate `app.param(fn)`
+* Fix `OPTIONS` responses to include the `HEAD` method properly
+* Fix `res.sendFile` not always detecting aborted connection
+* Match routes iteratively to prevent stack overflows
+* deps: accepts@~1.2.2
+  - deps: mime-types@~2.0.7
+...</pre></li>
     </ul>
 
 
@@ -5365,7 +6264,23 @@ $ npm install express
     ? this.parent.path() + this.mountpath
     : '';
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added "json replacer" setting
+* Added "json spaces" setting
+* Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
+* Added `--less` support to express(1)
+* Added `express.response` prototype
+* Added `express.request` prototype
+* Added `express.application` prototype
+* Added `app.<span class="apidocCodeKeywordSpan">path</span>()`
+* Added `app.render()`
+* Added `res.type()` to replace `res.contentType()`
+* Changed: `res.redirect()` to add relative support
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
+* Rewrite of all tests with mocha
+* Removed "root" setting
+...</pre></li>
     </ul>
 
 
@@ -5485,7 +6400,22 @@ $ npm install express
   route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  * Performance improved with better view caching
+  * Removed `request` and `response` locals
+  * Changed; errorHandler page title is now `Express` instead of `Connect`
+
+2.2.0 / 2011-03-30
+==================
+
+  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>('/user/:id')`. Closes #606
+  * Added `app.match.VERB()`, ex `app.match.put('/user/12')`. Closes #606
+  * Added `app.VERB(path)` as alias of `app.lookup.VERB()`.
+  * Dependency `connect &gt;= 1.2.0`
+
+2.1.1 / 2011-03-29
+==================
+...</pre></li>
     </ul>
 
 
@@ -5584,7 +6514,23 @@ $ npm install express
   // render
   tryRender(view, renderOptions, done);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* remove old OPTIONS default response
+
+3.0.0rc3 / 2012-08-13
+==================
+
+* update connect dep
+* fix signed cookies to work with `connect.cookieParser()` ("s:" prefix was missing) [tnydwrds]
+* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of "locals"
+
+3.0.0rc2 / 2012-08-03
+==================
+
+* add CORS example
+* update connect dep
+* deprecate `.createServer()` &amp; remove old stale examples
+...</pre></li>
     </ul>
 
 
@@ -5624,7 +6570,23 @@ $ npm install express
   this.lazyrouter();
   return this._router.route(path);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ - `res.headerSent` -&gt; `res.headersSent` to match node.js ServerResponse object
+ * refactor:
+ - `req.accepts*` with [accepts](https://github.com/expressjs/accepts)
+ - `req.is` with [type-is](https://github.com/expressjs/type-is)
+ - [path-to-regexp](https://github.com/component/path-to-regexp)
+ * add:
+ - `app.router()` - returns the app Router instance
+ - `app.<span class="apidocCodeKeywordSpan">route</span>()` - Proxy to the app's `Router#route()` method to create a new route
+ - Router &amp; Route - public API
+
+3.21.2 / 2015-07-31
+===================
+
+* deps: connect@2.30.2
+  - deps: body-parser@~1.13.3
+...</pre></li>
     </ul>
 
 
@@ -5691,6 +6653,46 @@ $ npm install express
       break;
   }
 
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Fix handling of URLs containing `://` in the path
+* deps: qs@2.3.2
+  - Fix parsing of mixed objects and values
+
+4.10.0 / 2014-10-23
+===================
+
+* Add support for `app.<span class="apidocCodeKeywordSpan">set</span>('views', array)`
+  - Views are looked up in sequence in array of directories
+* Fix `res.send(status)` to mention `res.sendStatus(status)`
+* Fix handling of invalid empty URLs
+* Use `content-disposition` module for `res.attachment`/`res.download`
+  - Sends standards-compliant `Content-Disposition` header
+  - Full Unicode support
+* Use `path.resolve` in view lookup
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express.application.source" id="apidoc.element.express.application.source">
+        function <span class="apidocSignatureSpan">express.application.</span>source
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">source = function (path){
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
+    // app.get(setting)
+    return this.set(path);
+  }
+
+  this.lazyrouter();
+
+  var route = this._router.route(path);
+  route[method].apply(route, slice.call(arguments, 1));
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -5872,7 +6874,7 @@ $ npm install express
   var fns = flatten(slice.call(arguments, offset));
 
   if (fns.length === 0) {
-    throw new TypeError('app.use() requires middleware functions');
+    throw new TypeError('app.use() requires a middleware function')
   }
 
   // setup router
@@ -5893,8 +6895,8 @@ $ npm install express
     router.use(path, function mounted_app(req, res, next) {
       var orig = req.app;
       fn.handle(req, res, function (err) {
-        setPrototyeOf(req, orig.request)
-        setPrototyeOf(res, orig.response)
+        setPrototypeOf(req, orig.request)
+        setPrototypeOf(res, orig.response)
         next(err);
       });
     });
@@ -5905,6 +6907,105 @@ $ npm install express
 
   return this;
 }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+4.8.0 / 2014-08-05
+==================
+
+* add `res.sendFile`
+  - accepts a file system path instead of a URL
+  - requires an absolute path or `root` option specified
+* deprecate `res.sendfile` -- use `res.sendFile` instead
+* support mounted app as any argument to `app.<span class="apidocCodeKeywordSpan">use</span>()`
+* deps: qs@1.0.2
+  - Complete rewrite
+  - Limits array length to 20
+  - Limits object depth to 5
+  - Limits parameters to 1,000
+* deps: send@0.8.1
+  - Add `extensions` option
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express.init" id="apidoc.module.express.init">module express.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express.init.init" id="apidoc.element.express.init.init">
+        function <span class="apidocSignatureSpan">express.</span>init
+        <span class="apidocSignatureSpan">(app)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function (app){
+  return function expressInit(req, res, next){
+    if (app.enabled('x-powered-by')) res.setHeader('X-Powered-By', 'Express');
+    req.res = res;
+    res.req = req;
+    req.next = next;
+
+    setPrototypeOf(req, app.request)
+    setPrototypeOf(res, app.response)
+
+    res.locals = res.locals || Object.create(null);
+
+    next();
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ if (!this._router) {
+   this._router = new Router({
+     caseSensitive: this.enabled('case sensitive routing'),
+     strict: this.enabled('strict routing')
+   });
+
+   this._router.use(query(this.get('query parser fn')));
+   this._router.use(middleware.<span class="apidocCodeKeywordSpan">init</span>(this));
+ }
+};
+
+/**
+* Dispatch a req, res pair into the application. Starts pipeline processing.
+*
+* If no callback is provided, then default error handlers will respond
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express.layer" id="apidoc.module.express.layer">module express.layer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express.layer.layer" id="apidoc.element.express.layer.layer">
+        function <span class="apidocSignatureSpan">express.</span>layer
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Layer(path, options, fn) {
+  if (!(this instanceof Layer)) {
+    return new Layer(path, options, fn);
+  }
+
+  debug('new %o', path)
+  var opts = options || {};
+
+  this.handle = fn;
+  this.name = fn.name || '&lt;anonymous&gt;';
+  this.params = undefined;
+  this.path = undefined;
+  this.regexp = pathRegexp(path, this.keys = [], opts);
+
+  // set fast path flags
+  this.regexp.fast_star = path === '*'
+  this.regexp.fast_slash = path === '/' &amp;&amp; opts.end === false
+}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -5912,234 +7013,165 @@ $ npm install express
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.express.express" id="apidoc.module.express.express">module express.express</a></h1>
+<h1><a href="#apidoc.module.express.layer.prototype" id="apidoc.module.express.layer.prototype">module express.layer.prototype</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.express.express.express" id="apidoc.element.express.express.express">
-        function <span class="apidocSignatureSpan">express.</span>express
-        <span class="apidocSignatureSpan">()</span>
+        <a href="#apidoc.element.express.layer.prototype.handle_error" id="apidoc.element.express.layer.prototype.handle_error">
+        function <span class="apidocSignatureSpan">express.layer.prototype.</span>handle_error
+        <span class="apidocSignatureSpan">(error, req, res, next)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function createApplication() {
-  var app = function(req, res, next) {
-    app.handle(req, res, next);
-  };
+    <li>description and source-code<pre class="apidocCodePre">function handle_error(error, req, res, next) {
+  var fn = this.handle;
 
-  mixin(app, EventEmitter.prototype, false);
-  mixin(app, proto, false);
+  if (fn.length !== 4) {
+    // not a standard error handler
+    return next(error);
+  }
 
-  // expose the prototype that will get set on requests
-  app.request = Object.create(req, {
-    app: { configurable: true, enumerable: true, writable: true, value: app }
-  })
-
-  // expose the prototype that will get set on responses
-  app.response = Object.create(res, {
-    app: { configurable: true, enumerable: true, writable: true, value: app }
-  })
-
-  app.init();
-  return app;
+  try {
+    fn(error, req, res, next);
+  } catch (err) {
+    next(err);
+  }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        ? removed.substring(0, removed.length - 1)
+        : removed);
+    }
+
+    debug('%s %s : %s', layer.name, layerPath, req.originalUrl);
+
+    if (layerError) {
+      layer.<span class="apidocCodeKeywordSpan">handle_error</span>(layerError, req, res, next);
+    } else {
+      layer.handle_request(req, res, next);
+    }
+  }
+};
+
+/**
+...</pre></li>
     </ul>
 
 
 
     <h2>
-        <a href="#apidoc.element.express.express.Route" id="apidoc.element.express.express.Route">
-        function <span class="apidocSignatureSpan">express.express.</span>Route
+        <a href="#apidoc.element.express.layer.prototype.handle_request" id="apidoc.element.express.layer.prototype.handle_request">
+        function <span class="apidocSignatureSpan">express.layer.prototype.</span>handle_request
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handle(req, res, next) {
+  var fn = this.handle;
+
+  if (fn.length &gt; 3) {
+    // not a standard request handler
+    return next();
+  }
+
+  try {
+    fn(req, res, next);
+  } catch (err) {
+    next(err);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // this should be done for the layer
+  self.process_params(layer, paramcalled, req, res, function (err) {
+    if (err) {
+      return next(layerError || err);
+    }
+
+    if (route) {
+      return layer.<span class="apidocCodeKeywordSpan">handle_request</span>(req, res, next);
+    }
+
+    trim_prefix(layer, layerError, layerPath, path);
+  });
+}
+
+function trim_prefix(layer, layerError, layerPath, path) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express.layer.prototype.match" id="apidoc.element.express.layer.prototype.match">
+        function <span class="apidocSignatureSpan">express.layer.prototype.</span>match
         <span class="apidocSignatureSpan">(path)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function Route(path) {
-  this.path = path;
-  this.stack = [];
+    <li>description and source-code<pre class="apidocCodePre">function match(path) {
+  var match
 
-  debug('new %o', path)
+  if (path != null) {
+    // fast path non-ending match for / (any path matches)
+    if (this.regexp.fast_slash) {
+      this.params = {}
+      this.path = ''
+      return true
+    }
 
-  // route handlers for various http methods
-  this.methods = {};
+    // fast path for * (everything matched in a param)
+    if (this.regexp.fast_star) {
+      this.params = {'0': decode_param(path)}
+      this.path = path
+      return true
+    }
+
+    // match the path
+    match = this.regexp.exec(path)
+  }
+
+  if (!match) {
+    this.params = undefined;
+    this.path = undefined;
+    return false;
+  }
+
+  // store values
+  this.params = {};
+  this.path = match[0]
+
+  var keys = this.keys;
+  var params = this.params;
+
+  for (var i = 1; i &lt; match.length; i++) {
+    var key = keys[i - 1];
+    var prop = key.name;
+    var val = decode_param(match[i])
+
+    if (val !== undefined || !(hasOwnProperty.call(params, prop))) {
+      params[prop] = val;
+    }
+  }
+
+  return true;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+==================
+
+  * Fixed view hints
+
+2.3.1 / 2011-04-26
+==================
+
+  * Added `app.<span class="apidocCodeKeywordSpan">match</span>()` as `app.match.all()`
+  * Added `app.lookup()` as `app.lookup.all()`
+  * Added `app.remove()` for `app.remove.all()`
+  * Added `app.remove.VERB()`
+  * Fixed template caching collision issue. Closes #644
+  * Moved router over from connect and started refactor
+
+2.3.0 / 2011-04-25
+...</pre></li>
     </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.express.express.Router" id="apidoc.element.express.express.Router">
-        function <span class="apidocSignatureSpan">express.express.</span>Router
-        <span class="apidocSignatureSpan">(options)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">Router = function (options) {
-  var opts = options || {};
-
-  function router(req, res, next) {
-    router.handle(req, res, next);
-  }
-
-  // mixin Router class functions
-  setPrototypeOf(router, proto)
-
-  router.params = {};
-  router._params = [];
-  router.caseSensitive = opts.caseSensitive;
-  router.mergeParams = opts.mergeParams;
-  router.strict = opts.strict;
-  router.stack = [];
-
-  return router;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.express.express.query" id="apidoc.element.express.express.query">
-        function <span class="apidocSignatureSpan">express.express.</span>query
-        <span class="apidocSignatureSpan">(options)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function query(options) {
-  var opts = Object.create(options || null);
-  var queryparse = qs.parse;
-
-  if (typeof options === 'function') {
-    queryparse = options;
-    opts = undefined;
-  }
-
-  if (opts !== undefined &amp;&amp; opts.allowPrototypes === undefined) {
-    // back-compat for qs module
-    opts.allowPrototypes = true;
-  }
-
-  return function query(req, res, next){
-    if (!req.query) {
-      var val = parseUrl(req).query;
-      req.query = queryparse(val, opts);
-    }
-
-    next();
-  };
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.express.express.static" id="apidoc.element.express.express.static">
-        function <span class="apidocSignatureSpan">express.express.</span>static
-        <span class="apidocSignatureSpan">(root, options)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function serveStatic(root, options) {
-  if (!root) {
-    throw new TypeError('root path required')
-  }
-
-  if (typeof root !== 'string') {
-    throw new TypeError('root path must be a string')
-  }
-
-  // copy options object
-  var opts = Object.create(options || null)
-
-  // fall-though
-  var fallthrough = opts.fallthrough !== false
-
-  // default redirect
-  var redirect = opts.redirect !== false
-
-  // headers listener
-  var setHeaders = opts.setHeaders
-
-  if (setHeaders &amp;&amp; typeof setHeaders !== 'function') {
-    throw new TypeError('option setHeaders must be function')
-  }
-
-  // setup options for send
-  opts.maxage = opts.maxage || opts.maxAge || 0
-  opts.root = resolve(root)
-
-  // construct directory listener
-  var onDirectory = redirect
-    ? createRedirectDirectoryListener()
-    : createNotFoundDirectoryListener()
-
-  return function serveStatic (req, res, next) {
-    if (req.method !== 'GET' &amp;&amp; req.method !== 'HEAD') {
-      if (fallthrough) {
-        return next()
-      }
-
-      // method not allowed
-      res.statusCode = 405
-      res.setHeader('Allow', 'GET, HEAD')
-      res.setHeader('Content-Length', '0')
-      res.end()
-      return
-    }
-
-    var forwardError = !fallthrough
-    var originalUrl = parseUrl.original(req)
-    var path = parseUrl(req).pathname
-
-    // make sure redirect occurs at mount
-    if (path === '/' &amp;&amp; originalUrl.pathname.substr(-1) !== '/') {
-      path = ''
-    }
-
-    // create send stream
-    var stream = send(req, path, opts)
-
-    // add directory handler
-    stream.on('directory', onDirectory)
-
-    // add headers listener
-    if (setHeaders) {
-      stream.on('headers', setHeaders)
-    }
-
-    // add file listener for fallthrough
-    if (fallthrough) {
-      stream.on('file', function onFile () {
-        // once file is determined, always forward error
-        forwardError = true
-      })
-    }
-
-    // forward errors
-    stream.on('error', function error (err) {
-      if (forwardError || !(err.statusCode &lt; 500)) {
-        next(err)
-        return
-      }
-
-      next()
-    })
-
-    // pipe
-    stream.pipe(res)
-  }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-
-
-
 
 
 </div>
@@ -6159,7 +7191,23 @@ $ npm install express
   var accept = accepts(this);
   return accept.types.apply(accept, arguments);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added `req.subdomains`
+* Added `req.protocol`
+* Added `req.secure`
+* Added `req.path`
+* Added `req.ips`
+* Added `req.fresh`
+* Added `req.stale`
+* Added comma-delimited / array support for `req.<span class="apidocCodeKeywordSpan">accepts</span>()`
+* Added debug instrumentation
+* Added `res.set(obj)`
+* Added `res.set(field, value)`
+* Added `res.get(field)`
+* Added `app.get(setting)`. Closes #842
+* Added `req.acceptsLanguage()`
+* Added `req.acceptsCharset()`
+...</pre></li>
     </ul>
 
 
@@ -6176,7 +7224,23 @@ $ npm install express
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added comma-delimited / array support for `req.accepts()`
+* Added debug instrumentation
+* Added `res.set(obj)`
+* Added `res.set(field, value)`
+* Added `res.get(field)`
+* Added `app.get(setting)`. Closes #842
+* Added `req.acceptsLanguage()`
+* Added `req.<span class="apidocCodeKeywordSpan">acceptsCharset</span>()`
+* Added `req.accepted`
+* Added `req.acceptedLanguages`
+* Added `req.acceptedCharsets`
+* Added "json replacer" setting
+* Added "json spaces" setting
+* Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
+* Added `--less` support to express(1)
+...</pre></li>
     </ul>
 
 
@@ -6209,7 +7273,22 @@ return fn.apply(this, arguments)
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  * update qs and remove all ~ semver crap
+  * fix: accept number as value of Signed Cookie
+
+3.2.0 / 2013-04-15
+==================
+
+  * add "view" constructor setting to override view behaviour
+  * add req.<span class="apidocCodeKeywordSpan">acceptsEncoding</span>(name)
+  * add req.acceptedEncodings
+  * revert cookie signature change causing session race conditions
+  * fix sorting of Accept values of the same quality
+
+3.1.2 / 2013-04-12
+==================
+...</pre></li>
     </ul>
 
 
@@ -6242,7 +7321,23 @@ return fn.apply(this, arguments)
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added `req.stale`
+* Added comma-delimited / array support for `req.accepts()`
+* Added debug instrumentation
+* Added `res.set(obj)`
+* Added `res.set(field, value)`
+* Added `res.get(field)`
+* Added `app.get(setting)`. Closes #842
+* Added `req.<span class="apidocCodeKeywordSpan">acceptsLanguage</span>()`
+* Added `req.acceptsCharset()`
+* Added `req.accepted`
+* Added `req.acceptedLanguages`
+* Added `req.acceptedCharsets`
+* Added "json replacer" setting
+* Added "json spaces" setting
+* Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
+...</pre></li>
     </ul>
 
 
@@ -6291,21 +7386,21 @@ return fn.apply(this, arguments)
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  [![Windows Build][appveyor-image]][appveyor-url]
-  [![Test Coverage][coveralls-image]][coveralls-url]
-
-```js
-var express = require('express')
-var app = express()
-
-app.<span class="apidocCodeKeywordSpan">get</span>('/', function (req, res) {
-  res.send('Hello World')
-})
-
-app.listen(3000)
-```
-
-## Installation
+* Add `acceptRanges` option to `res.sendFile`/`res.sendfile`
+* Add `cacheControl` option to `res.sendFile`/`res.sendfile`
+* Add `options` argument to `req.range`
+  - Includes the `combine` option
+* Encode URL in `res.location`/`res.redirect` if not already encoded
+* Fix some redirect handling in `res.sendFile`/`res.sendfile`
+* Fix Windows absolute path check using forward slashes
+* Improve error with invalid arguments to `req.<span class="apidocCodeKeywordSpan">get</span>()`
+* Improve performance for `res.json`/`res.jsonp` in most cases
+* Improve `Range` header handling in `res.sendFile`/`res.sendfile`
+* deps: accepts@~1.3.3
+  - Fix including type extensions in parameters in `Accept` parsing
+  - Fix parsing `Accept` parameters with quoted equals
+  - Fix parsing `Accept` parameters with quoted semicolons
+  - Many performance improvments
 ...</pre></li>
     </ul>
 
@@ -6338,7 +7433,23 @@ app.listen(3000)
       return this.headers[lc];
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+3.0.0alpha2 / 2012-04-26
+==================
+
+* Added `make benchmark` back
+* Added `res.send()` support for `String` objects
+* Added client-side data exposing example
+* Added `res.<span class="apidocCodeKeywordSpan">header</span>()` and `req.header()` aliases for BC
+* Added `express.createServer()` for BC
+* Perf: memoize parsed urls
+* Perf: connect 2.2.0 dep
+* Changed: make `expressInit()` middleware self-aware
+* Fixed: use app.get() for all core settings
+* Fixed redis session example
+* Fixed session example. Closes #1105
+...</pre></li>
     </ul>
 
 
@@ -6363,7 +7474,23 @@ app.listen(3000)
 
   return typeis(this, arr);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  * Changed: renamed "case sensitive routes" to "case sensitive routing"
+  * Rewrite of all tests with mocha
+  * Removed "root" setting
+  * Removed `res.redirect('home')` support
+  * Removed `req.notify()`
+  * Removed `app.register()`
+  * Removed `app.redirect()`
+  * Removed `app.<span class="apidocCodeKeywordSpan">is</span>()`
+  * Removed `app.helpers()`
+  * Removed `app.dynamicHelpers()`
+  * Fixed `res.sendfile()` with non-GET. Closes #723
+  * Fixed express(1) public dir for windows. Closes #866
+
+2.5.9/ 2012-04-02
+==================
+...</pre></li>
     </ul>
 
 
@@ -6391,7 +7518,23 @@ app.listen(3000)
 
   return defaultValue;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  - Fix root path disclosure
+  - deps: send@0.11.1
+
+4.11.0 / 2015-01-13
+===================
+
+* Add `res.append(field, val)` to append headers
+* Deprecate leading `:` in `name` for `app.<span class="apidocCodeKeywordSpan">param</span>(name, fn)`
+* Deprecate `req.param()` -- use `req.params`, `req.body`, or `req.query` instead
+* Deprecate `app.param(fn)`
+* Fix `OPTIONS` responses to include the `HEAD` method properly
+* Fix `res.sendFile` not always detecting aborted connection
+* Match routes iteratively to prevent stack overflows
+* deps: accepts@~1.2.2
+  - deps: mime-types@~2.0.7
+...</pre></li>
     </ul>
 
 
@@ -6408,7 +7551,22 @@ app.listen(3000)
   if (!range) return;
   return parseRange(size, range, options);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* update auth example to utilize cores pbkdf2
+* updated tests to use "supertest"
+
+3.0.0beta4 / 2012-06-25
+==================
+
+* Added `req.auth`
+* Added `req.<span class="apidocCodeKeywordSpan">range</span>(size)`
+* Added `res.links(obj)`
+* Added `res.send(body, status)` support back for backwards compat
+* Added `.default()` support to `res.format()`
+* Added 2xx / 304 check to `req.fresh`
+* Revert "Added + support to the router"
+* Fixed `res.send()` freshness check, respect res.statusCode
+...</pre></li>
     </ul>
 
 
@@ -6438,7 +7596,23 @@ app.listen(3000)
 
   return this.set(field, value);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  - Fix redirect loop in Node.js 0.11.14
+  - Fix root path disclosure
+  - deps: send@0.11.1
+
+4.11.0 / 2015-01-13
+===================
+
+* Add `res.<span class="apidocCodeKeywordSpan">append</span>(field, val)` to append headers
+* Deprecate leading `:` in `name` for `app.param(name, fn)`
+* Deprecate `req.param()` -- use `req.params`, `req.body`, or `req.query` instead
+* Deprecate `app.param(fn)`
+* Fix `OPTIONS` responses to include the `HEAD` method properly
+* Fix `res.sendFile` not always detecting aborted connection
+* Match routes iteratively to prevent stack overflows
+* deps: accepts@~1.2.2
+...</pre></li>
     </ul>
 
 
@@ -6476,7 +7650,23 @@ app.listen(3000)
 
   return this.cookie(name, '', opts);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  * Added `app.remove.VERB()`
+  * Fixed template caching collision issue. Closes #644
+  * Moved router over from connect and started refactor
+
+2.3.0 / 2011-04-25
+==================
+
+  * Added options support to `res.<span class="apidocCodeKeywordSpan">clearCookie</span>()`
+  * Added `res.helpers()` as alias of `res.locals()`
+  * Added; json defaults to UTF-8 with `res.send()`. Closes #632. [Daniel   * Dependency `connect &gt;= 1.4.0`
+  * Changed; auto set Content-Type in res.attachement [Aaron Heckmann]
+  * Renamed "cache views" to "view cache". Closes #628
+  * Fixed caching of views when using several apps. Closes #637
+  * Fixed gotcha invoking `app.param()` callbacks once per route middleware.
+Closes #638
+...</pre></li>
     </ul>
 
 
@@ -6495,7 +7685,23 @@ app.listen(3000)
 
   return this.set('Content-Type', ct);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
+* Added `--less` support to express(1)
+* Added `express.response` prototype
+* Added `express.request` prototype
+* Added `express.application` prototype
+* Added `app.path()`
+* Added `app.render()`
+* Added `res.type()` to replace `res.<span class="apidocCodeKeywordSpan">contentType</span>()`
+* Changed: `res.redirect()` to add relative support
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
+* Rewrite of all tests with mocha
+* Removed "root" setting
+* Removed `res.redirect('home')` support
+* Removed `req.notify()`
+...</pre></li>
     </ul>
 
 
@@ -6537,7 +7743,23 @@ app.listen(3000)
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* fix colons in passwords for `req.auth`
+
+3.0.6 / 2013-01-04
+==================
+
+* add http verb methods to Router
+* update connect
+* fix mangling of the `res.<span class="apidocCodeKeywordSpan">cookie</span>()` options object
+* fix jsonp whitespace escape. Closes #1132
+
+3.0.5 / 2012-12-19
+==================
+
+* add throwing when a non-function is passed to a route
+* fix: explicitly remove Transfer-Encoding header from 204 and 304 responses
+...</pre></li>
     </ul>
 
 
@@ -6545,18 +7767,23 @@ app.listen(3000)
     <h2>
         <a href="#apidoc.element.express.response.download" id="apidoc.element.express.response.download">
         function <span class="apidocSignatureSpan">express.response.</span>download
-        <span class="apidocSignatureSpan">(path, filename, callback)</span>
+        <span class="apidocSignatureSpan">(path, filename, options, callback)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function download(path, filename, callback) {
+    <li>description and source-code<pre class="apidocCodePre">function download(path, filename, options, callback) {
   var done = callback;
   var name = filename;
+  var opts = options || null
 
-  // support function as second arg
+  // support function as second or third arg
   if (typeof filename === 'function') {
     done = filename;
     name = null;
+    opts = null
+  } else if (typeof options === 'function') {
+    done = options
+    opts = null
   }
 
   // set Content-Disposition when file is sent
@@ -6564,12 +7791,44 @@ app.listen(3000)
     'Content-Disposition': contentDisposition(name || path)
   };
 
+  // merge user-provided headers
+  if (opts &amp;&amp; opts.headers) {
+    var keys = Object.keys(opts.headers)
+    for (var i = 0; i &lt; keys.length; i++) {
+      var key = keys[i]
+      if (key.toLowerCase() !== 'content-disposition') {
+        headers[key] = opts.headers[key]
+      }
+    }
+  }
+
+  // merge user-provided options
+  opts = Object.create(opts)
+  opts.headers = headers
+
   // Resolve the full path for sendFile
   var fullPath = resolve(path);
 
-  return this.sendFile(fullPath, { headers: headers }, done);
+  // send file
+  return this.sendFile(fullPath, opts, done)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Closes #638
+* Fixed partial lookup precedence. Closes #631
+Shaw]
+
+2.2.2 / 2011-04-12
+==================
+
+* Added second callback support for `res.<span class="apidocCodeKeywordSpan">download</span>()` connection errors
+* Fixed `filename` option passing to template engine
+
+2.2.1 / 2011-04-04
+==================
+
+* Added `layout(path)` helper to change the layout within a view. Closes #610
+* Fixed `partial()` collection object support.
+...</pre></li>
     </ul>
 
 
@@ -6610,21 +7869,20 @@ app.listen(3000)
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
- // parse type
- var parsed = contentType.parse(type);
+3.0.0beta4 / 2012-06-25
+==================
 
- // set charset
- parsed.parameters.charset = charset;
+  * Added `req.auth`
+  * Added `req.range(size)`
+  * Added `res.links(obj)`
+  * Added `res.send(body, status)` support back for backwards compat
+  * Added `.default()` support to `res.<span class="apidocCodeKeywordSpan">format</span>()`
+  * Added 2xx / 304 check to `req.fresh`
+  * Revert "Added + support to the router"
+  * Fixed `res.send()` freshness check, respect res.statusCode
 
- // format type
- return contentType.<span class="apidocCodeKeywordSpan">format</span>(parsed);
-};
-
-/**
-* Parse an extended query string with qs.
-*
-* @return {Object}
-* @private
+3.0.0beta3 / 2012-06-15
+==================
 ...</pre></li>
     </ul>
 
@@ -6641,21 +7899,21 @@ app.listen(3000)
   return this.getHeader(field);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  [![Windows Build][appveyor-image]][appveyor-url]
-  [![Test Coverage][coveralls-image]][coveralls-url]
-
-```js
-var express = require('express')
-var app = express()
-
-app.<span class="apidocCodeKeywordSpan">get</span>('/', function (req, res) {
-  res.send('Hello World')
-})
-
-app.listen(3000)
-```
-
-## Installation
+* Add `acceptRanges` option to `res.sendFile`/`res.sendfile`
+* Add `cacheControl` option to `res.sendFile`/`res.sendfile`
+* Add `options` argument to `req.range`
+  - Includes the `combine` option
+* Encode URL in `res.location`/`res.redirect` if not already encoded
+* Fix some redirect handling in `res.sendFile`/`res.sendfile`
+* Fix Windows absolute path check using forward slashes
+* Improve error with invalid arguments to `req.<span class="apidocCodeKeywordSpan">get</span>()`
+* Improve performance for `res.json`/`res.jsonp` in most cases
+* Improve `Range` header handling in `res.sendFile`/`res.sendfile`
+* deps: accepts@~1.3.3
+  - Fix including type extensions in parameters in `Accept` parsing
+  - Fix parsing `Accept` parameters with quoted equals
+  - Fix parsing `Accept` parameters with quoted semicolons
+  - Many performance improvments
 ...</pre></li>
     </ul>
 
@@ -6675,9 +7933,14 @@ app.listen(3000)
       : String(val);
 
     // add charset to content-type
-    if (field.toLowerCase() === 'content-type' &amp;&amp; !charsetRegExp.test(value)) {
-      var charset = mime.charsets.lookup(value.split(';')[0]);
-      if (charset) value += '; charset=' + charset.toLowerCase();
+    if (field.toLowerCase() === 'content-type') {
+      if (Array.isArray(value)) {
+        throw new TypeError('Content-Type cannot be set to an Array');
+      }
+      if (!charsetRegExp.test(value)) {
+        var charset = mime.charsets.lookup(value.split(';')[0]);
+        if (charset) value += '; charset=' + charset.toLowerCase();
+      }
     }
 
     this.setHeader(field, value);
@@ -6688,7 +7951,23 @@ app.listen(3000)
   }
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+3.0.0alpha2 / 2012-04-26
+==================
+
+* Added `make benchmark` back
+* Added `res.send()` support for `String` objects
+* Added client-side data exposing example
+* Added `res.<span class="apidocCodeKeywordSpan">header</span>()` and `req.header()` aliases for BC
+* Added `express.createServer()` for BC
+* Perf: memoize parsed urls
+* Perf: connect 2.2.0 dep
+* Changed: make `expressInit()` middleware self-aware
+* Fixed: use app.get() for all core settings
+* Fixed redis session example
+* Fixed session example. Closes #1105
+...</pre></li>
     </ul>
 
 
@@ -6718,9 +7997,10 @@ app.listen(3000)
 
   // settings
   var app = this.app;
+  var escape = app.get('json escape')
   var replacer = app.get('json replacer');
   var spaces = app.get('json spaces');
-  var body = stringify(val, replacer, spaces);
+  var body = stringify(val, replacer, spaces, escape)
 
   // content-type
   if (!this.get('Content-Type')) {
@@ -6729,7 +8009,23 @@ app.listen(3000)
 
   return this.send(body);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* fix `req.protocol` for proxy-direct connections
+* configurable query parser with `app.set('query parser', parser)`
+  - `app.set('query parser', 'extended')` parse with "qs" module
+  - `app.set('query parser', 'simple')` parse with "querystring" core module
+  - `app.set('query parser', false)` disable query string parsing
+  - `app.set('query parser', true)` enable simple parsing
+* deprecate `res.<span class="apidocCodeKeywordSpan">json</span>(status, obj)` -- use `res.status(status).json(obj)` instead
+* deprecate `res.jsonp(status, obj)` -- use `res.status(status).jsonp(obj)` instead
+* deprecate `res.send(status, body)` -- use `res.status(status).send(body)` instead
+* deps: debug@1.0.4
+* deps: depd@0.4.2
+  - Add `TRACE_DEPRECATION` environment variable
+  - Remove non-standard grey color from color output
+  - Support `--no-deprecation` argument
+...</pre></li>
     </ul>
 
 
@@ -6759,9 +8055,10 @@ app.listen(3000)
 
   // settings
   var app = this.app;
+  var escape = app.get('json escape')
   var replacer = app.get('json replacer');
   var spaces = app.get('json spaces');
-  var body = stringify(val, replacer, spaces);
+  var body = stringify(val, replacer, spaces, escape)
   var callback = this.req.query[app.get('jsonp callback name')];
 
   // content-type
@@ -6777,7 +8074,6 @@ app.listen(3000)
 
   // jsonp
   if (typeof callback === 'string' &amp;&amp; callback.length !== 0) {
-    this.charset = 'utf-8';
     this.set('X-Content-Type-Options', 'nosniff');
     this.set('Content-Type', 'text/javascript');
 
@@ -6796,7 +8092,23 @@ app.listen(3000)
 
   return this.send(body);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* fix `req.protocol` for proxy-direct connections
+* configurable query parser with `app.set('query parser', parser)`
+  - `app.set('query parser', 'extended')` parse with "qs" module
+  - `app.set('query parser', 'simple')` parse with "querystring" core module
+  - `app.set('query parser', false)` disable query string parsing
+  - `app.set('query parser', true)` enable simple parsing
+* deprecate `res.json(status, obj)` -- use `res.status(status).json(obj)` instead
+* deprecate `res.<span class="apidocCodeKeywordSpan">jsonp</span>(status, obj)` -- use `res.status(status).jsonp(obj)` instead
+* deprecate `res.send(status, body)` -- use `res.status(status).send(body)` instead
+* deps: debug@1.0.4
+* deps: depd@0.4.2
+  - Add `TRACE_DEPRECATION` environment variable
+  - Remove non-standard grey color from color output
+  - Support `--no-deprecation` argument
+  - Support `--trace-deprecation` argument
+...</pre></li>
     </ul>
 
 
@@ -6815,7 +8127,23 @@ app.listen(3000)
     return '&lt;' + links[rel] + '&gt;; rel="' + rel + '"';
   }).join(', '));
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  * updated tests to use "supertest"
+
+3.0.0beta4 / 2012-06-25
+==================
+
+  * Added `req.auth`
+  * Added `req.range(size)`
+  * Added `res.<span class="apidocCodeKeywordSpan">links</span>(obj)`
+  * Added `res.send(body, status)` support back for backwards compat
+  * Added `.default()` support to `res.format()`
+  * Added 2xx / 304 check to `req.fresh`
+  * Revert "Added + support to the router"
+  * Fixed `res.send()` freshness check, respect res.statusCode
+
+3.0.0beta3 / 2012-06-15
+...</pre></li>
     </ul>
 
 
@@ -6838,7 +8166,23 @@ app.listen(3000)
   // set location
   return this.set('Location', encodeUrl(loc));
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+3.1.0 / 2013-01-25
+==================
+
+* add support for leading "." in "view engine" setting
+* add array support to `res.set()`
+* add node 0.8.x to travis.yml
+* add "subdomain offset" setting for tweaking `req.subdomains`
+* add `res.<span class="apidocCodeKeywordSpan">location</span>(url)` implementing `res.redirect()`-like setting of Location
+* use app.get() for x-powered-by setting for inheritance
+* fix colons in passwords for `req.auth`
+
+3.0.6 / 2013-01-04
+==================
+
+* add http verb methods to Router
+...</pre></li>
     </ul>
 
 
@@ -6895,7 +8239,23 @@ app.listen(3000)
     this.end(body);
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+4.6.0 / 2014-07-11
+==================
+
+* accept multiple callbacks to `app.use()`
+* add explicit "Rosetta Flash JSONP abuse" protection
+  - previous versions are not vulnerable; this is just explicit protection
+* catch errors in multiple `req.param(name, fn)` handlers
+* deprecate `res.<span class="apidocCodeKeywordSpan">redirect</span>(url, status)` -- use `res.redirect(status, url)` instead
+* fix `res.send(status, num)` to send `num` as json (not error)
+* remove unnecessary escaping when `res.jsonp` returns JSON response
+* support non-string `path` in `app.use(path, fn)`
+  - supports array of paths
+  - supports `RegExp`
+* router: fix optimization on router exit
+* router: refactor location of `try` blocks
+...</pre></li>
     </ul>
 
 
@@ -6932,7 +8292,23 @@ app.listen(3000)
   // render
   app.render(view, opts, done);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* remove old OPTIONS default response
+
+3.0.0rc3 / 2012-08-13
+==================
+
+* update connect dep
+* fix signed cookies to work with `connect.cookieParser()` ("s:" prefix was missing) [tnydwrds]
+* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of "locals"
+
+3.0.0rc2 / 2012-08-03
+==================
+
+* add CORS example
+* update connect dep
+* deprecate `.createServer()` &amp; remove old stale examples
+...</pre></li>
     </ul>
 
 
@@ -6947,7 +8323,6 @@ app.listen(3000)
     <li>description and source-code<pre class="apidocCodePre">function send(body) {
   var chunk = body;
   var encoding;
-  var len;
   var req = this.req;
   var type;
 
@@ -7012,23 +8387,33 @@ app.listen(3000)
     }
   }
 
+  // determine if ETag should be generated
+  var etagFn = app.get('etag fn')
+  var generateETag = !this.get('ETag') &amp;&amp; typeof etagFn === 'function'
+
   // populate Content-Length
+  var len
   if (chunk !== undefined) {
-    if (!Buffer.isBuffer(chunk)) {
-      // convert chunk to Buffer; saves later double conversions
-      chunk = new Buffer(chunk, encoding);
+    if (Buffer.isBuffer(chunk)) {
+      // get length of Buffer
+      len = chunk.length
+    } else if (!generateETag &amp;&amp; chunk.length &lt; 1000) {
+      // just calculate length when no ETag + small chunk
+      len = Buffer.byteLength(chunk, encoding)
+    } else {
+      // convert chunk to Buffer and calculate
+      chunk = Buffer.from(chunk, encoding)
       encoding = undefined;
+      len = chunk.length
     }
 
-    len = chunk.length;
     this.set('Content-Length', len);
   }
 
   // populate ETag
   var etag;
-  var generateETag = len !== undefined &amp;&amp; app.get('etag fn');
-  if (typeof generateETag === 'function' &amp;&amp; !this.get('ETag')) {
-    if ((etag = generateETag(chunk, encoding))) {
+  if (generateETag &amp;&amp; len !== undefined) {
+    if ((etag = etagFn(chunk, encoding))) {
       this.set('ETag', etag);
     }
   }
@@ -7055,20 +8440,21 @@ app.listen(3000)
   return this;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  [![Test Coverage][coveralls-image]][coveralls-url]
+  - Fix parsing of mixed objects and values
 
-```js
-var express = require('express')
-var app = express()
+4.10.0 / 2014-10-23
+===================
 
-app.get('/', function (req, res) {
-  res.<span class="apidocCodeKeywordSpan">send</span>('Hello World')
-})
-
-app.listen(3000)
-```
-
-## Installation
+* Add support for `app.set('views', array)`
+  - Views are looked up in sequence in array of directories
+* Fix `res.<span class="apidocCodeKeywordSpan">send</span>(status)` to mention `res.sendStatus(status)`
+* Fix handling of invalid empty URLs
+* Use `content-disposition` module for `res.attachment`/`res.download`
+  - Sends standards-compliant `Content-Disposition` header
+  - Full Unicode support
+* Use `path.resolve` in view lookup
+* deps: debug@~2.1.0
+  - Implement `DEBUG_FD` env variable support
 ...</pre></li>
     </ul>
 
@@ -7117,7 +8503,23 @@ app.listen(3000)
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*   - `headers`  object of headers to serve with file
+*   - `dotfiles` serve dotfiles, defaulting to false; can be `"allow"` to send them
+*
+* Other options are passed along to `send`.
+*
+* Examples:
+*
+*  The following example illustrates how `res.<span class="apidocCodeKeywordSpan">sendFile</span>()` may
+*  be used as an alternative for the `static()` middleware for
+*  dynamic situations. The code backing `res.sendFile()` is actually
+*  the same code, so HTTP cache support etc is identical.
+*
+*     app.get('/user/:uid/photos/:file', function(req, res){
+*       var uid = req.params.uid
+*         , file = req.params.file;
+...</pre></li>
     </ul>
 
 
@@ -7137,7 +8539,23 @@ app.listen(3000)
 
   return this.send(body);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  - Fix parsing of mixed objects and values
+
+4.10.0 / 2014-10-23
+===================
+
+* Add support for `app.set('views', array)`
+  - Views are looked up in sequence in array of directories
+* Fix `res.send(status)` to mention `res.<span class="apidocCodeKeywordSpan">sendStatus</span>(status)`
+* Fix handling of invalid empty URLs
+* Use `content-disposition` module for `res.attachment`/`res.download`
+  - Sends standards-compliant `Content-Disposition` header
+  - Full Unicode support
+* Use `path.resolve` in view lookup
+* deps: debug@~2.1.0
+  - Implement `DEBUG_FD` env variable support
+...</pre></li>
     </ul>
 
 
@@ -7154,7 +8572,23 @@ app.listen(3000)
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  * add more examples to view-locals
+  * add scheme-relative redirects (`res.redirect("//foo.com")`) support
+  * update cookie dep
+  * update connect dep
+  * update send dep
+  * fix `express(1)` -h flag, use -H for hogan. Closes #1245
+  * fix `res.<span class="apidocCodeKeywordSpan">sendfile</span>()` socket error handling regression
+
+3.0.0beta7 / 2012-07-16
+==================
+
+  * update connect dep for `send()` root normalization regression
+
+3.0.0beta6 / 2012-07-13
+...</pre></li>
     </ul>
 
 
@@ -7173,9 +8607,14 @@ return fn.apply(this, arguments)
       : String(val);
 
     // add charset to content-type
-    if (field.toLowerCase() === 'content-type' &amp;&amp; !charsetRegExp.test(value)) {
-      var charset = mime.charsets.lookup(value.split(';')[0]);
-      if (charset) value += '; charset=' + charset.toLowerCase();
+    if (field.toLowerCase() === 'content-type') {
+      if (Array.isArray(value)) {
+        throw new TypeError('Content-Type cannot be set to an Array');
+      }
+      if (!charsetRegExp.test(value)) {
+        var charset = mime.charsets.lookup(value.split(';')[0]);
+        if (charset) value += '; charset=' + charset.toLowerCase();
+      }
     }
 
     this.setHeader(field, value);
@@ -7186,7 +8625,23 @@ return fn.apply(this, arguments)
   }
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Fix handling of URLs containing `://` in the path
+* deps: qs@2.3.2
+  - Fix parsing of mixed objects and values
+
+4.10.0 / 2014-10-23
+===================
+
+* Add support for `app.<span class="apidocCodeKeywordSpan">set</span>('views', array)`
+  - Views are looked up in sequence in array of directories
+* Fix `res.send(status)` to mention `res.sendStatus(status)`
+* Fix handling of invalid empty URLs
+* Use `content-disposition` module for `res.attachment`/`res.download`
+  - Sends standards-compliant `Content-Disposition` header
+  - Full Unicode support
+* Use `path.resolve` in view lookup
+...</pre></li>
     </ul>
 
 
@@ -7202,7 +8657,23 @@ return fn.apply(this, arguments)
   this.statusCode = code;
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+* fix `req.protocol` for proxy-direct connections
+* configurable query parser with `app.set('query parser', parser)`
+  - `app.set('query parser', 'extended')` parse with "qs" module
+  - `app.set('query parser', 'simple')` parse with "querystring" core module
+  - `app.set('query parser', false)` disable query string parsing
+  - `app.set('query parser', true)` enable simple parsing
+* deprecate `res.json(status, obj)` -- use `res.<span class="apidocCodeKeywordSpan">status</span>(status).json(obj)` instead
+* deprecate `res.jsonp(status, obj)` -- use `res.status(status).jsonp(obj)` instead
+* deprecate `res.send(status, body)` -- use `res.status(status).send(body)` instead
+* deps: debug@1.0.4
+* deps: depd@0.4.2
+  - Add `TRACE_DEPRECATION` environment variable
+  - Remove non-standard grey color from color output
+  - Support `--no-deprecation` argument
+...</pre></li>
     </ul>
 
 
@@ -7221,7 +8692,23 @@ return fn.apply(this, arguments)
 
   return this.set('Content-Type', ct);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
+* Added `--less` support to express(1)
+* Added `express.response` prototype
+* Added `express.request` prototype
+* Added `express.application` prototype
+* Added `app.path()`
+* Added `app.render()`
+* Added `res.<span class="apidocCodeKeywordSpan">type</span>()` to replace `res.contentType()`
+* Changed: `res.redirect()` to add relative support
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
+* Rewrite of all tests with mocha
+* Removed "root" setting
+* Removed `res.redirect('home')` support
+* Removed `req.notify()`
+...</pre></li>
     </ul>
 
 
@@ -7244,7 +8731,23 @@ return fn.apply(this, arguments)
 
   return this;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* fix routing regression when altering `req.method`
+
+4.5.0 / 2014-07-04
+==================
+
+* add deprecation message to non-plural `req.accepts*`
+* add deprecation message to `res.send(body, status)`
+* add deprecation message to `res.<span class="apidocCodeKeywordSpan">vary</span>()`
+* add `headers` option to `res.sendfile`
+  - use to set headers on successful file transfer
+* add `mergeParams` option to `Router`
+  - merges `req.params` from parent routes
+* add `req.hostname` -- correct name for what `req.host` returns
+* deprecate things with `depd` module
+* deprecate `req.host` -- use `req.hostname` instead
+...</pre></li>
     </ul>
 
 
@@ -7385,12 +8888,12 @@ return fn.apply(this, arguments)
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">etag = function (body, encoding) {
+    <li>description and source-code<pre class="apidocCodePre">function generateETag(body, encoding) {
   var buf = !Buffer.isBuffer(body)
-    ? new Buffer(body, encoding)
-    : body;
+    ? Buffer.from(body, encoding)
+    : body
 
-  return etag(buf, {weak: false});
+  return etag(buf, options)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -7518,12 +9021,12 @@ exports.normalizeTypes = function(types){
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function wetag(body, encoding){
+    <li>description and source-code<pre class="apidocCodePre">function generateETag(body, encoding) {
   var buf = !Buffer.isBuffer(body)
-    ? new Buffer(body, encoding)
-    : body;
+    ? Buffer.from(body, encoding)
+    : body
 
-  return etag(buf, {weak: true});
+  return etag(buf, options)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -7569,7 +9072,15 @@ exports.normalizeTypes = function(types){
     // load engine
     var mod = this.ext.substr(1)
     debug('require "%s"', mod)
-    opts.engines[this.ext] = require(mod).__express
+
+    // default engine export
+    var fn = require(mod).__express
+
+    if (typeof fn !== 'function') {
+      throw new Error('Module "' + mod + '" does not provide a view engine.')
+    }
+
+    opts.engines[this.ext] = fn
   }
 
   // store loaded engine
@@ -7616,21 +9127,21 @@ exports.normalizeTypes = function(types){
   return path;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-* @return {Object}
-* @api private
-*/
 
-exports.normalizeType = function(type){
- return ~type.indexOf('/')
-   ? acceptParams(type)
-   : { value: mime.<span class="apidocCodeKeywordSpan">lookup</span>(type), params: {} };
-};
+  * Fixed view hints
 
-/**
-* Normalize `types`, for example "html" becomes "text/html".
-*
-* @param {Array} types
-* @return {Array}
+2.3.1 / 2011-04-26
+==================
+
+  * Added `app.match()` as `app.match.all()`
+  * Added `app.<span class="apidocCodeKeywordSpan">lookup</span>()` as `app.lookup.all()`
+  * Added `app.remove()` for `app.remove.all()`
+  * Added `app.remove.VERB()`
+  * Fixed template caching collision issue. Closes #644
+  * Moved router over from connect and started refactor
+
+2.3.0 / 2011-04-25
+==================
 ...</pre></li>
     </ul>
 
@@ -7647,7 +9158,23 @@ exports.normalizeType = function(type){
   debug('render "%s"', this.path);
   this.engine(this.path, options, callback);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* remove old OPTIONS default response
+
+3.0.0rc3 / 2012-08-13
+==================
+
+* update connect dep
+* fix signed cookies to work with `connect.cookieParser()` ("s:" prefix was missing) [tnydwrds]
+* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of "locals"
+
+3.0.0rc2 / 2012-08-03
+==================
+
+* add CORS example
+* update connect dep
+* deprecate `.createServer()` &amp; remove old stale examples
+...</pre></li>
     </ul>
 
 

@@ -1,0 +1,1744 @@
+<svg height="16686" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="16686" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26"></tspan>
+
+<tspan x="10" y="42">[MODE_BUILD=npmTest] - 2018-06-10T18:27:43.474Z - npm-testing /home/travis/build/npmdoc/node-npm\</tspan>
+<tspan x="10" y="58">doc-express</tspan>
+
+<tspan x="10" y="74"></tspan>
+
+<tspan x="10" y="90"></tspan>
+
+<tspan x="10" y="106">npmTest - merged test-report from file /home/travis/build/npmdoc/node-npmdoc-express/tmp/build/t\</tspan>
+<tspan x="10" y="122">est-report.json</tspan>
+
+<tspan x="10" y="138">&gt; server listening on http-port 44127</tspan>
+
+<tspan x="10" y="154">[node test-case 1 of 8 passed] - testCase_buildApidoc_default</tspan>
+
+<tspan x="10" y="170">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/pa\</tspan>
+<tspan x="10" y="186">ckage.json</tspan>
+
+<tspan x="10" y="202">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/Hi\</tspan>
+<tspan x="10" y="218">story.md</tspan>
+
+<tspan x="10" y="234">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/in\</tspan>
+<tspan x="10" y="250">dex.js</tspan>
+
+<tspan x="10" y="266">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/LI\</tspan>
+<tspan x="10" y="282">CENSE</tspan>
+
+<tspan x="10" y="298">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/pa\</tspan>
+<tspan x="10" y="314">ckage.json</tspan>
+
+<tspan x="10" y="330">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/Re\</tspan>
+<tspan x="10" y="346">adme.md</tspan>
+
+<tspan x="10" y="362">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="378">b/application.js</tspan>
+
+<tspan x="10" y="394">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="410">b/express.js</tspan>
+
+<tspan x="10" y="426">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="442">b/request.js</tspan>
+
+<tspan x="10" y="458">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="474">b/response.js</tspan>
+
+<tspan x="10" y="490">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="506">b/utils.js</tspan>
+
+<tspan x="10" y="522">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="538">b/view.js</tspan>
+
+<tspan x="10" y="554">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="570">b/middleware/init.js</tspan>
+
+<tspan x="10" y="586">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="602">b/middleware/query.js</tspan>
+
+<tspan x="10" y="618">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="634">b/router/index.js</tspan>
+
+<tspan x="10" y="650">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="666">b/router/layer.js</tspan>
+
+<tspan x="10" y="682">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="698">b/router/route.js</tspan>
+
+<tspan x="10" y="714">apidocCreate - requiring /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express ...</tspan>
+
+<tspan x="10" y="730">apidocCreate - ... required /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express</tspan>
+
+<tspan x="10" y="746">apidocCreate - libFile index.js</tspan>
+
+<tspan x="10" y="762">apidocCreate - libFile lib/application.js</tspan>
+
+<tspan x="10" y="778">apidocCreate - libFile lib/express.js</tspan>
+
+<tspan x="10" y="794">apidocCreate - libFile lib/request.js</tspan>
+
+<tspan x="10" y="810">apidocCreate - libFile lib/response.js</tspan>
+
+<tspan x="10" y="826">apidocCreate - libFile lib/utils.js</tspan>
+
+<tspan x="10" y="842">apidocCreate - libFile lib/view.js</tspan>
+
+<tspan x="10" y="858">apidocCreate - libFile lib/middleware/init.js</tspan>
+
+<tspan x="10" y="874">apidocCreate - libFile lib/middleware/query.js</tspan>
+
+<tspan x="10" y="890">apidocCreate - libFile lib/router/index.js</tspan>
+
+<tspan x="10" y="906">apidocCreate - libFile lib/router/layer.js</tspan>
+
+<tspan x="10" y="922">apidocCreate - libFile lib/router/route.js</tspan>
+
+<tspan x="10" y="938">TypeError: Cannot read property 'encrypted' of undefined</tspan>
+
+<tspan x="10" y="954">    at protocol (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="970">js:307:30)</tspan>
+
+<tspan x="10" y="986">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="1002">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="1018">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="1034">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="1050">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="1066">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="1082">    at Array.map (native)</tspan>
+
+<tspan x="10" y="1098">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="1114">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="1130">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="1146">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="1162">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="1178">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="1194">TypeError: Cannot read property 'encrypted' of undefined</tspan>
+
+<tspan x="10" y="1210">    at protocol (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="1226">js:307:30)</tspan>
+
+<tspan x="10" y="1242">    at secure (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="1258">:336:14)</tspan>
+
+<tspan x="10" y="1274">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="1290">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="1306">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="1322">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="1338">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="1354">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="1370">    at Array.map (native)</tspan>
+
+<tspan x="10" y="1386">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="1402">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="1418">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="1434">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="1450">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="1466">    at ip (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:350\</tspan>
+<tspan x="10" y="1482">:23)</tspan>
+
+<tspan x="10" y="1498">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="1514">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="1530">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="1546">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="1562">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="1578">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="1594">    at Array.map (native)</tspan>
+
+<tspan x="10" y="1610">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="1626">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="1642">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="1658">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="1674">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="1690">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="1706">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="1722">    at ips (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:36\</tspan>
+<tspan x="10" y="1738">7:23)</tspan>
+
+<tspan x="10" y="1754">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="1770">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="1786">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="1802">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="1818">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="1834">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="1850">    at Array.map (native)</tspan>
+
+<tspan x="10" y="1866">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="1882">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="1898">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="1914">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="1930">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="1946">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="1962">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="1978">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="1994">js:428:23)</tspan>
+
+<tspan x="10" y="2010">    at subdomains (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/reques\</tspan>
+<tspan x="10" y="2026">t.js:393:22)</tspan>
+
+<tspan x="10" y="2042">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="2058">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="2074">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="2090">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="2106">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="2122">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="2138">    at Array.map (native)</tspan>
+
+<tspan x="10" y="2154">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="2170">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="2186">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="2202">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="2218">TypeError: Cannot read property 'pathname' of undefined</tspan>
+
+<tspan x="10" y="2234">    at path (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:4\</tspan>
+<tspan x="10" y="2250">13:21)</tspan>
+
+<tspan x="10" y="2266">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="2282">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="2298">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="2314">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="2330">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="2346">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="2362">    at Array.map (native)</tspan>
+
+<tspan x="10" y="2378">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="2394">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="2410">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="2426">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="2442">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="2458">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="2474">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="2490">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="2506">js:428:23)</tspan>
+
+<tspan x="10" y="2522">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="2538">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="2554">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="2570">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="2586">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="2602">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="2618">    at Array.map (native)</tspan>
+
+<tspan x="10" y="2634">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="2650">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="2666">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="2682">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="2698">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="2714">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="2730">TypeError: Path must be a string. Received undefined</tspan>
+
+<tspan x="10" y="2746">    at assertPath (path.js:7:11)</tspan>
+
+<tspan x="10" y="2762">    at relative (path.js:1232:5)</tspan>
+
+<tspan x="10" y="2778">    at formatLocation (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/depd/index.js:\</tspan>
+<tspan x="10" y="2794">356:10)</tspan>
+
+<tspan x="10" y="2810">    at Function.formatPlain (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/depd/ind\</tspan>
+<tspan x="10" y="2826">ex.js:320:27)</tspan>
+
+<tspan x="10" y="2842">    at Function.log (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/depd/index.js:24\</tspan>
+<tspan x="10" y="2858">3:23)</tspan>
+
+<tspan x="10" y="2874">    at eval (eval at wrapfunction (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/de\</tspan>
+<tspan x="10" y="2890">pd/index.js:413:42), &lt;anonymous&gt;:3:5)</tspan>
+
+<tspan x="10" y="2906">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="2922">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="2938">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="2954">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="2970">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="2986">TypeError: Cannot read property 'statusCode' of undefined</tspan>
+
+<tspan x="10" y="3002">    at .fresh (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="3018">:466:19)</tspan>
+
+<tspan x="10" y="3034">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="3050">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="3066">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="3082">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="3098">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="3114">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="3130">    at Array.map (native)</tspan>
+
+<tspan x="10" y="3146">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="3162">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="3178">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="3194">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="3210">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="3226">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="3242">TypeError: Cannot read property 'statusCode' of undefined</tspan>
+
+<tspan x="10" y="3258">    at .fresh (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="3274">:466:19)</tspan>
+
+<tspan x="10" y="3290">    at stale (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:\</tspan>
+<tspan x="10" y="3306">492:15)</tspan>
+
+<tspan x="10" y="3322">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="3338">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="3354">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="3370">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="3386">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="3402">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="3418">    at Array.map (native)</tspan>
+
+<tspan x="10" y="3434">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="3450">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="3466">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="3482">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="3498">TypeError: Cannot read property 'x-requested-with' of undefined</tspan>
+
+<tspan x="10" y="3514">    at header (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="3530">:82:26)</tspan>
+
+<tspan x="10" y="3546">    at xhr (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:50\</tspan>
+<tspan x="10" y="3562">3:18)</tspan>
+
+<tspan x="10" y="3578">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="3594">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="3610">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="3626">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="3642">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="3658">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="3674">    at Array.map (native)</tspan>
+
+<tspan x="10" y="3690">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="3706">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="3722">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="3738">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="3754">created apidoc file /home/travis/build/npmdoc/node-npmdoc-express/tmp/build/apidoc.html</tspan>
+
+<tspan x="10" y="3770"></tspan>
+
+<tspan x="10" y="3786">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/pa\</tspan>
+<tspan x="10" y="3802">ckage.json</tspan>
+
+<tspan x="10" y="3818">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/Hi\</tspan>
+<tspan x="10" y="3834">story.md</tspan>
+
+<tspan x="10" y="3850">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/in\</tspan>
+<tspan x="10" y="3866">dex.js</tspan>
+
+<tspan x="10" y="3882">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/LI\</tspan>
+<tspan x="10" y="3898">CENSE</tspan>
+
+<tspan x="10" y="3914">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/pa\</tspan>
+<tspan x="10" y="3930">ckage.json</tspan>
+
+<tspan x="10" y="3946">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/Re\</tspan>
+<tspan x="10" y="3962">adme.md</tspan>
+
+<tspan x="10" y="3978">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="3994">b/application.js</tspan>
+
+<tspan x="10" y="4010">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4026">b/express.js</tspan>
+
+<tspan x="10" y="4042">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4058">b/request.js</tspan>
+
+<tspan x="10" y="4074">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4090">b/response.js</tspan>
+
+<tspan x="10" y="4106">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4122">b/utils.js</tspan>
+
+<tspan x="10" y="4138">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4154">b/view.js</tspan>
+
+<tspan x="10" y="4170">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4186">b/middleware/init.js</tspan>
+
+<tspan x="10" y="4202">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4218">b/middleware/query.js</tspan>
+
+<tspan x="10" y="4234">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4250">b/router/index.js</tspan>
+
+<tspan x="10" y="4266">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4282">b/router/layer.js</tspan>
+
+<tspan x="10" y="4298">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="4314">b/router/route.js</tspan>
+
+<tspan x="10" y="4330">apidocCreate - requiring /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express ...</tspan>
+
+<tspan x="10" y="4346">apidocCreate - ... required /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express</tspan>
+
+<tspan x="10" y="4362">apidocCreate - libFile index.js</tspan>
+
+<tspan x="10" y="4378">apidocCreate - libFile lib/application.js</tspan>
+
+<tspan x="10" y="4394">apidocCreate - libFile lib/express.js</tspan>
+
+<tspan x="10" y="4410">apidocCreate - libFile lib/request.js</tspan>
+
+<tspan x="10" y="4426">apidocCreate - libFile lib/response.js</tspan>
+
+<tspan x="10" y="4442">apidocCreate - libFile lib/utils.js</tspan>
+
+<tspan x="10" y="4458">apidocCreate - libFile lib/view.js</tspan>
+
+<tspan x="10" y="4474">apidocCreate - libFile lib/middleware/init.js</tspan>
+
+<tspan x="10" y="4490">apidocCreate - libFile lib/middleware/query.js</tspan>
+
+<tspan x="10" y="4506">apidocCreate - libFile lib/router/index.js</tspan>
+
+<tspan x="10" y="4522">apidocCreate - libFile lib/router/layer.js</tspan>
+
+<tspan x="10" y="4538">apidocCreate - libFile lib/router/route.js</tspan>
+
+<tspan x="10" y="4554">TypeError: Cannot read property 'encrypted' of undefined</tspan>
+
+<tspan x="10" y="4570">    at protocol (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="4586">js:307:30)</tspan>
+
+<tspan x="10" y="4602">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="4618">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="4634">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="4650">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="4666">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="4682">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="4698">    at Array.map (native)</tspan>
+
+<tspan x="10" y="4714">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="4730">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="4746">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="4762">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="4778">    at Object.local._testCase_buildCustomOrg_default (/home/travis/build/npmdoc/node-npmdoc-expr\</tspan>
+<tspan x="10" y="4794">ess/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="4810">TypeError: Cannot read property 'encrypted' of undefined</tspan>
+
+<tspan x="10" y="4826">    at protocol (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="4842">js:307:30)</tspan>
+
+<tspan x="10" y="4858">    at secure (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="4874">:336:14)</tspan>
+
+<tspan x="10" y="4890">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="4906">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="4922">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="4938">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="4954">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="4970">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="4986">    at Array.map (native)</tspan>
+
+<tspan x="10" y="5002">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="5018">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="5034">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="5050">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="5066">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="5082">    at ip (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:350\</tspan>
+<tspan x="10" y="5098">:23)</tspan>
+
+<tspan x="10" y="5114">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="5130">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="5146">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="5162">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="5178">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="5194">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="5210">    at Array.map (native)</tspan>
+
+<tspan x="10" y="5226">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="5242">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="5258">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="5274">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="5290">    at Object.local._testCase_buildCustomOrg_default (/home/travis/build/npmdoc/node-npmdoc-expr\</tspan>
+<tspan x="10" y="5306">ess/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="5322">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="5338">    at ips (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:36\</tspan>
+<tspan x="10" y="5354">7:23)</tspan>
+
+<tspan x="10" y="5370">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="5386">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="5402">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="5418">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="5434">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="5450">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="5466">    at Array.map (native)</tspan>
+
+<tspan x="10" y="5482">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="5498">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="5514">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="5530">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="5546">    at Object.local._testCase_buildCustomOrg_default (/home/travis/build/npmdoc/node-npmdoc-expr\</tspan>
+<tspan x="10" y="5562">ess/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="5578">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="5594">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="5610">js:428:23)</tspan>
+
+<tspan x="10" y="5626">    at subdomains (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/reques\</tspan>
+<tspan x="10" y="5642">t.js:393:22)</tspan>
+
+<tspan x="10" y="5658">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="5674">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="5690">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="5706">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="5722">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="5738">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="5754">    at Array.map (native)</tspan>
+
+<tspan x="10" y="5770">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="5786">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="5802">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="5818">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="5834">TypeError: Cannot read property 'pathname' of undefined</tspan>
+
+<tspan x="10" y="5850">    at path (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:4\</tspan>
+<tspan x="10" y="5866">13:21)</tspan>
+
+<tspan x="10" y="5882">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="5898">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="5914">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="5930">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="5946">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="5962">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="5978">    at Array.map (native)</tspan>
+
+<tspan x="10" y="5994">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="6010">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="6026">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="6042">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="6058">    at Object.local._testCase_buildCustomOrg_default (/home/travis/build/npmdoc/node-npmdoc-expr\</tspan>
+<tspan x="10" y="6074">ess/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="6090">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="6106">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="6122">js:428:23)</tspan>
+
+<tspan x="10" y="6138">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="6154">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="6170">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="6186">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="6202">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="6218">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="6234">    at Array.map (native)</tspan>
+
+<tspan x="10" y="6250">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="6266">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="6282">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="6298">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="6314">    at Object.local._testCase_buildCustomOrg_default (/home/travis/build/npmdoc/node-npmdoc-expr\</tspan>
+<tspan x="10" y="6330">ess/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="6346">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="6362">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="6378">js:428:23)</tspan>
+
+<tspan x="10" y="6394">    at host (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:4\</tspan>
+<tspan x="10" y="6410">51:14)</tspan>
+
+<tspan x="10" y="6426">    at eval (eval at wrapfunction (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/de\</tspan>
+<tspan x="10" y="6442">pd/index.js:413:42), &lt;anonymous&gt;:4:11)</tspan>
+
+<tspan x="10" y="6458">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="6474">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="6490">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="6506">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="6522">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="6538">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="6554">    at Array.map (native)</tspan>
+
+<tspan x="10" y="6570">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="6586">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="6602">TypeError: Cannot read property 'statusCode' of undefined</tspan>
+
+<tspan x="10" y="6618">    at .fresh (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="6634">:466:19)</tspan>
+
+<tspan x="10" y="6650">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="6666">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="6682">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="6698">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="6714">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="6730">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="6746">    at Array.map (native)</tspan>
+
+<tspan x="10" y="6762">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="6778">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="6794">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="6810">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="6826">    at Object.local._testCase_buildCustomOrg_default (/home/travis/build/npmdoc/node-npmdoc-expr\</tspan>
+<tspan x="10" y="6842">ess/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="6858">TypeError: Cannot read property 'statusCode' of undefined</tspan>
+
+<tspan x="10" y="6874">    at .fresh (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="6890">:466:19)</tspan>
+
+<tspan x="10" y="6906">    at stale (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:\</tspan>
+<tspan x="10" y="6922">492:15)</tspan>
+
+<tspan x="10" y="6938">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="6954">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="6970">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="6986">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="7002">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="7018">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="7034">    at Array.map (native)</tspan>
+
+<tspan x="10" y="7050">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="7066">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="7082">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="7098">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="7114">TypeError: Cannot read property 'x-requested-with' of undefined</tspan>
+
+<tspan x="10" y="7130">    at header (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="7146">:82:26)</tspan>
+
+<tspan x="10" y="7162">    at xhr (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:50\</tspan>
+<tspan x="10" y="7178">3:18)</tspan>
+
+<tspan x="10" y="7194">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="7210">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="7226">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="7242">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="7258">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="7274">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="7290">    at Array.map (native)</tspan>
+
+<tspan x="10" y="7306">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="7322">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="7338">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="7354">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="7370">created customOrg file /home/travis/build/npmdoc/node-npmdoc-express/README.md</tspan>
+
+<tspan x="10" y="7386"></tspan>
+
+<tspan x="10" y="7402">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/pa\</tspan>
+<tspan x="10" y="7418">ckage.json</tspan>
+
+<tspan x="10" y="7434">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/Hi\</tspan>
+<tspan x="10" y="7450">story.md</tspan>
+
+<tspan x="10" y="7466">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/in\</tspan>
+<tspan x="10" y="7482">dex.js</tspan>
+
+<tspan x="10" y="7498">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/LI\</tspan>
+<tspan x="10" y="7514">CENSE</tspan>
+
+<tspan x="10" y="7530">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/pa\</tspan>
+<tspan x="10" y="7546">ckage.json</tspan>
+
+<tspan x="10" y="7562">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/Re\</tspan>
+<tspan x="10" y="7578">adme.md</tspan>
+
+<tspan x="10" y="7594">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7610">b/application.js</tspan>
+
+<tspan x="10" y="7626">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7642">b/express.js</tspan>
+
+<tspan x="10" y="7658">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7674">b/request.js</tspan>
+
+<tspan x="10" y="7690">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7706">b/response.js</tspan>
+
+<tspan x="10" y="7722">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7738">b/utils.js</tspan>
+
+<tspan x="10" y="7754">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7770">b/view.js</tspan>
+
+<tspan x="10" y="7786">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7802">b/middleware/init.js</tspan>
+
+<tspan x="10" y="7818">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7834">b/middleware/query.js</tspan>
+
+<tspan x="10" y="7850">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7866">b/router/index.js</tspan>
+
+<tspan x="10" y="7882">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7898">b/router/layer.js</tspan>
+
+<tspan x="10" y="7914">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="7930">b/router/route.js</tspan>
+
+<tspan x="10" y="7946">apidocCreate - requiring /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express ...</tspan>
+
+<tspan x="10" y="7962">apidocCreate - ... required /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express</tspan>
+
+<tspan x="10" y="7978">apidocCreate - libFile index.js</tspan>
+
+<tspan x="10" y="7994">apidocCreate - libFile lib/application.js</tspan>
+
+<tspan x="10" y="8010">apidocCreate - libFile lib/express.js</tspan>
+
+<tspan x="10" y="8026">apidocCreate - libFile lib/request.js</tspan>
+
+<tspan x="10" y="8042">apidocCreate - libFile lib/response.js</tspan>
+
+<tspan x="10" y="8058">apidocCreate - libFile lib/utils.js</tspan>
+
+<tspan x="10" y="8074">apidocCreate - libFile lib/view.js</tspan>
+
+<tspan x="10" y="8090">apidocCreate - libFile lib/middleware/init.js</tspan>
+
+<tspan x="10" y="8106">apidocCreate - libFile lib/middleware/query.js</tspan>
+
+<tspan x="10" y="8122">apidocCreate - libFile lib/router/index.js</tspan>
+
+<tspan x="10" y="8138">apidocCreate - libFile lib/router/layer.js</tspan>
+
+<tspan x="10" y="8154">apidocCreate - libFile lib/router/route.js</tspan>
+
+<tspan x="10" y="8170">TypeError: Cannot read property 'encrypted' of undefined</tspan>
+
+<tspan x="10" y="8186">    at protocol (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="8202">js:307:30)</tspan>
+
+<tspan x="10" y="8218">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="8234">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="8250">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="8266">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="8282">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="8298">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="8314">    at Array.map (native)</tspan>
+
+<tspan x="10" y="8330">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="8346">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="8362">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="8378">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="8394">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="8410">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="8426">TypeError: Cannot read property 'encrypted' of undefined</tspan>
+
+<tspan x="10" y="8442">    at protocol (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="8458">js:307:30)</tspan>
+
+<tspan x="10" y="8474">    at secure (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="8490">:336:14)</tspan>
+
+<tspan x="10" y="8506">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="8522">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="8538">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="8554">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="8570">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="8586">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="8602">    at Array.map (native)</tspan>
+
+<tspan x="10" y="8618">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="8634">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="8650">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="8666">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="8682">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="8698">    at ip (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:350\</tspan>
+<tspan x="10" y="8714">:23)</tspan>
+
+<tspan x="10" y="8730">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="8746">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="8762">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="8778">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="8794">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="8810">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="8826">    at Array.map (native)</tspan>
+
+<tspan x="10" y="8842">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="8858">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="8874">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="8890">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="8906">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="8922">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="8938">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="8954">    at ips (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:36\</tspan>
+<tspan x="10" y="8970">7:23)</tspan>
+
+<tspan x="10" y="8986">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="9002">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="9018">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="9034">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="9050">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="9066">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="9082">    at Array.map (native)</tspan>
+
+<tspan x="10" y="9098">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="9114">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="9130">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="9146">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="9162">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="9178">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="9194">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="9210">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="9226">js:428:23)</tspan>
+
+<tspan x="10" y="9242">    at subdomains (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/reques\</tspan>
+<tspan x="10" y="9258">t.js:393:22)</tspan>
+
+<tspan x="10" y="9274">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="9290">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="9306">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="9322">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="9338">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="9354">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="9370">    at Array.map (native)</tspan>
+
+<tspan x="10" y="9386">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="9402">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="9418">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="9434">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="9450">TypeError: Cannot read property 'pathname' of undefined</tspan>
+
+<tspan x="10" y="9466">    at path (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:4\</tspan>
+<tspan x="10" y="9482">13:21)</tspan>
+
+<tspan x="10" y="9498">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="9514">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="9530">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="9546">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="9562">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="9578">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="9594">    at Array.map (native)</tspan>
+
+<tspan x="10" y="9610">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="9626">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="9642">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="9658">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="9674">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="9690">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="9706">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="9722">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="9738">js:428:23)</tspan>
+
+<tspan x="10" y="9754">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="9770">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="9786">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="9802">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="9818">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="9834">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="9850">    at Array.map (native)</tspan>
+
+<tspan x="10" y="9866">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="9882">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="9898">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="9914">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="9930">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="9946">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="9962">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="9978">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="9994">js:428:23)</tspan>
+
+<tspan x="10" y="10010">    at host (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:4\</tspan>
+<tspan x="10" y="10026">51:14)</tspan>
+
+<tspan x="10" y="10042">    at eval (eval at wrapfunction (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/de\</tspan>
+<tspan x="10" y="10058">pd/index.js:413:42), &lt;anonymous&gt;:4:11)</tspan>
+
+<tspan x="10" y="10074">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="10090">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="10106">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="10122">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="10138">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="10154">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="10170">    at Array.map (native)</tspan>
+
+<tspan x="10" y="10186">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="10202">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="10218">TypeError: Cannot read property 'statusCode' of undefined</tspan>
+
+<tspan x="10" y="10234">    at .fresh (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="10250">:466:19)</tspan>
+
+<tspan x="10" y="10266">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="10282">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="10298">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="10314">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="10330">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="10346">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="10362">    at Array.map (native)</tspan>
+
+<tspan x="10" y="10378">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="10394">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="10410">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="10426">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="10442">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="10458">tility2/lib.utility2.js:3455:23)</tspan>
+
+<tspan x="10" y="10474">TypeError: Cannot read property 'statusCode' of undefined</tspan>
+
+<tspan x="10" y="10490">    at .fresh (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="10506">:466:19)</tspan>
+
+<tspan x="10" y="10522">    at stale (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:\</tspan>
+<tspan x="10" y="10538">492:15)</tspan>
+
+<tspan x="10" y="10554">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="10570">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="10586">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="10602">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="10618">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="10634">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="10650">    at Array.map (native)</tspan>
+
+<tspan x="10" y="10666">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="10682">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="10698">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="10714">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="10730">TypeError: Cannot read property 'x-requested-with' of undefined</tspan>
+
+<tspan x="10" y="10746">    at header (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="10762">:82:26)</tspan>
+
+<tspan x="10" y="10778">    at xhr (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:50\</tspan>
+<tspan x="10" y="10794">3:18)</tspan>
+
+<tspan x="10" y="10810">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="10826">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="10842">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="10858">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="10874">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="10890">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="10906">    at Array.map (native)</tspan>
+
+<tspan x="10" y="10922">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="10938">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="10954">    at Object.local.buildApidoc (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/util\</tspan>
+<tspan x="10" y="10970">ity2/lib.utility2.js:3322:72)</tspan>
+
+<tspan x="10" y="10986">created apidoc file /home/travis/build/npmdoc/node-npmdoc-express/tmp/build/apidoc.html</tspan>
+
+<tspan x="10" y="11002"></tspan>
+
+<tspan x="10" y="11018">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/pa\</tspan>
+<tspan x="10" y="11034">ckage.json</tspan>
+
+<tspan x="10" y="11050">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/Hi\</tspan>
+<tspan x="10" y="11066">story.md</tspan>
+
+<tspan x="10" y="11082">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/in\</tspan>
+<tspan x="10" y="11098">dex.js</tspan>
+
+<tspan x="10" y="11114">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/LI\</tspan>
+<tspan x="10" y="11130">CENSE</tspan>
+
+<tspan x="10" y="11146">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/pa\</tspan>
+<tspan x="10" y="11162">ckage.json</tspan>
+
+<tspan x="10" y="11178">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/Re\</tspan>
+<tspan x="10" y="11194">adme.md</tspan>
+
+<tspan x="10" y="11210">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11226">b/application.js</tspan>
+
+<tspan x="10" y="11242">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11258">b/express.js</tspan>
+
+<tspan x="10" y="11274">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11290">b/request.js</tspan>
+
+<tspan x="10" y="11306">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11322">b/response.js</tspan>
+
+<tspan x="10" y="11338">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11354">b/utils.js</tspan>
+
+<tspan x="10" y="11370">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11386">b/view.js</tspan>
+
+<tspan x="10" y="11402">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11418">b/middleware/init.js</tspan>
+
+<tspan x="10" y="11434">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11450">b/middleware/query.js</tspan>
+
+<tspan x="10" y="11466">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11482">b/router/index.js</tspan>
+
+<tspan x="10" y="11498">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11514">b/router/layer.js</tspan>
+
+<tspan x="10" y="11530">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/li\</tspan>
+<tspan x="10" y="11546">b/router/route.js</tspan>
+
+<tspan x="10" y="11562">apidocCreate - requiring /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express ...</tspan>
+
+<tspan x="10" y="11578">apidocCreate - ... required /home/travis/build/npmdoc/node-npmdoc-express/node_modules/express</tspan>
+
+<tspan x="10" y="11594">apidocCreate - libFile index.js</tspan>
+
+<tspan x="10" y="11610">apidocCreate - libFile lib/application.js</tspan>
+
+<tspan x="10" y="11626">apidocCreate - libFile lib/express.js</tspan>
+
+<tspan x="10" y="11642">apidocCreate - libFile lib/request.js</tspan>
+
+<tspan x="10" y="11658">apidocCreate - libFile lib/response.js</tspan>
+
+<tspan x="10" y="11674">apidocCreate - libFile lib/utils.js</tspan>
+
+<tspan x="10" y="11690">apidocCreate - libFile lib/view.js</tspan>
+
+<tspan x="10" y="11706">apidocCreate - libFile lib/middleware/init.js</tspan>
+
+<tspan x="10" y="11722">apidocCreate - libFile lib/middleware/query.js</tspan>
+
+<tspan x="10" y="11738">apidocCreate - libFile lib/router/index.js</tspan>
+
+<tspan x="10" y="11754">apidocCreate - libFile lib/router/layer.js</tspan>
+
+<tspan x="10" y="11770">apidocCreate - libFile lib/router/route.js</tspan>
+
+<tspan x="10" y="11786">TypeError: Cannot read property 'encrypted' of undefined</tspan>
+
+<tspan x="10" y="11802">    at protocol (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="11818">js:307:30)</tspan>
+
+<tspan x="10" y="11834">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="11850">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="11866">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="11882">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="11898">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="11914">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="11930">    at Array.map (native)</tspan>
+
+<tspan x="10" y="11946">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="11962">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="11978">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="11994">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="12010">    at Object.local._testCase_buildCustomOrg_default [as onTestCase] (/home/travis/build/npmdoc/\</tspan>
+<tspan x="10" y="12026">node-npmdoc-express/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="12042">TypeError: Cannot read property 'encrypted' of undefined</tspan>
+
+<tspan x="10" y="12058">    at protocol (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="12074">js:307:30)</tspan>
+
+<tspan x="10" y="12090">    at secure (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="12106">:336:14)</tspan>
+
+<tspan x="10" y="12122">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="12138">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="12154">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="12170">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="12186">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="12202">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="12218">    at Array.map (native)</tspan>
+
+<tspan x="10" y="12234">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="12250">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="12266">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="12282">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="12298">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="12314">    at ip (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:350\</tspan>
+<tspan x="10" y="12330">:23)</tspan>
+
+<tspan x="10" y="12346">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="12362">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="12378">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="12394">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="12410">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="12426">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="12442">    at Array.map (native)</tspan>
+
+<tspan x="10" y="12458">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="12474">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="12490">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="12506">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="12522">    at Object.local._testCase_buildCustomOrg_default [as onTestCase] (/home/travis/build/npmdoc/\</tspan>
+<tspan x="10" y="12538">node-npmdoc-express/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="12554">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="12570">    at ips (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:36\</tspan>
+<tspan x="10" y="12586">7:23)</tspan>
+
+<tspan x="10" y="12602">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="12618">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="12634">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="12650">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="12666">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="12682">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="12698">    at Array.map (native)</tspan>
+
+<tspan x="10" y="12714">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="12730">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="12746">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="12762">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="12778">    at Object.local._testCase_buildCustomOrg_default [as onTestCase] (/home/travis/build/npmdoc/\</tspan>
+<tspan x="10" y="12794">node-npmdoc-express/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="12810">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="12826">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="12842">js:428:23)</tspan>
+
+<tspan x="10" y="12858">    at subdomains (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/reques\</tspan>
+<tspan x="10" y="12874">t.js:393:22)</tspan>
+
+<tspan x="10" y="12890">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="12906">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="12922">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="12938">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="12954">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="12970">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="12986">    at Array.map (native)</tspan>
+
+<tspan x="10" y="13002">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="13018">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="13034">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="13050">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="13066">TypeError: Cannot read property 'pathname' of undefined</tspan>
+
+<tspan x="10" y="13082">    at path (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:4\</tspan>
+<tspan x="10" y="13098">13:21)</tspan>
+
+<tspan x="10" y="13114">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="13130">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="13146">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="13162">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="13178">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="13194">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="13210">    at Array.map (native)</tspan>
+
+<tspan x="10" y="13226">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="13242">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="13258">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="13274">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="13290">    at Object.local._testCase_buildCustomOrg_default [as onTestCase] (/home/travis/build/npmdoc/\</tspan>
+<tspan x="10" y="13306">node-npmdoc-express/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="13322">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="13338">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="13354">js:428:23)</tspan>
+
+<tspan x="10" y="13370">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="13386">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="13402">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="13418">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="13434">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="13450">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="13466">    at Array.map (native)</tspan>
+
+<tspan x="10" y="13482">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="13498">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="13514">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="13530">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="13546">    at Object.local._testCase_buildCustomOrg_default [as onTestCase] (/home/travis/build/npmdoc/\</tspan>
+<tspan x="10" y="13562">node-npmdoc-express/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="13578">TypeError: Cannot read property 'get' of undefined</tspan>
+
+<tspan x="10" y="13594">    at hostname (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.\</tspan>
+<tspan x="10" y="13610">js:428:23)</tspan>
+
+<tspan x="10" y="13626">    at host (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:4\</tspan>
+<tspan x="10" y="13642">51:14)</tspan>
+
+<tspan x="10" y="13658">    at eval (eval at wrapfunction (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/de\</tspan>
+<tspan x="10" y="13674">pd/index.js:413:42), &lt;anonymous&gt;:4:11)</tspan>
+
+<tspan x="10" y="13690">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="13706">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="13722">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="13738">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="13754">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="13770">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="13786">    at Array.map (native)</tspan>
+
+<tspan x="10" y="13802">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="13818">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="13834">TypeError: Cannot read property 'statusCode' of undefined</tspan>
+
+<tspan x="10" y="13850">    at .fresh (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="13866">:466:19)</tspan>
+
+<tspan x="10" y="13882">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="13898">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="13914">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="13930">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="13946">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="13962">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="13978">    at Array.map (native)</tspan>
+
+<tspan x="10" y="13994">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="14010">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="14026">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="14042">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="14058">    at Object.local._testCase_buildCustomOrg_default [as onTestCase] (/home/travis/build/npmdoc/\</tspan>
+<tspan x="10" y="14074">node-npmdoc-express/node_modules/utility2/lib.utility2.js:2136:19)</tspan>
+
+<tspan x="10" y="14090">TypeError: Cannot read property 'statusCode' of undefined</tspan>
+
+<tspan x="10" y="14106">    at .fresh (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="14122">:466:19)</tspan>
+
+<tspan x="10" y="14138">    at stale (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:\</tspan>
+<tspan x="10" y="14154">492:15)</tspan>
+
+<tspan x="10" y="14170">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="14186">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="14202">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="14218">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="14234">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="14250">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="14266">    at Array.map (native)</tspan>
+
+<tspan x="10" y="14282">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="14298">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="14314">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="14330">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="14346">TypeError: Cannot read property 'x-requested-with' of undefined</tspan>
+
+<tspan x="10" y="14362">    at header (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js\</tspan>
+<tspan x="10" y="14378">:82:26)</tspan>
+
+<tspan x="10" y="14394">    at xhr (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/express/lib/request.js:50\</tspan>
+<tspan x="10" y="14410">3:18)</tspan>
+
+<tspan x="10" y="14426">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:977:48</tspan>
+
+<tspan x="10" y="14442">    at Object.local.tryCatchOnError (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/\</tspan>
+<tspan x="10" y="14458">utility2/lib.apidoc.js:500:26)</tspan>
+
+<tspan x="10" y="14474">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:973:46</tspan>
+
+<tspan x="10" y="14490">    at Array.filter (native)</tspan>
+
+<tspan x="10" y="14506">    at /home/travis/build/npmdoc/node-npmdoc-express/node_modules/utility2/lib.apidoc.js:972:30</tspan>
+
+<tspan x="10" y="14522">    at Array.map (native)</tspan>
+
+<tspan x="10" y="14538">    at Object.local.apidocCreate (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/uti\</tspan>
+<tspan x="10" y="14554">lity2/lib.apidoc.js:961:18)</tspan>
+
+<tspan x="10" y="14570">    at Object.local.buildCustomOrg (/home/travis/build/npmdoc/node-npmdoc-express/node_modules/u\</tspan>
+<tspan x="10" y="14586">tility2/lib.utility2.js:3472:36)</tspan>
+
+<tspan x="10" y="14602">created customOrg file /home/travis/build/npmdoc/node-npmdoc-express/README.md</tspan>
+
+<tspan x="10" y="14618"></tspan>
+
+<tspan x="10" y="14634">[node test-case 2 of 8 passed] - testCase_buildLib_default</tspan>
+
+<tspan x="10" y="14650">[node test-case 3 of 8 passed] - testCase_buildReadme_default</tspan>
+
+<tspan x="10" y="14666">[node test-case 4 of 8 passed] - testCase_buildTest_default</tspan>
+
+<tspan x="10" y="14682">[node test-case 5 of 8 passed] - testCase_nop_default</tspan>
+
+<tspan x="10" y="14698"></tspan>
+
+<tspan x="10" y="14714">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-express/tmp/elec\</tspan>
+<tspan x="10" y="14730">tron.163eaf440d80.76f0e8dc8402c.html</tspan>
+
+<tspan x="10" y="14746"></tspan>
+
+<tspan x="10" y="14762">(node:4667) DeprecationWarning: _linklist module is deprecated. Please use a userland alternativ\</tspan>
+<tspan x="10" y="14778">e.</tspan>
+
+<tspan x="10" y="14794">(node:4667) DeprecationWarning: sys is deprecated. Use util instead.</tspan>
+
+<tspan x="10" y="14810">[node test-case 6 of 8 passed] - testCase_buildCustomOrg_default</tspan>
+
+<tspan x="10" y="14826">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+
+<tspan x="10" y="14842">&gt; server listening on http-port 64040</tspan>
+
+<tspan x="10" y="14858">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+
+<tspan x="10" y="14874">[4879:0610/182747.061578:WARNING:audio_manager.cc(295)] Multiple instances of AudioManager detec\</tspan>
+<tspan x="10" y="14890">ted</tspan>
+
+<tspan x="10" y="14906">[4879:0610/182747.061637:WARNING:audio_manager.cc(254)] Multiple instances of AudioManager detec\</tspan>
+<tspan x="10" y="14922">ted</tspan>
+
+<tspan x="10" y="14938">[4917:0610/182747.098687:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple t\</tspan>
+<tspan x="10" y="14954">hreads in process gpu-process. </tspan>
+
+<tspan x="10" y="14970">[4879:0610/182747.202052:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="14986">l.</tspan>
+
+<tspan x="10" y="15002">[4879:0610/182747.202834:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="15018">l.</tspan>
+
+<tspan x="10" y="15034">[4879:0610/182747.204378:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="15050">l.</tspan>
+
+<tspan x="10" y="15066">[4879:0610/182747.204949:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="15082">l.</tspan>
+
+<tspan x="10" y="15098">[4879:0610/182747.208452:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="15114">l.</tspan>
+
+<tspan x="10" y="15130"></tspan>
+
+<tspan x="10" y="15146">browserTest - opened http://127.0.0.1:44127?modeTest=1&amp;timeoutDefault=120000</tspan>
+
+<tspan x="10" y="15162"></tspan>
+
+<tspan x="10" y="15178">[4879:0610/182747.857809:INFO:CONSOLE(266)] "[browser test-case 1 of 8 passed] - testCase_buildA\</tspan>
+<tspan x="10" y="15194">pidoc_default", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf\</tspan>
+<tspan x="10" y="15210">440d80.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15226">[4879:0610/182747.867798:INFO:CONSOLE(266)] "[browser test-case 2 of 8 passed] - testCase_buildA\</tspan>
+<tspan x="10" y="15242">pp_default", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440\</tspan>
+<tspan x="10" y="15258">d80.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15274">[4879:0610/182747.869992:INFO:CONSOLE(266)] "[browser test-case 3 of 8 passed] - testCase_buildC\</tspan>
+<tspan x="10" y="15290">ustomOrg_default", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163\</tspan>
+<tspan x="10" y="15306">eaf440d80.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15322">[4879:0610/182747.878045:INFO:CONSOLE(266)] "[browser test-case 4 of 8 passed] - testCase_buildL\</tspan>
+<tspan x="10" y="15338">ib_default", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440\</tspan>
+<tspan x="10" y="15354">d80.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15370">[4879:0610/182747.878083:INFO:CONSOLE(266)] "[browser test-case 5 of 8 passed] - testCase_buildR\</tspan>
+<tspan x="10" y="15386">eadme_default", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf\</tspan>
+<tspan x="10" y="15402">440d80.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15418">[4879:0610/182747.878107:INFO:CONSOLE(266)] "[browser test-case 6 of 8 passed] - testCase_buildT\</tspan>
+<tspan x="10" y="15434">est_default", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf44\</tspan>
+<tspan x="10" y="15450">0d80.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15466">[4879:0610/182747.878119:INFO:CONSOLE(266)] "[browser test-case 7 of 8 passed] - testCase_nop_de\</tspan>
+<tspan x="10" y="15482">fault", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.7\</tspan>
+<tspan x="10" y="15498">6f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15514">[4879:0610/182747.878759:INFO:CONSOLE(266)] "domStyleValidateUnmatched 0. 0 .testReportDiv .test\</tspan>
+<tspan x="10" y="15530">Failed {", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d8\</tspan>
+<tspan x="10" y="15546">0.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15562">[4879:0610/182747.878780:INFO:CONSOLE(266)] "domStyleValidateUnmatched 1. 0 .testReportDiv img {\</tspan>
+<tspan x="10" y="15578">", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.76f0e8\</tspan>
+<tspan x="10" y="15594">dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15610">[4879:0610/182747.885918:INFO:CONSOLE(266)] "domStyleValidateUnmatched 2. 1 .testReportDiv .disp\</tspan>
+<tspan x="10" y="15626">layNone {", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d\</tspan>
+<tspan x="10" y="15642">80.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15658">[4879:0610/182747.888766:INFO:CONSOLE(266)] "domStyleValidateUnmatched 3. 1 .testReportDiv .foot\</tspan>
+<tspan x="10" y="15674">er {", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.76\</tspan>
+<tspan x="10" y="15690">f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15706">[4879:0610/182747.890470:INFO:CONSOLE(266)] "domStyleValidateUnmatched 4. 1 .testReportDiv .summ\</tspan>
+<tspan x="10" y="15722">ary {", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.7\</tspan>
+<tspan x="10" y="15738">6f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15754">[4879:0610/182747.892274:INFO:CONSOLE(266)] "domStyleValidateUnmatched 5. 1 .testReportDiv pre {\</tspan>
+<tspan x="10" y="15770">", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.76f0e8\</tspan>
+<tspan x="10" y="15786">dc8402c.html (266)</tspan>
+
+<tspan x="10" y="15802">[4879:0610/182747.893844:INFO:CONSOLE(266)] "domStyleValidateUnmatched 6. 1 body &gt; pre,", source\</tspan>
+<tspan x="10" y="15818">: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.76f0e8dc8402c.h\</tspan>
+<tspan x="10" y="15834">tml (266)</tspan>
+
+<tspan x="10" y="15850">[4879:0610/182747.895610:INFO:CONSOLE(266)] "domStyleValidateUnmatched 7. 1 body &gt; pre,", source\</tspan>
+<tspan x="10" y="15866">: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.76f0e8dc8402c.h\</tspan>
+<tspan x="10" y="15882">tml (266)</tspan>
+
+<tspan x="10" y="15898">[4879:0610/182747.897368:INFO:CONSOLE(266)] "domStyleValidateUnmatched 8. 1 body {", source: fil\</tspan>
+<tspan x="10" y="15914">e:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.76f0e8dc8402c.html (\</tspan>
+<tspan x="10" y="15930">266)</tspan>
+
+<tspan x="10" y="15946">[4879:0610/182747.899028:INFO:CONSOLE(266)] "domStyleValidateUnmatched 9. 1 body {", source: fil\</tspan>
+<tspan x="10" y="15962">e:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d80.76f0e8dc8402c.html (\</tspan>
+<tspan x="10" y="15978">266)</tspan>
+
+<tspan x="10" y="15994">[4879:0610/182747.904462:INFO:CONSOLE(266)] "[browser test-case 8 of 8 passed] - testCase_webpag\</tspan>
+<tspan x="10" y="16010">e_default", source: file:///home/travis/build/npmdoc/node-npmdoc-express/tmp/electron.163eaf440d\</tspan>
+<tspan x="10" y="16026">80.76f0e8dc8402c.html (266)</tspan>
+
+<tspan x="10" y="16042">[node test-case 7 of 8 passed] - testCase_buildApp_default</tspan>
+
+<tspan x="10" y="16058"></tspan>
+
+<tspan x="10" y="16074">browserTest - created screenshot file /home/travis/build/npmdoc/node-npmdoc-express/tmp/build/sc\</tspan>
+<tspan x="10" y="16090">reenshot.npmTest.browser.%2F.png</tspan>
+
+<tspan x="10" y="16106"></tspan>
+
+<tspan x="10" y="16122">browserTest - created screenshot file /home/travis/build/npmdoc/node-npmdoc-express/tmp/build/sc\</tspan>
+<tspan x="10" y="16138">reenshot.npmTest.browser.%2F.html</tspan>
+
+<tspan x="10" y="16154"></tspan>
+
+<tspan x="10" y="16170">browserTest - exit-code 0 - http://127.0.0.1:44127?modeTest=1&amp;timeoutDefault=120000</tspan>
+
+<tspan x="10" y="16186"></tspan>
+
+<tspan x="10" y="16202"></tspan>
+
+<tspan x="10" y="16218">browserTest - merged coverage from file /home/travis/build/npmdoc/node-npmdoc-express/tmp/covera\</tspan>
+<tspan x="10" y="16234">ge.npmTest.browser.%2F.json</tspan>
+
+<tspan x="10" y="16250"></tspan>
+
+<tspan x="10" y="16266"></tspan>
+
+<tspan x="10" y="16282">browserTest - merged test-report from file /home/travis/build/npmdoc/node-npmdoc-express/tmp/tes\</tspan>
+<tspan x="10" y="16298">t-report.npmTest.browser.%2F.json</tspan>
+
+<tspan x="10" y="16314"></tspan>
+
+<tspan x="10" y="16330">[node test-case 8 of 8 passed] - testCase_webpage_default</tspan>
+
+<tspan x="10" y="16346"></tspan>
+
+<tspan x="10" y="16362">npmTest - merged test-report from file /home/travis/build/npmdoc/node-npmdoc-express/tmp/build/t\</tspan>
+<tspan x="10" y="16378">est-report.json</tspan>
+
+<tspan x="10" y="16394"></tspan>
+
+<tspan x="10" y="16410">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="16426">| test-report - buildApp - node - linux v6.14.2 - 2018-06-10T18:27:34.041Z</tspan>
+
+<tspan x="10" y="16442">|   28436 ms            0 failed        8 passed      |</tspan>
+
+<tspan x="10" y="16458">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="16474">| test-report - npmTest - browser - / - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTM\</tspan>
+<tspan x="10" y="16490">L, like Gecko) Chrome/58.0.3029.110 Electron/1.7.15 Safari/537.36 - 2018-06-10T18:27:47.803Z</tspan>
+
+<tspan x="10" y="16506">|      51 ms            0 failed        8 passed      |</tspan>
+
+<tspan x="10" y="16522">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="16538"></tspan>
+
+<tspan x="10" y="16554">created test-report file /home/travis/build/npmdoc/node-npmdoc-express/tmp/build/test-report.htm\</tspan>
+<tspan x="10" y="16570">l</tspan>
+
+<tspan x="10" y="16586"></tspan>
+
+<tspan x="10" y="16602"></tspan>
+
+<tspan x="10" y="16618">npmTest - 0 failed tests</tspan>
+
+<tspan x="10" y="16634"></tspan>
+
+<tspan x="10" y="16650"></tspan>
+
+<tspan x="10" y="16666">[MODE_BUILD=npmTest] - 2018-06-10T18:28:03.968Z - EXIT_CODE - 0</tspan>
+
+</text>
+</svg>

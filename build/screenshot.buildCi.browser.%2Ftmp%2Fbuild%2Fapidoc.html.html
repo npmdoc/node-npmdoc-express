@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -48,17 +48,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://expressjs.com/"
-
-    >express (4.16.3)</a>
+    <a href="http://expressjs.com/">express (4.16.3)</a>
 </h1>
 <h4>Fast, unopinionated, minimalist web framework</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.express">module express</a><ol>
 
@@ -1974,7 +1967,7 @@
   this.path = path;
   this.stack = [];
 
-  debug(&apos;new %o&apos;, path)
+  debug('new %o', path)
 
   // route handlers for various http methods
   this.methods = {};
@@ -2025,42 +2018,42 @@
     <li>description and source-code<pre class="apidocCodePre">function json(options) {
   var opts = options || {}
 
-  var limit = typeof opts.limit !== &apos;number&apos;
-    ? bytes.parse(opts.limit || &apos;100kb&apos;)
+  var limit = typeof opts.limit !== 'number'
+    ? bytes.parse(opts.limit || '100kb')
     : opts.limit
   var inflate = opts.inflate !== false
   var reviver = opts.reviver
   var strict = opts.strict !== false
-  var type = opts.type || &apos;application/json&apos;
+  var type = opts.type || 'application/json'
   var verify = opts.verify || false
 
-  if (verify !== false &amp;&amp; typeof verify !== &apos;function&apos;) {
-    throw new TypeError(&apos;option verify must be function&apos;)
+  if (verify !== false &amp;&amp; typeof verify !== 'function') {
+    throw new TypeError('option verify must be function')
   }
 
   // create the appropriate type checking function
-  var shouldParse = typeof type !== &apos;function&apos;
+  var shouldParse = typeof type !== 'function'
     ? typeChecker(type)
     : type
 
   function parse (body) {
     if (body.length === 0) {
-      // special-case empty json body, as it&apos;s a common client-side mistake
-      // TODO: maybe make this configurable or part of &quot;strict&quot; option
+      // special-case empty json body, as it's a common client-side mistake
+      // TODO: maybe make this configurable or part of "strict" option
       return {}
     }
 
     if (strict) {
       var first = firstchar(body)
 
-      if (first !== &apos;{&apos; &amp;&amp; first !== &apos;[&apos;) {
-        debug(&apos;strict violation&apos;)
+      if (first !== '{' &amp;&amp; first !== '[') {
+        debug('strict violation')
         throw createStrictSyntaxError(body, first)
       }
     }
 
     try {
-      debug(&apos;parse json&apos;)
+      debug('parse json')
       return JSON.parse(body, reviver)
     } catch (e) {
       throw normalizeJsonSyntaxError(e, {
@@ -2071,7 +2064,7 @@
 
   return function jsonParser (req, res, next) {
     if (req._body) {
-      debug(&apos;body already parsed&apos;)
+      debug('body already parsed')
       next()
       return
     }
@@ -2080,27 +2073,27 @@
 
     // skip requests without bodies
     if (!typeis.hasBody(req)) {
-      debug(&apos;skip empty body&apos;)
+      debug('skip empty body')
       next()
       return
     }
 
-    debug(&apos;content-type %j&apos;, req.headers[&apos;content-type&apos;])
+    debug('content-type %j', req.headers['content-type'])
 
     // determine if request should be parsed
     if (!shouldParse(req)) {
-      debug(&apos;skip parsing&apos;)
+      debug('skip parsing')
       next()
       return
     }
 
     // assert charset per RFC 7159 sec 8.1
-    var charset = getCharset(req) || &apos;utf-8&apos;
-    if (charset.substr(0, 4) !== &apos;utf-&apos;) {
-      debug(&apos;invalid charset&apos;)
-      next(createError(415, &apos;unsupported charset &quot;&apos; + charset.toUpperCase() + &apos;&quot;&apos;, {
+    var charset = getCharset(req) || 'utf-8'
+    if (charset.substr(0, 4) !== 'utf-') {
+      debug('invalid charset')
+      next(createError(415, 'unsupported charset "' + charset.toUpperCase() + '"', {
         charset: charset,
-        type: &apos;charset.unsupported&apos;
+        type: 'charset.unsupported'
       }))
       return
     }
@@ -2117,11 +2110,11 @@
     <li>example usage<pre class="apidocCodePre">...
 
 * fix `req.protocol` for proxy-direct connections
-* configurable query parser with `app.set(&apos;query parser&apos;, parser)`
-  - `app.set(&apos;query parser&apos;, &apos;extended&apos;)` parse with &quot;qs&quot; module
-  - `app.set(&apos;query parser&apos;, &apos;simple&apos;)` parse with &quot;querystring&quot; core module
-  - `app.set(&apos;query parser&apos;, false)` disable query string parsing
-  - `app.set(&apos;query parser&apos;, true)` enable simple parsing
+* configurable query parser with `app.set('query parser', parser)`
+  - `app.set('query parser', 'extended')` parse with "qs" module
+  - `app.set('query parser', 'simple')` parse with "querystring" core module
+  - `app.set('query parser', false)` disable query string parsing
+  - `app.set('query parser', true)` enable simple parsing
 * deprecate `res.<span class="apidocCodeKeywordSpan">json</span>(status, obj)` -- use `res.status(status).json(obj)` instead
 * deprecate `res.jsonp(status, obj)` -- use `res.status(status).jsonp(obj)` instead
 * deprecate `res.send(status, body)` -- use `res.status(status).send(body)` instead
@@ -2147,18 +2140,18 @@
     return new Layer(path, options, fn);
   }
 
-  debug(&apos;new %o&apos;, path)
+  debug('new %o', path)
   var opts = options || {};
 
   this.handle = fn;
-  this.name = fn.name || &apos;&lt;anonymous&gt;&apos;;
+  this.name = fn.name || '&lt;anonymous&gt;';
   this.params = undefined;
   this.path = undefined;
   this.regexp = pathRegexp(path, this.keys = [], opts);
 
   // set fast path flags
-  this.regexp.fast_star = path === &apos;*&apos;
-  this.regexp.fast_slash = path === &apos;/&apos; &amp;&amp; opts.end === false
+  this.regexp.fast_star = path === '*'
+  this.regexp.fast_slash = path === '/' &amp;&amp; opts.end === false
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2176,7 +2169,7 @@
   var opts = merge({}, options)
   var queryparse = qs.parse;
 
-  if (typeof options === &apos;function&apos;) {
+  if (typeof options === 'function') {
     queryparse = options;
     opts = undefined;
   }
@@ -2209,11 +2202,11 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function serveStatic(root, options) {
   if (!root) {
-    throw new TypeError(&apos;root path required&apos;)
+    throw new TypeError('root path required')
   }
 
-  if (typeof root !== &apos;string&apos;) {
-    throw new TypeError(&apos;root path must be a string&apos;)
+  if (typeof root !== 'string') {
+    throw new TypeError('root path must be a string')
   }
 
   // copy options object
@@ -2228,8 +2221,8 @@
   // headers listener
   var setHeaders = opts.setHeaders
 
-  if (setHeaders &amp;&amp; typeof setHeaders !== &apos;function&apos;) {
-    throw new TypeError(&apos;option setHeaders must be function&apos;)
+  if (setHeaders &amp;&amp; typeof setHeaders !== 'function') {
+    throw new TypeError('option setHeaders must be function')
   }
 
   // setup options for send
@@ -2242,15 +2235,15 @@
     : createNotFoundDirectoryListener()
 
   return function serveStatic (req, res, next) {
-    if (req.method !== &apos;GET&apos; &amp;&amp; req.method !== &apos;HEAD&apos;) {
+    if (req.method !== 'GET' &amp;&amp; req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
       }
 
       // method not allowed
       res.statusCode = 405
-      res.setHeader(&apos;Allow&apos;, &apos;GET, HEAD&apos;)
-      res.setHeader(&apos;Content-Length&apos;, &apos;0&apos;)
+      res.setHeader('Allow', 'GET, HEAD')
+      res.setHeader('Content-Length', '0')
       res.end()
       return
     }
@@ -2260,31 +2253,31 @@
     var path = parseUrl(req).pathname
 
     // make sure redirect occurs at mount
-    if (path === &apos;/&apos; &amp;&amp; originalUrl.pathname.substr(-1) !== &apos;/&apos;) {
-      path = &apos;&apos;
+    if (path === '/' &amp;&amp; originalUrl.pathname.substr(-1) !== '/') {
+      path = ''
     }
 
     // create send stream
     var stream = send(req, path, opts)
 
     // add directory handler
-    stream.on(&apos;directory&apos;, onDirectory)
+    stream.on('directory', onDirectory)
 
     // add headers listener
     if (setHeaders) {
-      stream.on(&apos;headers&apos;, setHeaders)
+      stream.on('headers', setHeaders)
     }
 
     // add file listener for fallthrough
     if (fallthrough) {
-      stream.on(&apos;file&apos;, function onFile () {
+      stream.on('file', function onFile () {
         // once file is determined, always forward error
         forwardError = true
       })
     }
 
     // forward errors
-    stream.on(&apos;error&apos;, function error (err) {
+    stream.on('error', function error (err) {
       if (forwardError || !(err.statusCode &lt; 500)) {
         next(err)
         return
@@ -2314,19 +2307,19 @@
 
   // notice because option default will flip in next major
   if (opts.extended === undefined) {
-    deprecate(&apos;undefined extended: provide extended option&apos;)
+    deprecate('undefined extended: provide extended option')
   }
 
   var extended = opts.extended !== false
   var inflate = opts.inflate !== false
-  var limit = typeof opts.limit !== &apos;number&apos;
-    ? bytes.parse(opts.limit || &apos;100kb&apos;)
+  var limit = typeof opts.limit !== 'number'
+    ? bytes.parse(opts.limit || '100kb')
     : opts.limit
-  var type = opts.type || &apos;application/x-www-form-urlencoded&apos;
+  var type = opts.type || 'application/x-www-form-urlencoded'
   var verify = opts.verify || false
 
-  if (verify !== false &amp;&amp; typeof verify !== &apos;function&apos;) {
-    throw new TypeError(&apos;option verify must be function&apos;)
+  if (verify !== false &amp;&amp; typeof verify !== 'function') {
+    throw new TypeError('option verify must be function')
   }
 
   // create the appropriate query parser
@@ -2335,7 +2328,7 @@
     : simpleparser(opts)
 
   // create the appropriate type checking function
-  var shouldParse = typeof type !== &apos;function&apos;
+  var shouldParse = typeof type !== 'function'
     ? typeChecker(type)
     : type
 
@@ -2347,7 +2340,7 @@
 
   return function urlencodedParser (req, res, next) {
     if (req._body) {
-      debug(&apos;body already parsed&apos;)
+      debug('body already parsed')
       next()
       return
     }
@@ -2356,27 +2349,27 @@
 
     // skip requests without bodies
     if (!typeis.hasBody(req)) {
-      debug(&apos;skip empty body&apos;)
+      debug('skip empty body')
       next()
       return
     }
 
-    debug(&apos;content-type %j&apos;, req.headers[&apos;content-type&apos;])
+    debug('content-type %j', req.headers['content-type'])
 
     // determine if request should be parsed
     if (!shouldParse(req)) {
-      debug(&apos;skip parsing&apos;)
+      debug('skip parsing')
       next()
       return
     }
 
     // assert charset
-    var charset = getCharset(req) || &apos;utf-8&apos;
-    if (charset !== &apos;utf-8&apos;) {
-      debug(&apos;invalid charset&apos;)
-      next(createError(415, &apos;unsupported charset &quot;&apos; + charset.toUpperCase() + &apos;&quot;&apos;, {
+    var charset = getCharset(req) || 'utf-8'
+    if (charset !== 'utf-8') {
+      debug('invalid charset')
+      next(createError(415, 'unsupported charset "' + charset.toUpperCase() + '"', {
         charset: charset,
-        type: &apos;charset.unsupported&apos;
+        type: 'charset.unsupported'
       }))
       return
     }
@@ -2412,15 +2405,15 @@
   this.root = opts.root;
 
   if (!this.ext &amp;&amp; !this.defaultEngine) {
-    throw new Error(&apos;No default engine was specified and no extension was provided.&apos;);
+    throw new Error('No default engine was specified and no extension was provided.');
   }
 
   var fileName = name;
 
   if (!this.ext) {
     // get extension from default engine name
-    this.ext = this.defaultEngine[0] !== &apos;.&apos;
-      ? &apos;.&apos; + this.defaultEngine
+    this.ext = this.defaultEngine[0] !== '.'
+      ? '.' + this.defaultEngine
       : this.defaultEngine;
 
     fileName += this.ext;
@@ -2429,13 +2422,13 @@
   if (!opts.engines[this.ext]) {
     // load engine
     var mod = this.ext.substr(1)
-    debug(&apos;require &quot;%s&quot;&apos;, mod)
+    debug('require "%s"', mod)
 
     // default engine export
     var fn = require(mod).__express
 
-    if (typeof fn !== &apos;function&apos;) {
-      throw new Error(&apos;Module &quot;&apos; + mod + &apos;&quot; does not provide a view engine.&apos;)
+    if (typeof fn !== 'function') {
+      throw new Error('Module "' + mod + '" does not provide a view engine.')
     }
 
     opts.engines[this.ext] = fn
@@ -2484,7 +2477,7 @@
   this.path = path;
   this.stack = [];
 
-  debug(&apos;new %o&apos;, path)
+  debug('new %o', path)
 
   // route handlers for various http methods
   this.methods = {};
@@ -2513,8 +2506,8 @@
 
   var name = method.toLowerCase();
 
-  if (name === &apos;head&apos; &amp;&amp; !this.methods[&apos;head&apos;]) {
-    name = &apos;get&apos;;
+  if (name === 'head' &amp;&amp; !this.methods['head']) {
+    name = 'get';
   }
 
   return Boolean(this.methods[name]);
@@ -2530,11 +2523,11 @@ var method = req.method;
 var has_method = route.<span class="apidocCodeKeywordSpan">_handles_method</span>(method);
 
 // build up automatic options response
-if (!has_method &amp;&amp; method === &apos;OPTIONS&apos;) {
+if (!has_method &amp;&amp; method === 'OPTIONS') {
   appendMethods(options, route._options());
 }
 
-// don&apos;t even bother matching route
+// don't even bother matching route
 ...</pre></li>
     </ul>
 
@@ -2552,7 +2545,7 @@ if (!has_method &amp;&amp; method === &apos;OPTIONS&apos;) {
 
   // append automatic head
   if (this.methods.get &amp;&amp; !this.methods.head) {
-    methods.push(&apos;head&apos;);
+    methods.push('head');
   }
 
   for (var i = 0; i &lt; methods.length; i++) {
@@ -2569,12 +2562,12 @@ var method = req.method;
 var has_method = route._handles_method(method);
 
 // build up automatic options response
-if (!has_method &amp;&amp; method === &apos;OPTIONS&apos;) {
+if (!has_method &amp;&amp; method === 'OPTIONS') {
   appendMethods(options, route.<span class="apidocCodeKeywordSpan">_options</span>());
 }
 
-// don&apos;t even bother matching route
-if (!has_method &amp;&amp; method !== &apos;HEAD&apos;) {
+// don't even bother matching route
+if (!has_method &amp;&amp; method !== 'HEAD') {
   match = false;
   continue;
 }
@@ -2596,15 +2589,15 @@ if (!has_method &amp;&amp; method !== &apos;HEAD&apos;) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2631,13 +2624,13 @@ if (!has_method &amp;&amp; method !== &apos;HEAD&apos;) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.all() requires a callback function but got a &apos; + type
+      var msg = 'Route.all() requires a callback function but got a ' + type
       throw new TypeError(msg);
     }
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = undefined;
 
     this.methods._all = true;
@@ -2652,7 +2645,7 @@ if (!has_method &amp;&amp; method !== &apos;HEAD&apos;) {
 
 * update connect
 * res.location: remove leading ./ #1802 @kapouer
-* res.redirect: fix `res.redirect(&apos;toString&apos;) #1829 @michaelficarra
+* res.redirect: fix `res.redirect('toString') #1829 @michaelficarra
 * res.send: always send ETag when content-length &gt; 0
 * router: add Router.<span class="apidocCodeKeywordSpan">all</span>() method
 
@@ -2680,15 +2673,15 @@ if (!has_method &amp;&amp; method !== &apos;HEAD&apos;) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2704,13 +2697,13 @@ var router = this._router;
 
 // final handler
 var done = callback || finalhandler(req, res, {
-  env: this.get(&apos;env&apos;),
+  env: this.get('env'),
   onerror: logerror.<span class="apidocCodeKeywordSpan">bind</span>(this)
 });
 
 // no routes
 if (!router) {
-  debug(&apos;no routes defined on app&apos;);
+  debug('no routes defined on app');
   done();
   return;
 ...</pre></li>
@@ -2731,15 +2724,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2766,15 +2759,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2801,15 +2794,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2836,15 +2829,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2889,8 +2882,8 @@ if (!router) {
   }
 
   var method = req.method.toLowerCase();
-  if (method === &apos;head&apos; &amp;&amp; !this.methods[&apos;head&apos;]) {
-    method = &apos;get&apos;;
+  if (method === 'head' &amp;&amp; !this.methods['head']) {
+    method = 'get';
   }
 
   req.route = this;
@@ -2899,12 +2892,12 @@ if (!router) {
 
   function next(err) {
     // signal to exit route
-    if (err &amp;&amp; err === &apos;route&apos;) {
+    if (err &amp;&amp; err === 'route') {
       return done();
     }
 
     // signal to exit router
-    if (err &amp;&amp; err === &apos;router&apos;) {
+    if (err &amp;&amp; err === 'router') {
       return done(err)
     }
 
@@ -2942,15 +2935,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -2993,15 +2986,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3028,15 +3021,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3063,15 +3056,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3098,15 +3091,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3133,15 +3126,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3168,15 +3161,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3203,15 +3196,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3238,15 +3231,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3273,15 +3266,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3308,15 +3301,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3328,11 +3321,11 @@ if (!router) {
     <li>example usage<pre class="apidocCodePre">...
 * Added `res.type()` to replace `res.contentType()`
 * Changed: `res.redirect()` to add relative support
-* Changed: enable &quot;jsonp callback&quot; by default
-* Changed: renamed &quot;case sensitive routes&quot; to &quot;case sensitive routing&quot;
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
 * Rewrite of all tests with mocha
-* Removed &quot;root&quot; setting
-* Removed `res.redirect(&apos;home&apos;)` support
+* Removed "root" setting
+* Removed `res.redirect('home')` support
 * Removed `req.<span class="apidocCodeKeywordSpan">notify</span>()`
 * Removed `app.register()`
 * Removed `app.redirect()`
@@ -3359,15 +3352,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3379,7 +3372,7 @@ if (!router) {
     <li>example usage<pre class="apidocCodePre">...
 ==================
 
-* Fixed bug-ish with `../&apos; in `res.partial()` calls
+* Fixed bug-ish with `../' in `res.partial()` calls
 
 2.3.8 / 2011-05-24
 ==================
@@ -3389,7 +3382,7 @@ if (!router) {
 2.3.7 / 2011-05-23
 ==================
 
-* Added route `Collection`, ex: `app.get(&apos;/user/:id&apos;).remove();`
+* Added route `Collection`, ex: `app.get('/user/:id').remove();`
 * Added support for `app.param(fn)` to define param logic
 * Removed `app.param()` support for callback with return value
 ...</pre></li>
@@ -3410,15 +3403,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3445,15 +3438,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3480,15 +3473,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3515,15 +3508,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3550,15 +3543,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3585,15 +3578,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3610,8 +3603,8 @@ if (!router) {
 2.2.0 / 2011-03-30
 ==================
 
-  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>(&apos;/user/:id&apos;)`. Closes #606
-  * Added `app.match.VERB()`, ex `app.match.put(&apos;/user/12&apos;)`. Closes #606
+  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>('/user/:id')`. Closes #606
+  * Added `app.match.VERB()`, ex `app.match.put('/user/12')`. Closes #606
   * Added `app.VERB(path)` as alias of `app.lookup.VERB()`.
   * Dependency `connect &gt;= 1.2.0`
 
@@ -3635,15 +3628,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3670,15 +3663,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3705,15 +3698,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3740,15 +3733,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3775,15 +3768,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3810,15 +3803,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3845,15 +3838,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3880,15 +3873,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3915,15 +3908,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -3950,15 +3943,15 @@ if (!router) {
   for (var i = 0; i &lt; handles.length; i++) {
     var handle = handles[i];
 
-    if (typeof handle !== &apos;function&apos;) {
+    if (typeof handle !== 'function') {
       var type = toString.call(handle);
-      var msg = &apos;Route.&apos; + method + &apos;() requires a callback function but got a &apos; + type
+      var msg = 'Route.' + method + '() requires a callback function but got a ' + type
       throw new Error(msg);
     }
 
-    debug(&apos;%s %o&apos;, method, this.path)
+    debug('%s %o', method, this.path)
 
-    var layer = Layer(&apos;/&apos;, {}, handle);
+    var layer = Layer('/', {}, handle);
     layer.method = method;
 
     this.methods[method] = true;
@@ -4043,7 +4036,7 @@ if (!router) {
 
 * update connect
 * res.location: remove leading ./ #1802 @kapouer
-* res.redirect: fix `res.redirect(&apos;toString&apos;) #1829 @michaelficarra
+* res.redirect: fix `res.redirect('toString') #1829 @michaelficarra
 * res.send: always send ETag when content-length &gt; 0
 * router: add Router.<span class="apidocCodeKeywordSpan">all</span>() method
 
@@ -4077,13 +4070,13 @@ var router = this._router;
 
 // final handler
 var done = callback || finalhandler(req, res, {
-  env: this.get(&apos;env&apos;),
+  env: this.get('env'),
   onerror: logerror.<span class="apidocCodeKeywordSpan">bind</span>(this)
 });
 
 // no routes
 if (!router) {
-  debug(&apos;no routes defined on app&apos;);
+  debug('no routes defined on app');
   done();
   return;
 ...</pre></li>
@@ -4218,11 +4211,11 @@ if (!router) {
     <li>description and source-code<pre class="apidocCodePre">function handle(req, res, out) {
   var self = this;
 
-  debug(&apos;dispatching %s %s&apos;, req.method, req.url);
+  debug('dispatching %s %s', req.method, req.url);
 
   var idx = 0;
-  var protohost = getProtohost(req.url) || &apos;&apos;
-  var removed = &apos;&apos;;
+  var protohost = getProtohost(req.url) || ''
+  var removed = '';
   var slashAdded = false;
   var paramcalled = {};
 
@@ -4235,14 +4228,14 @@ if (!router) {
 
   // manage inter-router variables
   var parentParams = req.params;
-  var parentUrl = req.baseUrl || &apos;&apos;;
-  var done = restore(out, req, &apos;baseUrl&apos;, &apos;next&apos;, &apos;params&apos;);
+  var parentUrl = req.baseUrl || '';
+  var done = restore(out, req, 'baseUrl', 'next', 'params');
 
   // setup next layer
   req.next = next;
 
   // for options requests, respond with a default if nothing else responds
-  if (req.method === &apos;OPTIONS&apos;) {
+  if (req.method === 'OPTIONS') {
     done = wrap(done, function(old, err) {
       if (err || options.length === 0) return old(err);
       sendOptionsResponse(res, options, old);
@@ -4256,7 +4249,7 @@ if (!router) {
   next();
 
   function next(err) {
-    var layerError = err === &apos;route&apos;
+    var layerError = err === 'route'
       ? null
       : err;
 
@@ -4270,11 +4263,11 @@ if (!router) {
     if (removed.length !== 0) {
       req.baseUrl = parentUrl;
       req.url = protohost + removed + req.url.substr(protohost.length);
-      removed = &apos;&apos;;
+      removed = '';
     }
 
     // signal to exit router
-    if (layerError === &apos;router&apos;) {
+    if (layerError === 'router') {
       setImmediate(done, null)
       return
     }
@@ -4302,7 +4295,7 @@ if (!router) {
       match = matchLayer(layer, path);
       route = layer.route;
 
-      if (typeof match !== &apos;boolean&apos;) {
+      if (typeof match !== 'boolean') {
         // hold on to layerError
         layerError = layerError || match;
       }
@@ -4326,12 +4319,12 @@ if (!router) {
       var has_method = route._handles_method(method);
 
       // build up automatic options response
-      if (!has_method &amp;&amp; method === &apos;OPTIONS&apos;) {
+      if (!has_method &amp;&amp; method === 'OPTIONS') {
         appendMethods(options, route._options());
       }
 
-      // don&apos;t even bother matching route
-      if (!has_method &amp;&amp; method !== &apos;HEAD&apos;) {
+      // don't even bother matching route
+      if (!has_method &amp;&amp; method !== 'HEAD') {
         match = false;
         continue;
       }
@@ -4371,16 +4364,16 @@ if (!router) {
     if (layerPath.length !== 0) {
       // Validate path breaks on a path separator
       var c = path[layerPath.length]
-      if (c &amp;&amp; c !== &apos;/&apos; &amp;&amp; c !== &apos;.&apos;) return next(layerError)
+      if (c &amp;&amp; c !== '/' &amp;&amp; c !== '.') return next(layerError)
 
       // Trim off the part of the url that matches the route
       // middleware (.use stuff) needs to have the path stripped
-      debug(&apos;trim prefix (%s) from url %s&apos;, layerPath, req.url);
+      debug('trim prefix (%s) from url %s', layerPath, req.url);
       removed = layerP...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
  // no routes
  if (!router) {
-   debug(&apos;no routes defined on app&apos;);
+   debug('no routes defined on app');
    done();
    return;
  }
@@ -4566,11 +4559,11 @@ if (!router) {
     <li>example usage<pre class="apidocCodePre">...
 * Added `res.type()` to replace `res.contentType()`
 * Changed: `res.redirect()` to add relative support
-* Changed: enable &quot;jsonp callback&quot; by default
-* Changed: renamed &quot;case sensitive routes&quot; to &quot;case sensitive routing&quot;
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
 * Rewrite of all tests with mocha
-* Removed &quot;root&quot; setting
-* Removed `res.redirect(&apos;home&apos;)` support
+* Removed "root" setting
+* Removed `res.redirect('home')` support
 * Removed `req.<span class="apidocCodeKeywordSpan">notify</span>()`
 * Removed `app.register()`
 * Removed `app.redirect()`
@@ -4599,7 +4592,7 @@ if (!router) {
     <li>example usage<pre class="apidocCodePre">...
 ==================
 
-* Fixed bug-ish with `../&apos; in `res.partial()` calls
+* Fixed bug-ish with `../' in `res.partial()` calls
 
 2.3.8 / 2011-05-24
 ==================
@@ -4609,7 +4602,7 @@ if (!router) {
 2.3.7 / 2011-05-23
 ==================
 
-* Added route `Collection`, ex: `app.get(&apos;/user/:id&apos;).remove();`
+* Added route `Collection`, ex: `app.get('/user/:id').remove();`
 * Added support for `app.param(fn)` to define param logic
 * Removed `app.param()` support for callback with return value
 ...</pre></li>
@@ -4626,8 +4619,8 @@ if (!router) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function param(name, fn) {
   // param logic
-  if (typeof name === &apos;function&apos;) {
-    deprecate(&apos;router.param(fn): Refactor to use path params&apos;);
+  if (typeof name === 'function') {
+    deprecate('router.param(fn): Refactor to use path params');
     this._params.push(name);
     return;
   }
@@ -4637,9 +4630,9 @@ if (!router) {
   var len = params.length;
   var ret;
 
-  if (name[0] === &apos;:&apos;) {
-    deprecate(&apos;router.param(&apos; + JSON.stringify(name) + &apos;, fn): Use router.param(&apos; + JSON.stringify(name.substr(1)) + &apos;, fn) instead
-&apos;);
+  if (name[0] === ':') {
+    deprecate('router.param(' + JSON.stringify(name) + ', fn): Use router.param(' + JSON.stringify(name.substr(1)) + ', fn) instead
+');
     name = name.substr(1);
   }
 
@@ -4651,8 +4644,8 @@ if (!router) {
 
   // ensure we end up with a
   // middleware function
-  if (&apos;function&apos; !== typeof fn) {
-    throw new Error(&apos;invalid param() call for &apos; + name + &apos;, got &apos; + fn);
+  if ('function' !== typeof fn) {
+    throw new Error('invalid param() call for ' + name + ', got ' + fn);
   }
 
   (this.params[name] = this.params[name] || []).push(fn);
@@ -4763,7 +4756,7 @@ if (!router) {
 
     // param previously called with same value or error occurred
     if (paramCalled &amp;&amp; (paramCalled.match === paramVal
-      || (paramCalled.error &amp;&amp; paramCalled.error !== &apos;route&apos;))) {
+      || (paramCalled.error &amp;&amp; paramCalled.error !== 'route'))) {
       // restore value
       req.params[name] = paramCalled.value;
 
@@ -4897,8 +4890,8 @@ if (route) {
 2.2.0 / 2011-03-30
 ==================
 
-  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>(&apos;/user/:id&apos;)`. Closes #606
-  * Added `app.match.VERB()`, ex `app.match.put(&apos;/user/12&apos;)`. Closes #606
+  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>('/user/:id')`. Closes #606
+  * Added `app.match.VERB()`, ex `app.match.put('/user/12')`. Closes #606
   * Added `app.VERB(path)` as alias of `app.lookup.VERB()`.
   * Dependency `connect &gt;= 1.2.0`
 
@@ -4972,7 +4965,7 @@ if (route) {
  - [path-to-regexp](https://github.com/component/path-to-regexp)
  * add:
  - `app.router()` - returns the app Router instance
- - `app.<span class="apidocCodeKeywordSpan">route</span>()` - Proxy to the app&apos;s `Router#route()` method to create a new route
+ - `app.<span class="apidocCodeKeywordSpan">route</span>()` - Proxy to the app's `Router#route()` method to create a new route
  - Router &amp; Route - public API
 
 3.21.2 / 2015-07-31
@@ -5130,11 +5123,11 @@ if (route) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function use(fn) {
   var offset = 0;
-  var path = &apos;/&apos;;
+  var path = '/';
 
-  // default path to &apos;/&apos;
+  // default path to '/'
   // disambiguate router.use([fn])
-  if (typeof fn !== &apos;function&apos;) {
+  if (typeof fn !== 'function') {
     var arg = fn;
 
     while (Array.isArray(arg) &amp;&amp; arg.length !== 0) {
@@ -5142,7 +5135,7 @@ if (route) {
     }
 
     // first arg is the path
-    if (typeof arg !== &apos;function&apos;) {
+    if (typeof arg !== 'function') {
       offset = 1;
       path = fn;
     }
@@ -5151,18 +5144,18 @@ if (route) {
   var callbacks = flatten(slice.call(arguments, offset));
 
   if (callbacks.length === 0) {
-    throw new TypeError(&apos;Router.use() requires a middleware function&apos;)
+    throw new TypeError('Router.use() requires a middleware function')
   }
 
   for (var i = 0; i &lt; callbacks.length; i++) {
     var fn = callbacks[i];
 
-    if (typeof fn !== &apos;function&apos;) {
-      throw new TypeError(&apos;Router.use() requires a middleware function but got a &apos; + gettype(fn))
+    if (typeof fn !== 'function') {
+      throw new TypeError('Router.use() requires a middleware function but got a ' + gettype(fn))
     }
 
     // add the middleware
-    debug(&apos;use %o %s&apos;, path, fn.name || &apos;&lt;anonymous&gt;&apos;)
+    debug('use %o %s', path, fn.name || '&lt;anonymous&gt;')
 
     var layer = new Layer(path, {
       sensitive: this.caseSensitive,
@@ -5211,7 +5204,7 @@ if (route) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">acl = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5252,7 +5245,7 @@ if (route) {
 
 * update connect
 * res.location: remove leading ./ #1802 @kapouer
-* res.redirect: fix `res.redirect(&apos;toString&apos;) #1829 @michaelficarra
+* res.redirect: fix `res.redirect('toString') #1829 @michaelficarra
 * res.send: always send ETag when content-length &gt; 0
 * router: add Router.<span class="apidocCodeKeywordSpan">all</span>() method
 
@@ -5275,7 +5268,7 @@ if (route) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">bind = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5293,13 +5286,13 @@ var router = this._router;
 
 // final handler
 var done = callback || finalhandler(req, res, {
-  env: this.get(&apos;env&apos;),
+  env: this.get('env'),
   onerror: logerror.<span class="apidocCodeKeywordSpan">bind</span>(this)
 });
 
 // no routes
 if (!router) {
-  debug(&apos;no routes defined on app&apos;);
+  debug('no routes defined on app');
   done();
   return;
 ...</pre></li>
@@ -5315,7 +5308,7 @@ if (!router) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">checkout = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5339,7 +5332,7 @@ if (!router) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">connect = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5363,7 +5356,7 @@ if (!router) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">copy = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5387,15 +5380,15 @@ if (!router) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function defaultConfiguration() {
-  var env = process.env.NODE_ENV || &apos;development&apos;;
+  var env = process.env.NODE_ENV || 'development';
 
   // default settings
-  this.enable(&apos;x-powered-by&apos;);
-  this.set(&apos;etag&apos;, &apos;weak&apos;);
-  this.set(&apos;env&apos;, env);
-  this.set(&apos;query parser&apos;, &apos;extended&apos;);
-  this.set(&apos;subdomain offset&apos;, 2);
-  this.set(&apos;trust proxy&apos;, false);
+  this.enable('x-powered-by');
+  this.set('etag', 'weak');
+  this.set('env', env);
+  this.set('query parser', 'extended');
+  this.set('subdomain offset', 2);
+  this.set('trust proxy', false);
 
   // trust proxy inherit back-compat
   Object.defineProperty(this.settings, trustProxyDefaultSymbol, {
@@ -5403,14 +5396,14 @@ if (!router) {
     value: true
   });
 
-  debug(&apos;booting in %s mode&apos;, env);
+  debug('booting in %s mode', env);
 
-  this.on(&apos;mount&apos;, function onmount(parent) {
+  this.on('mount', function onmount(parent) {
     // inherit trust proxy
     if (this.settings[trustProxyDefaultSymbol] === true
-      &amp;&amp; typeof parent.settings[&apos;trust proxy fn&apos;] === &apos;function&apos;) {
-      delete this.settings[&apos;trust proxy&apos;];
-      delete this.settings[&apos;trust proxy fn&apos;];
+      &amp;&amp; typeof parent.settings['trust proxy fn'] === 'function') {
+      delete this.settings['trust proxy'];
+      delete this.settings['trust proxy fn'];
     }
 
     // inherit protos
@@ -5424,24 +5417,24 @@ if (!router) {
   this.locals = Object.create(null);
 
   // top-most app is mounted at /
-  this.mountpath = &apos;/&apos;;
+  this.mountpath = '/';
 
   // default locals
   this.locals.settings = this.settings;
 
   // default configuration
-  this.set(&apos;view&apos;, View);
-  this.set(&apos;views&apos;, resolve(&apos;views&apos;));
-  this.set(&apos;jsonp callback name&apos;, &apos;callback&apos;);
+  this.set('view', View);
+  this.set('views', resolve('views'));
+  this.set('jsonp callback name', 'callback');
 
-  if (env === &apos;production&apos;) {
-    this.enable(&apos;view cache&apos;);
+  if (env === 'production') {
+    this.enable('view cache');
   }
 
-  Object.defineProperty(this, &apos;router&apos;, {
+  Object.defineProperty(this, 'router', {
     get: function() {
-      throw new Error(&apos;\&apos;app.router\&apos; is deprecated!\nPlease see the 3.x to 4.x migration guide for details on how to update your
- app.&apos;);
+      throw new Error('\'app.router\' is deprecated!\nPlease see the 3.x to 4.x migration guide for details on how to update your
+ app.');
     }
   });
 }</pre></li>
@@ -5473,7 +5466,7 @@ app.init = function init() {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">del = function (arg0) {
-&quot;use strict&quot;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -5506,7 +5499,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">delete = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5556,14 +5549,14 @@ return fn.apply(this, arguments)
 * update connect
 * add redis search example
 * add static-files example
-* add &quot;x-powered-by&quot; setting (`app.<span class="apidocCodeKeywordSpan">disable</span>(&apos;x-powered-by&apos;)`)
-* add &quot;application/octet-stream&quot; redirect Accept test case. Closes #1317
+* add "x-powered-by" setting (`app.<span class="apidocCodeKeywordSpan">disable</span>('x-powered-by')`)
+* add "application/octet-stream" redirect Accept test case. Closes #1317
 
 3.0.0rc4 / 2012-08-30
 ==================
 
 * add `res.jsonp()`. Closes #1307
-* add &quot;verbose errors&quot; option to error-pages example
+* add "verbose errors" option to error-pages example
 ...</pre></li>
     </ul>
 
@@ -5588,13 +5581,13 @@ return fn.apply(this, arguments)
 * Added `res.local(name, val)` for progressive view locals
 * Added default param support to `req.param(name, default)`
 * Added `app.<span class="apidocCodeKeywordSpan">disabled</span>()` and `app.enabled()`
-* Added `app.register()` support for omitting leading &quot;.&quot;, either works
+* Added `app.register()` support for omitting leading ".", either works
 * Added `res.partial()`, using the same interface as `partial()` within a view. Closes #539
 * Added `app.param()` to map route params to async/sync logic
 * Added; aliased `app.helpers()` as `app.locals()`. Closes #481
-* Added extname with no leading &quot;.&quot; support to `res.contentType()`
-* Added `cache views` setting, defaulting to enabled in &quot;production&quot; env
-* Added index file partial resolution, eg: partial(&apos;user&apos;) may try _views/user/index.jade_.
+* Added extname with no leading "." support to `res.contentType()`
+* Added `cache views` setting, defaulting to enabled in "production" env
+* Added index file partial resolution, eg: partial('user') may try _views/user/index.jade_.
 ...</pre></li>
     </ul>
 
@@ -5615,15 +5608,15 @@ return fn.apply(this, arguments)
  */
 
 app.defaultConfiguration = function defaultConfiguration() {
-var env = process.env.NODE_ENV || &apos;development&apos;;
+var env = process.env.NODE_ENV || 'development';
 
 // default settings
-this.<span class="apidocCodeKeywordSpan">enable</span>(&apos;x-powered-by&apos;);
-this.set(&apos;etag&apos;, &apos;weak&apos;);
-this.set(&apos;env&apos;, env);
-this.set(&apos;query parser&apos;, &apos;extended&apos;);
-this.set(&apos;subdomain offset&apos;, 2);
-this.set(&apos;trust proxy&apos;, false);
+this.<span class="apidocCodeKeywordSpan">enable</span>('x-powered-by');
+this.set('etag', 'weak');
+this.set('env', env);
+this.set('query parser', 'extended');
+this.set('subdomain offset', 2);
+this.set('trust proxy', false);
 
 // trust proxy inherit back-compat
 ...</pre></li>
@@ -5650,13 +5643,13 @@ this.set(&apos;trust proxy&apos;, false);
 * Added `res.local(name, val)` for progressive view locals
 * Added default param support to `req.param(name, default)`
 * Added `app.disabled()` and `app.<span class="apidocCodeKeywordSpan">enabled</span>()`
-* Added `app.register()` support for omitting leading &quot;.&quot;, either works
+* Added `app.register()` support for omitting leading ".", either works
 * Added `res.partial()`, using the same interface as `partial()` within a view. Closes #539
 * Added `app.param()` to map route params to async/sync logic
 * Added; aliased `app.helpers()` as `app.locals()`. Closes #481
-* Added extname with no leading &quot;.&quot; support to `res.contentType()`
-* Added `cache views` setting, defaulting to enabled in &quot;production&quot; env
-* Added index file partial resolution, eg: partial(&apos;user&apos;) may try _views/user/index.jade_.
+* Added extname with no leading "." support to `res.contentType()`
+* Added `cache views` setting, defaulting to enabled in "production" env
+* Added index file partial resolution, eg: partial('user') may try _views/user/index.jade_.
 ...</pre></li>
     </ul>
 
@@ -5670,13 +5663,13 @@ this.set(&apos;trust proxy&apos;, false);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function engine(ext, fn) {
-  if (typeof fn !== &apos;function&apos;) {
-    throw new Error(&apos;callback function required&apos;);
+  if (typeof fn !== 'function') {
+    throw new Error('callback function required');
   }
 
   // get file extension
-  var extension = ext[0] !== &apos;.&apos;
-    ? &apos;.&apos; + ext
+  var extension = ext[0] !== '.'
+    ? '.' + ext
     : ext;
 
   // store engine
@@ -5694,7 +5687,7 @@ this.set(&apos;trust proxy&apos;, false);
 * Added `res.format()` for content-negotiation
 * Added `app.<span class="apidocCodeKeywordSpan">engine</span>()`
 * Added `res.cookie()` JSON cookie support
-* Added &quot;trust proxy&quot; setting
+* Added "trust proxy" setting
 * Added `req.subdomains`
 * Added `req.protocol`
 * Added `req.secure`
@@ -5713,7 +5706,7 @@ this.set(&apos;trust proxy&apos;, false);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">get = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5757,13 +5750,13 @@ this.set(&apos;trust proxy&apos;, false);
 
   // final handler
   var done = callback || finalhandler(req, res, {
-    env: this.get(&apos;env&apos;),
+    env: this.get('env'),
     onerror: logerror.bind(this)
   });
 
   // no routes
   if (!router) {
-    debug(&apos;no routes defined on app&apos;);
+    debug('no routes defined on app');
     done();
     return;
   }
@@ -5773,7 +5766,7 @@ this.set(&apos;trust proxy&apos;, false);
     <li>example usage<pre class="apidocCodePre">...
  // no routes
  if (!router) {
-   debug(&apos;no routes defined on app&apos;);
+   debug('no routes defined on app');
    done();
    return;
  }
@@ -5799,7 +5792,7 @@ this.set(&apos;trust proxy&apos;, false);
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">head = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5832,11 +5825,11 @@ this.set(&apos;trust proxy&apos;, false);
     <li>example usage<pre class="apidocCodePre">...
  if (!this._router) {
    this._router = new Router({
-     caseSensitive: this.enabled(&apos;case sensitive routing&apos;),
-     strict: this.enabled(&apos;strict routing&apos;)
+     caseSensitive: this.enabled('case sensitive routing'),
+     strict: this.enabled('strict routing')
    });
 
-   this._router.use(query(this.get(&apos;query parser fn&apos;)));
+   this._router.use(query(this.get('query parser fn')));
    this._router.use(middleware.<span class="apidocCodeKeywordSpan">init</span>(this));
  }
 };
@@ -5860,11 +5853,11 @@ this.set(&apos;trust proxy&apos;, false);
     <li>description and source-code<pre class="apidocCodePre">function lazyrouter() {
   if (!this._router) {
     this._router = new Router({
-      caseSensitive: this.enabled(&apos;case sensitive routing&apos;),
-      strict: this.enabled(&apos;strict routing&apos;)
+      caseSensitive: this.enabled('case sensitive routing'),
+      strict: this.enabled('strict routing')
     });
 
-    this._router.use(query(this.get(&apos;query parser fn&apos;)));
+    this._router.use(query(this.get('query parser fn')));
     this._router.use(middleware.init(this));
   }
 }</pre></li>
@@ -5872,7 +5865,7 @@ this.set(&apos;trust proxy&apos;, false);
 var fns = flatten(slice.call(arguments, offset));
 
 if (fns.length === 0) {
-  throw new TypeError(&apos;app.use() requires a middleware function&apos;)
+  throw new TypeError('app.use() requires a middleware function')
 }
 
 // setup router
@@ -5897,7 +5890,7 @@ fns.forEach(function (fn) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">link = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5925,11 +5918,11 @@ fns.forEach(function (fn) {
   return server.listen.apply(server, arguments);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var express = require(&apos;express&apos;)
+var express = require('express')
 var app = express()
 
-app.get(&apos;/&apos;, function (req, res) {
-  res.send(&apos;Hello World&apos;)
+app.get('/', function (req, res) {
+  res.send('Hello World')
 })
 
 app.<span class="apidocCodeKeywordSpan">listen</span>(3000)
@@ -5952,7 +5945,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">lock = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -5976,7 +5969,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">m-search = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6000,7 +5993,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">merge = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6024,7 +6017,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">mkactivity = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6048,7 +6041,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">mkcalendar = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6072,7 +6065,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">mkcol = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6096,7 +6089,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">move = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6120,7 +6113,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">notify = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6134,11 +6127,11 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     <li>example usage<pre class="apidocCodePre">...
 * Added `res.type()` to replace `res.contentType()`
 * Changed: `res.redirect()` to add relative support
-* Changed: enable &quot;jsonp callback&quot; by default
-* Changed: renamed &quot;case sensitive routes&quot; to &quot;case sensitive routing&quot;
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
 * Rewrite of all tests with mocha
-* Removed &quot;root&quot; setting
-* Removed `res.redirect(&apos;home&apos;)` support
+* Removed "root" setting
+* Removed `res.redirect('home')` support
 * Removed `req.<span class="apidocCodeKeywordSpan">notify</span>()`
 * Removed `app.register()`
 * Removed `app.redirect()`
@@ -6160,7 +6153,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">options = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6174,7 +6167,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     <li>example usage<pre class="apidocCodePre">...
 ==================
 
-* Fixed bug-ish with `../&apos; in `res.partial()` calls
+* Fixed bug-ish with `../' in `res.partial()` calls
 
 2.3.8 / 2011-05-24
 ==================
@@ -6184,7 +6177,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 2.3.7 / 2011-05-23
 ==================
 
-* Added route `Collection`, ex: `app.get(&apos;/user/:id&apos;).remove();`
+* Added route `Collection`, ex: `app.get('/user/:id').remove();`
 * Added support for `app.param(fn)` to define param logic
 * Removed `app.param()` support for callback with return value
 ...</pre></li>
@@ -6243,7 +6236,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">patch = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6269,11 +6262,11 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     <li>description and source-code<pre class="apidocCodePre">function path() {
   return this.parent
     ? this.parent.path() + this.mountpath
-    : &apos;&apos;;
+    : '';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-* Added &quot;json replacer&quot; setting
-* Added &quot;json spaces&quot; setting
+* Added "json replacer" setting
+* Added "json spaces" setting
 * Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
 * Added `--less` support to express(1)
 * Added `express.response` prototype
@@ -6283,10 +6276,10 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 * Added `app.render()`
 * Added `res.type()` to replace `res.contentType()`
 * Changed: `res.redirect()` to add relative support
-* Changed: enable &quot;jsonp callback&quot; by default
-* Changed: renamed &quot;case sensitive routes&quot; to &quot;case sensitive routing&quot;
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
 * Rewrite of all tests with mocha
-* Removed &quot;root&quot; setting
+* Removed "root" setting
 ...</pre></li>
     </ul>
 
@@ -6300,7 +6293,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">post = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6324,7 +6317,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">propfind = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6348,7 +6341,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">proppatch = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6372,7 +6365,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">purge = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6396,7 +6389,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">put = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6415,8 +6408,8 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 2.2.0 / 2011-03-30
 ==================
 
-  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>(&apos;/user/:id&apos;)`. Closes #606
-  * Added `app.match.VERB()`, ex `app.match.put(&apos;/user/12&apos;)`. Closes #606
+  * Added `app.lookup.VERB()`, ex `app.lookup.<span class="apidocCodeKeywordSpan">put</span>('/user/:id')`. Closes #606
+  * Added `app.match.VERB()`, ex `app.match.put('/user/12')`. Closes #606
   * Added `app.VERB(path)` as alias of `app.lookup.VERB()`.
   * Dependency `connect &gt;= 1.2.0`
 
@@ -6435,7 +6428,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rebind = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6467,7 +6460,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
   var view;
 
   // support callback function as second arg
-  if (typeof options === &apos;function&apos;) {
+  if (typeof options === 'function') {
     done = options;
     opts = {};
   }
@@ -6485,7 +6478,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 
   // set .cache unless explicitly provided
   if (renderOptions.cache == null) {
-    renderOptions.cache = this.enabled(&apos;view cache&apos;);
+    renderOptions.cache = this.enabled('view cache');
   }
 
   // primed cache
@@ -6495,19 +6488,19 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 
   // view
   if (!view) {
-    var View = this.get(&apos;view&apos;);
+    var View = this.get('view');
 
     view = new View(name, {
-      defaultEngine: this.get(&apos;view engine&apos;),
-      root: this.get(&apos;views&apos;),
+      defaultEngine: this.get('view engine'),
+      root: this.get('views'),
       engines: engines
     });
 
     if (!view.path) {
       var dirs = Array.isArray(view.root) &amp;&amp; view.root.length &gt; 1
-        ? &apos;directories &quot;&apos; + view.root.slice(0, -1).join(&apos;&quot;, &quot;&apos;) + &apos;&quot; or &quot;&apos; + view.root[view.root.length - 1] + &apos;&quot;&apos;
-        : &apos;directory &quot;&apos; + view.root + &apos;&quot;&apos;
-      var err = new Error(&apos;Failed to lookup view &quot;&apos; + name + &apos;&quot; in views &apos; + dirs);
+        ? 'directories "' + view.root.slice(0, -1).join('", "') + '" or "' + view.root[view.root.length - 1] + '"'
+        : 'directory "' + view.root + '"'
+      var err = new Error('Failed to lookup view "' + name + '" in views ' + dirs);
       err.view = view;
       return done(err);
     }
@@ -6528,8 +6521,8 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 ==================
 
 * update connect dep
-* fix signed cookies to work with `connect.cookieParser()` (&quot;s:&quot; prefix was missing) [tnydwrds]
-* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of &quot;locals&quot;
+* fix signed cookies to work with `connect.cookieParser()` ("s:" prefix was missing) [tnydwrds]
+* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of "locals"
 
 3.0.0rc2 / 2012-08-03
 ==================
@@ -6550,7 +6543,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">report = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6585,7 +6578,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
  - [path-to-regexp](https://github.com/component/path-to-regexp)
  * add:
  - `app.router()` - returns the app Router instance
- - `app.<span class="apidocCodeKeywordSpan">route</span>()` - Proxy to the app&apos;s `Router#route()` method to create a new route
+ - `app.<span class="apidocCodeKeywordSpan">route</span>()` - Proxy to the app's `Router#route()` method to create a new route
  - Router &amp; Route - public API
 
 3.21.2 / 2015-07-31
@@ -6606,7 +6599,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">search = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6635,21 +6628,21 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     return this.settings[setting];
   }
 
-  debug(&apos;set &quot;%s&quot; to %o&apos;, setting, val);
+  debug('set "%s" to %o', setting, val);
 
   // set value
   this.settings[setting] = val;
 
   // trigger matched settings
   switch (setting) {
-    case &apos;etag&apos;:
-      this.set(&apos;etag fn&apos;, compileETag(val));
+    case 'etag':
+      this.set('etag fn', compileETag(val));
       break;
-    case &apos;query parser&apos;:
-      this.set(&apos;query parser fn&apos;, compileQueryParser(val));
+    case 'query parser':
+      this.set('query parser fn', compileQueryParser(val));
       break;
-    case &apos;trust proxy&apos;:
-      this.set(&apos;trust proxy fn&apos;, compileTrust(val));
+    case 'trust proxy':
+      this.set('trust proxy fn', compileTrust(val));
 
       // trust proxy inherit back-compat
       Object.defineProperty(this.settings, trustProxyDefaultSymbol, {
@@ -6670,7 +6663,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
 4.10.0 / 2014-10-23
 ===================
 
-* Add support for `app.<span class="apidocCodeKeywordSpan">set</span>(&apos;views&apos;, array)`
+* Add support for `app.<span class="apidocCodeKeywordSpan">set</span>('views', array)`
   - Views are looked up in sequence in array of directories
 * Fix `res.send(status)` to mention `res.sendStatus(status)`
 * Fix handling of invalid empty URLs
@@ -6691,7 +6684,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">source = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6715,7 +6708,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">subscribe = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6739,7 +6732,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">trace = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6763,7 +6756,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unbind = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6787,7 +6780,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlink = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6811,7 +6804,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlock = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6835,7 +6828,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unsubscribe = function (path){
-  if (method === &apos;get&apos; &amp;&amp; arguments.length === 1) {
+  if (method === 'get' &amp;&amp; arguments.length === 1) {
     // app.get(setting)
     return this.set(path);
   }
@@ -6860,11 +6853,11 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function use(fn) {
   var offset = 0;
-  var path = &apos;/&apos;;
+  var path = '/';
 
-  // default path to &apos;/&apos;
+  // default path to '/'
   // disambiguate app.use([fn])
-  if (typeof fn !== &apos;function&apos;) {
+  if (typeof fn !== 'function') {
     var arg = fn;
 
     while (Array.isArray(arg) &amp;&amp; arg.length !== 0) {
@@ -6872,7 +6865,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     }
 
     // first arg is the path
-    if (typeof arg !== &apos;function&apos;) {
+    if (typeof arg !== 'function') {
       offset = 1;
       path = fn;
     }
@@ -6881,7 +6874,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
   var fns = flatten(slice.call(arguments, offset));
 
   if (fns.length === 0) {
-    throw new TypeError(&apos;app.use() requires a middleware function&apos;)
+    throw new TypeError('app.use() requires a middleware function')
   }
 
   // setup router
@@ -6894,7 +6887,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
       return router.use(path, fn);
     }
 
-    debug(&apos;.use app under %s&apos;, path);
+    debug('.use app under %s', path);
     fn.mountpath = path;
     fn.parent = this;
 
@@ -6909,7 +6902,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     });
 
     // mounted an app
-    fn.emit(&apos;mount&apos;, this);
+    fn.emit('mount', this);
   }, this);
 
   return this;
@@ -6949,7 +6942,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     <ul>
     <li>description and source-code<pre class="apidocCodePre">init = function (app){
   return function expressInit(req, res, next){
-    if (app.enabled(&apos;x-powered-by&apos;)) res.setHeader(&apos;X-Powered-By&apos;, &apos;Express&apos;);
+    if (app.enabled('x-powered-by')) res.setHeader('X-Powered-By', 'Express');
     req.res = res;
     res.req = req;
     req.next = next;
@@ -6965,11 +6958,11 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     <li>example usage<pre class="apidocCodePre">...
  if (!this._router) {
    this._router = new Router({
-     caseSensitive: this.enabled(&apos;case sensitive routing&apos;),
-     strict: this.enabled(&apos;strict routing&apos;)
+     caseSensitive: this.enabled('case sensitive routing'),
+     strict: this.enabled('strict routing')
    });
 
-   this._router.use(query(this.get(&apos;query parser fn&apos;)));
+   this._router.use(query(this.get('query parser fn')));
    this._router.use(middleware.<span class="apidocCodeKeywordSpan">init</span>(this));
  }
 };
@@ -7000,18 +6993,18 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
     return new Layer(path, options, fn);
   }
 
-  debug(&apos;new %o&apos;, path)
+  debug('new %o', path)
   var opts = options || {};
 
   this.handle = fn;
-  this.name = fn.name || &apos;&lt;anonymous&gt;&apos;;
+  this.name = fn.name || '&lt;anonymous&gt;';
   this.params = undefined;
   this.path = undefined;
   this.regexp = pathRegexp(path, this.keys = [], opts);
 
   // set fast path flags
-  this.regexp.fast_star = path === &apos;*&apos;
-  this.regexp.fast_slash = path === &apos;/&apos; &amp;&amp; opts.end === false
+  this.regexp.fast_star = path === '*'
+  this.regexp.fast_slash = path === '/' &amp;&amp; opts.end === false
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -7049,7 +7042,7 @@ This is a [Node.js](https://nodejs.org/en/) module available through the
         : removed);
     }
 
-    debug(&apos;%s %s : %s&apos;, layer.name, layerPath, req.originalUrl);
+    debug('%s %s : %s', layer.name, layerPath, req.originalUrl);
 
     if (layerError) {
       layer.<span class="apidocCodeKeywordSpan">handle_error</span>(layerError, req, res, next);
@@ -7121,13 +7114,13 @@ function trim_prefix(layer, layerError, layerPath, path) {
     // fast path non-ending match for / (any path matches)
     if (this.regexp.fast_slash) {
       this.params = {}
-      this.path = &apos;&apos;
+      this.path = ''
       return true
     }
 
     // fast path for * (everything matched in a param)
     if (this.regexp.fast_star) {
-      this.params = {&apos;0&apos;: decode_param(path)}
+      this.params = {'0': decode_param(path)}
       this.path = path
       return true
     }
@@ -7227,7 +7220,7 @@ function trim_prefix(layer, layerError, layerPath, path) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">acceptsCharset = function () {
-&quot;use strict&quot;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -7243,8 +7236,8 @@ return fn.apply(this, arguments)
 * Added `req.accepted`
 * Added `req.acceptedLanguages`
 * Added `req.acceptedCharsets`
-* Added &quot;json replacer&quot; setting
-* Added &quot;json spaces&quot; setting
+* Added "json replacer" setting
+* Added "json spaces" setting
 * Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
 * Added `--less` support to express(1)
 ...</pre></li>
@@ -7276,7 +7269,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">acceptsEncoding = function () {
-&quot;use strict&quot;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -7287,7 +7280,7 @@ return fn.apply(this, arguments)
 3.2.0 / 2013-04-15
 ==================
 
-  * add &quot;view&quot; constructor setting to override view behaviour
+  * add "view" constructor setting to override view behaviour
   * add req.<span class="apidocCodeKeywordSpan">acceptsEncoding</span>(name)
   * add req.acceptedEncodings
   * revert cookie signature change causing session race conditions
@@ -7324,7 +7317,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">acceptsLanguage = function () {
-&quot;use strict&quot;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -7341,8 +7334,8 @@ return fn.apply(this, arguments)
 * Added `req.accepted`
 * Added `req.acceptedLanguages`
 * Added `req.acceptedCharsets`
-* Added &quot;json replacer&quot; setting
-* Added &quot;json spaces&quot; setting
+* Added "json replacer" setting
+* Added "json spaces" setting
 * Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
 ...</pre></li>
     </ul>
@@ -7374,18 +7367,18 @@ return fn.apply(this, arguments)
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function header(name) {
   if (!name) {
-    throw new TypeError(&apos;name argument is required to req.get&apos;);
+    throw new TypeError('name argument is required to req.get');
   }
 
-  if (typeof name !== &apos;string&apos;) {
-    throw new TypeError(&apos;name must be a string to req.get&apos;);
+  if (typeof name !== 'string') {
+    throw new TypeError('name must be a string to req.get');
   }
 
   var lc = name.toLowerCase();
 
   switch (lc) {
-    case &apos;referer&apos;:
-    case &apos;referrer&apos;:
+    case 'referer':
+    case 'referrer':
       return this.headers.referrer
         || this.headers.referer;
     default:
@@ -7422,18 +7415,18 @@ return fn.apply(this, arguments)
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function header(name) {
   if (!name) {
-    throw new TypeError(&apos;name argument is required to req.get&apos;);
+    throw new TypeError('name argument is required to req.get');
   }
 
-  if (typeof name !== &apos;string&apos;) {
-    throw new TypeError(&apos;name must be a string to req.get&apos;);
+  if (typeof name !== 'string') {
+    throw new TypeError('name must be a string to req.get');
   }
 
   var lc = name.toLowerCase();
 
   switch (lc) {
-    case &apos;referer&apos;:
-    case &apos;referrer&apos;:
+    case 'referer':
+    case 'referrer':
       return this.headers.referrer
         || this.headers.referer;
     default:
@@ -7482,10 +7475,10 @@ return fn.apply(this, arguments)
   return typeis(this, arr);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  * Changed: renamed &quot;case sensitive routes&quot; to &quot;case sensitive routing&quot;
+  * Changed: renamed "case sensitive routes" to "case sensitive routing"
   * Rewrite of all tests with mocha
-  * Removed &quot;root&quot; setting
-  * Removed `res.redirect(&apos;home&apos;)` support
+  * Removed "root" setting
+  * Removed `res.redirect('home')` support
   * Removed `req.notify()`
   * Removed `app.register()`
   * Removed `app.redirect()`
@@ -7515,9 +7508,9 @@ return fn.apply(this, arguments)
   var query = this.query || {};
 
   var args = arguments.length === 1
-    ? &apos;name&apos;
-    : &apos;name, default&apos;;
-  deprecate(&apos;req.param(&apos; + args + &apos;): Use req.params, req.body, or req.query instead&apos;);
+    ? 'name'
+    : 'name, default';
+  deprecate('req.param(' + args + '): Use req.params, req.body, or req.query instead');
 
   if (null != params[name] &amp;&amp; params.hasOwnProperty(name)) return params[name];
   if (null != body[name]) return body[name];
@@ -7554,13 +7547,13 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function range(size, options) {
-  var range = this.get(&apos;Range&apos;);
+  var range = this.get('Range');
   if (!range) return;
   return parseRange(size, range, options);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * update auth example to utilize cores pbkdf2
-* updated tests to use &quot;supertest&quot;
+* updated tests to use "supertest"
 
 3.0.0beta4 / 2012-06-25
 ==================
@@ -7571,7 +7564,7 @@ return fn.apply(this, arguments)
 * Added `res.send(body, status)` support back for backwards compat
 * Added `.default()` support to `res.format()`
 * Added 2xx / 304 check to `req.fresh`
-* Revert &quot;Added + support to the router&quot;
+* Revert "Added + support to the router"
 * Fixed `res.send()` freshness check, respect res.statusCode
 ...</pre></li>
     </ul>
@@ -7636,7 +7629,7 @@ return fn.apply(this, arguments)
     this.type(extname(filename));
   }
 
-  this.set(&apos;Content-Disposition&apos;, contentDisposition(filename));
+  this.set('Content-Disposition', contentDisposition(filename));
 
   return this;
 }</pre></li>
@@ -7653,9 +7646,9 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function clearCookie(name, options) {
-  var opts = merge({ expires: new Date(1), path: &apos;/&apos; }, options);
+  var opts = merge({ expires: new Date(1), path: '/' }, options);
 
-  return this.cookie(name, &apos;&apos;, opts);
+  return this.cookie(name, '', opts);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
   * Added `app.remove.VERB()`
@@ -7669,7 +7662,7 @@ return fn.apply(this, arguments)
   * Added `res.helpers()` as alias of `res.locals()`
   * Added; json defaults to UTF-8 with `res.send()`. Closes #632. [Daniel   * Dependency `connect &gt;= 1.4.0`
   * Changed; auto set Content-Type in res.attachement [Aaron Heckmann]
-  * Renamed &quot;cache views&quot; to &quot;view cache&quot;. Closes #628
+  * Renamed "cache views" to "view cache". Closes #628
   * Fixed caching of views when using several apps. Closes #637
   * Fixed gotcha invoking `app.param()` callbacks once per route middleware.
 Closes #638
@@ -7686,11 +7679,11 @@ Closes #638
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function contentType(type) {
-  var ct = type.indexOf(&apos;/&apos;) === -1
+  var ct = type.indexOf('/') === -1
     ? mime.lookup(type)
     : type;
 
-  return this.set(&apos;Content-Type&apos;, ct);
+  return this.set('Content-Type', ct);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
@@ -7702,11 +7695,11 @@ Closes #638
 * Added `app.render()`
 * Added `res.type()` to replace `res.<span class="apidocCodeKeywordSpan">contentType</span>()`
 * Changed: `res.redirect()` to add relative support
-* Changed: enable &quot;jsonp callback&quot; by default
-* Changed: renamed &quot;case sensitive routes&quot; to &quot;case sensitive routing&quot;
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
 * Rewrite of all tests with mocha
-* Removed &quot;root&quot; setting
-* Removed `res.redirect(&apos;home&apos;)` support
+* Removed "root" setting
+* Removed `res.redirect('home')` support
 * Removed `req.notify()`
 ...</pre></li>
     </ul>
@@ -7726,27 +7719,27 @@ Closes #638
   var signed = opts.signed;
 
   if (signed &amp;&amp; !secret) {
-    throw new Error(&apos;cookieParser(&quot;secret&quot;) required for signed cookies&apos;);
+    throw new Error('cookieParser("secret") required for signed cookies');
   }
 
-  var val = typeof value === &apos;object&apos;
-    ? &apos;j:&apos; + JSON.stringify(value)
+  var val = typeof value === 'object'
+    ? 'j:' + JSON.stringify(value)
     : String(value);
 
   if (signed) {
-    val = &apos;s:&apos; + sign(val, secret);
+    val = 's:' + sign(val, secret);
   }
 
-  if (&apos;maxAge&apos; in opts) {
+  if ('maxAge' in opts) {
     opts.expires = new Date(Date.now() + opts.maxAge);
     opts.maxAge /= 1000;
   }
 
   if (opts.path == null) {
-    opts.path = &apos;/&apos;;
+    opts.path = '/';
   }
 
-  this.append(&apos;Set-Cookie&apos;, cookie.serialize(name, String(val), opts));
+  this.append('Set-Cookie', cookie.serialize(name, String(val), opts));
 
   return this;
 }</pre></li>
@@ -7784,18 +7777,18 @@ Closes #638
   var opts = options || null
 
   // support function as second or third arg
-  if (typeof filename === &apos;function&apos;) {
+  if (typeof filename === 'function') {
     done = filename;
     name = null;
     opts = null
-  } else if (typeof options === &apos;function&apos;) {
+  } else if (typeof options === 'function') {
     done = options
     opts = null
   }
 
   // set Content-Disposition when file is sent
   var headers = {
-    &apos;Content-Disposition&apos;: contentDisposition(name || path)
+    'Content-Disposition': contentDisposition(name || path)
   };
 
   // merge user-provided headers
@@ -7803,7 +7796,7 @@ Closes #638
     var keys = Object.keys(opts.headers)
     for (var i = 0; i &lt; keys.length; i++) {
       var key = keys[i]
-      if (key.toLowerCase() !== &apos;content-disposition&apos;) {
+      if (key.toLowerCase() !== 'content-disposition') {
         headers[key] = opts.headers[key]
       }
     }
@@ -7859,15 +7852,15 @@ Shaw]
     ? req.accepts(keys)
     : false;
 
-  this.vary(&quot;Accept&quot;);
+  this.vary("Accept");
 
   if (key) {
-    this.set(&apos;Content-Type&apos;, normalizeType(key).value);
+    this.set('Content-Type', normalizeType(key).value);
     obj[key](req, this, next);
   } else if (fn) {
     fn();
   } else {
-    var err = new Error(&apos;Not Acceptable&apos;);
+    var err = new Error('Not Acceptable');
     err.status = err.statusCode = 406;
     err.types = normalizeTypes(keys).map(function(o){ return o.value });
     next(err);
@@ -7885,7 +7878,7 @@ Shaw]
   * Added `res.send(body, status)` support back for backwards compat
   * Added `.default()` support to `res.<span class="apidocCodeKeywordSpan">format</span>()`
   * Added 2xx / 304 check to `req.fresh`
-  * Revert &quot;Added + support to the router&quot;
+  * Revert "Added + support to the router"
   * Fixed `res.send()` freshness check, respect res.statusCode
 
 3.0.0beta3 / 2012-06-15
@@ -7940,13 +7933,13 @@ Shaw]
       : String(val);
 
     // add charset to content-type
-    if (field.toLowerCase() === &apos;content-type&apos;) {
+    if (field.toLowerCase() === 'content-type') {
       if (Array.isArray(value)) {
-        throw new TypeError(&apos;Content-Type cannot be set to an Array&apos;);
+        throw new TypeError('Content-Type cannot be set to an Array');
       }
       if (!charsetRegExp.test(value)) {
-        var charset = mime.charsets.lookup(value.split(&apos;;&apos;)[0]);
-        if (charset) value += &apos;; charset=&apos; + charset.toLowerCase();
+        var charset = mime.charsets.lookup(value.split(';')[0]);
+        if (charset) value += '; charset=' + charset.toLowerCase();
       }
     }
 
@@ -7992,11 +7985,11 @@ Shaw]
   // allow status / body
   if (arguments.length === 2) {
     // res.json(body, status) backwards compat
-    if (typeof arguments[1] === &apos;number&apos;) {
-      deprecate(&apos;res.json(obj, status): Use res.status(status).json(obj) instead&apos;);
+    if (typeof arguments[1] === 'number') {
+      deprecate('res.json(obj, status): Use res.status(status).json(obj) instead');
       this.statusCode = arguments[1];
     } else {
-      deprecate(&apos;res.json(status, obj): Use res.status(status).json(obj) instead&apos;);
+      deprecate('res.json(status, obj): Use res.status(status).json(obj) instead');
       this.statusCode = arguments[0];
       val = arguments[1];
     }
@@ -8004,14 +7997,14 @@ Shaw]
 
   // settings
   var app = this.app;
-  var escape = app.get(&apos;json escape&apos;)
-  var replacer = app.get(&apos;json replacer&apos;);
-  var spaces = app.get(&apos;json spaces&apos;);
+  var escape = app.get('json escape')
+  var replacer = app.get('json replacer');
+  var spaces = app.get('json spaces');
   var body = stringify(val, replacer, spaces, escape)
 
   // content-type
-  if (!this.get(&apos;Content-Type&apos;)) {
-    this.set(&apos;Content-Type&apos;, &apos;application/json&apos;);
+  if (!this.get('Content-Type')) {
+    this.set('Content-Type', 'application/json');
   }
 
   return this.send(body);
@@ -8019,11 +8012,11 @@ Shaw]
     <li>example usage<pre class="apidocCodePre">...
 
 * fix `req.protocol` for proxy-direct connections
-* configurable query parser with `app.set(&apos;query parser&apos;, parser)`
-  - `app.set(&apos;query parser&apos;, &apos;extended&apos;)` parse with &quot;qs&quot; module
-  - `app.set(&apos;query parser&apos;, &apos;simple&apos;)` parse with &quot;querystring&quot; core module
-  - `app.set(&apos;query parser&apos;, false)` disable query string parsing
-  - `app.set(&apos;query parser&apos;, true)` enable simple parsing
+* configurable query parser with `app.set('query parser', parser)`
+  - `app.set('query parser', 'extended')` parse with "qs" module
+  - `app.set('query parser', 'simple')` parse with "querystring" core module
+  - `app.set('query parser', false)` disable query string parsing
+  - `app.set('query parser', true)` enable simple parsing
 * deprecate `res.<span class="apidocCodeKeywordSpan">json</span>(status, obj)` -- use `res.status(status).json(obj)` instead
 * deprecate `res.jsonp(status, obj)` -- use `res.status(status).jsonp(obj)` instead
 * deprecate `res.send(status, body)` -- use `res.status(status).send(body)` instead
@@ -8050,11 +8043,11 @@ Shaw]
   // allow status / body
   if (arguments.length === 2) {
     // res.json(body, status) backwards compat
-    if (typeof arguments[1] === &apos;number&apos;) {
-      deprecate(&apos;res.jsonp(obj, status): Use res.status(status).json(obj) instead&apos;);
+    if (typeof arguments[1] === 'number') {
+      deprecate('res.jsonp(obj, status): Use res.status(status).json(obj) instead');
       this.statusCode = arguments[1];
     } else {
-      deprecate(&apos;res.jsonp(status, obj): Use res.status(status).jsonp(obj) instead&apos;);
+      deprecate('res.jsonp(status, obj): Use res.status(status).jsonp(obj) instead');
       this.statusCode = arguments[0];
       val = arguments[1];
     }
@@ -8062,16 +8055,16 @@ Shaw]
 
   // settings
   var app = this.app;
-  var escape = app.get(&apos;json escape&apos;)
-  var replacer = app.get(&apos;json replacer&apos;);
-  var spaces = app.get(&apos;json spaces&apos;);
+  var escape = app.get('json escape')
+  var replacer = app.get('json replacer');
+  var spaces = app.get('json spaces');
   var body = stringify(val, replacer, spaces, escape)
-  var callback = this.req.query[app.get(&apos;jsonp callback name&apos;)];
+  var callback = this.req.query[app.get('jsonp callback name')];
 
   // content-type
-  if (!this.get(&apos;Content-Type&apos;)) {
-    this.set(&apos;X-Content-Type-Options&apos;, &apos;nosniff&apos;);
-    this.set(&apos;Content-Type&apos;, &apos;application/json&apos;);
+  if (!this.get('Content-Type')) {
+    this.set('X-Content-Type-Options', 'nosniff');
+    this.set('Content-Type', 'application/json');
   }
 
   // fixup callback
@@ -8080,32 +8073,32 @@ Shaw]
   }
 
   // jsonp
-  if (typeof callback === &apos;string&apos; &amp;&amp; callback.length !== 0) {
-    this.set(&apos;X-Content-Type-Options&apos;, &apos;nosniff&apos;);
-    this.set(&apos;Content-Type&apos;, &apos;text/javascript&apos;);
+  if (typeof callback === 'string' &amp;&amp; callback.length !== 0) {
+    this.set('X-Content-Type-Options', 'nosniff');
+    this.set('Content-Type', 'text/javascript');
 
     // restrict callback charset
-    callback = callback.replace(/[^\[\]\w$.]/g, &apos;&apos;);
+    callback = callback.replace(/[^\[\]\w$.]/g, '');
 
     // replace chars not allowed in JavaScript that are in JSON
     body = body
-      .replace(/\u2028/g, &apos;\\u2028&apos;)
-      .replace(/\u2029/g, &apos;\\u2029&apos;);
+      .replace(/\u2028/g, '\\u2028')
+      .replace(/\u2029/g, '\\u2029');
 
-    // the /**/ is a specific security mitigation for &quot;Rosetta Flash JSONP abuse&quot;
+    // the /**/ is a specific security mitigation for "Rosetta Flash JSONP abuse"
     // the typeof check is just to reduce client error noise
-    body = &apos;/**/ typeof &apos; + callback + &apos; === \&apos;function\&apos; &amp;&amp; &apos; + callback + &apos;(&apos; + body + &apos;);&apos;;
+    body = '/**/ typeof ' + callback + ' === \'function\' &amp;&amp; ' + callback + '(' + body + ');';
   }
 
   return this.send(body);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * fix `req.protocol` for proxy-direct connections
-* configurable query parser with `app.set(&apos;query parser&apos;, parser)`
-  - `app.set(&apos;query parser&apos;, &apos;extended&apos;)` parse with &quot;qs&quot; module
-  - `app.set(&apos;query parser&apos;, &apos;simple&apos;)` parse with &quot;querystring&quot; core module
-  - `app.set(&apos;query parser&apos;, false)` disable query string parsing
-  - `app.set(&apos;query parser&apos;, true)` enable simple parsing
+* configurable query parser with `app.set('query parser', parser)`
+  - `app.set('query parser', 'extended')` parse with "qs" module
+  - `app.set('query parser', 'simple')` parse with "querystring" core module
+  - `app.set('query parser', false)` disable query string parsing
+  - `app.set('query parser', true)` enable simple parsing
 * deprecate `res.json(status, obj)` -- use `res.status(status).json(obj)` instead
 * deprecate `res.<span class="apidocCodeKeywordSpan">jsonp</span>(status, obj)` -- use `res.status(status).jsonp(obj)` instead
 * deprecate `res.send(status, body)` -- use `res.status(status).send(body)` instead
@@ -8128,14 +8121,14 @@ Shaw]
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">links = function (links){
-  var link = this.get(&apos;Link&apos;) || &apos;&apos;;
-  if (link) link += &apos;, &apos;;
-  return this.set(&apos;Link&apos;, link + Object.keys(links).map(function(rel){
-    return &apos;&lt;&apos; + links[rel] + &apos;&gt;; rel=&quot;&apos; + rel + &apos;&quot;&apos;;
-  }).join(&apos;, &apos;));
+  var link = this.get('Link') || '';
+  if (link) link += ', ';
+  return this.set('Link', link + Object.keys(links).map(function(rel){
+    return '&lt;' + links[rel] + '&gt;; rel="' + rel + '"';
+  }).join(', '));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  * updated tests to use &quot;supertest&quot;
+  * updated tests to use "supertest"
 
 3.0.0beta4 / 2012-06-25
 ==================
@@ -8146,7 +8139,7 @@ Shaw]
   * Added `res.send(body, status)` support back for backwards compat
   * Added `.default()` support to `res.format()`
   * Added 2xx / 304 check to `req.fresh`
-  * Revert &quot;Added + support to the router&quot;
+  * Revert "Added + support to the router"
   * Fixed `res.send()` freshness check, respect res.statusCode
 
 3.0.0beta3 / 2012-06-15
@@ -8165,22 +8158,22 @@ Shaw]
     <li>description and source-code<pre class="apidocCodePre">function location(url) {
   var loc = url;
 
-  // &quot;back&quot; is an alias for the referrer
-  if (url === &apos;back&apos;) {
-    loc = this.req.get(&apos;Referrer&apos;) || &apos;/&apos;;
+  // "back" is an alias for the referrer
+  if (url === 'back') {
+    loc = this.req.get('Referrer') || '/';
   }
 
   // set location
-  return this.set(&apos;Location&apos;, encodeUrl(loc));
+  return this.set('Location', encodeUrl(loc));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 3.1.0 / 2013-01-25
 ==================
 
-* add support for leading &quot;.&quot; in &quot;view engine&quot; setting
+* add support for leading "." in "view engine" setting
 * add array support to `res.set()`
 * add node 0.8.x to travis.yml
-* add &quot;subdomain offset&quot; setting for tweaking `req.subdomains`
+* add "subdomain offset" setting for tweaking `req.subdomains`
 * add `res.<span class="apidocCodeKeywordSpan">location</span>(url)` implementing `res.redirect()`-like setting of Location
 * use app.get() for x-powered-by setting for inheritance
 * fix colons in passwords for `req.auth`
@@ -8208,39 +8201,39 @@ Shaw]
 
   // allow status / url
   if (arguments.length === 2) {
-    if (typeof arguments[0] === &apos;number&apos;) {
+    if (typeof arguments[0] === 'number') {
       status = arguments[0];
       address = arguments[1];
     } else {
-      deprecate(&apos;res.redirect(url, status): Use res.redirect(status, url) instead&apos;);
+      deprecate('res.redirect(url, status): Use res.redirect(status, url) instead');
       status = arguments[1];
     }
   }
 
   // Set location header
-  address = this.location(address).get(&apos;Location&apos;);
+  address = this.location(address).get('Location');
 
   // Support text/{plain,html} by default
   this.format({
     text: function(){
-      body = statuses[status] + &apos;. Redirecting to &apos; + address
+      body = statuses[status] + '. Redirecting to ' + address
     },
 
     html: function(){
       var u = escapeHtml(address);
-      body = &apos;&lt;p&gt;&apos; + statuses[status] + &apos;. Redirecting to &lt;a href=&quot;&apos; + u + &apos;&quot;&gt;&apos; + u + &apos;&lt;/a&gt;&lt;/p&gt;&apos;
+      body = '&lt;p&gt;' + statuses[status] + '. Redirecting to &lt;a href="' + u + '"&gt;' + u + '&lt;/a&gt;&lt;/p&gt;'
     },
 
     default: function(){
-      body = &apos;&apos;;
+      body = '';
     }
   });
 
   // Respond
   this.statusCode = status;
-  this.set(&apos;Content-Length&apos;, Buffer.byteLength(body));
+  this.set('Content-Length', Buffer.byteLength(body));
 
-  if (this.req.method === &apos;HEAD&apos;) {
+  if (this.req.method === 'HEAD') {
     this.end();
   } else {
     this.end(body);
@@ -8251,7 +8244,7 @@ Shaw]
 ==================
 
 * accept multiple callbacks to `app.use()`
-* add explicit &quot;Rosetta Flash JSONP abuse&quot; protection
+* add explicit "Rosetta Flash JSONP abuse" protection
   - previous versions are not vulnerable; this is just explicit protection
 * catch errors in multiple `req.param(name, fn)` handlers
 * deprecate `res.<span class="apidocCodeKeywordSpan">redirect</span>(url, status)` -- use `res.redirect(status, url)` instead
@@ -8282,7 +8275,7 @@ Shaw]
   var self = this;
 
   // support callback function as second arg
-  if (typeof options === &apos;function&apos;) {
+  if (typeof options === 'function') {
     done = options;
     opts = {};
   }
@@ -8306,8 +8299,8 @@ Shaw]
 ==================
 
 * update connect dep
-* fix signed cookies to work with `connect.cookieParser()` (&quot;s:&quot; prefix was missing) [tnydwrds]
-* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of &quot;locals&quot;
+* fix signed cookies to work with `connect.cookieParser()` ("s:" prefix was missing) [tnydwrds]
+* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of "locals"
 
 3.0.0rc2 / 2012-08-03
 ==================
@@ -8339,43 +8332,43 @@ Shaw]
   // allow status / body
   if (arguments.length === 2) {
     // res.send(body, status) backwards compat
-    if (typeof arguments[0] !== &apos;number&apos; &amp;&amp; typeof arguments[1] === &apos;number&apos;) {
-      deprecate(&apos;res.send(body, status): Use res.status(status).send(body) instead&apos;);
+    if (typeof arguments[0] !== 'number' &amp;&amp; typeof arguments[1] === 'number') {
+      deprecate('res.send(body, status): Use res.status(status).send(body) instead');
       this.statusCode = arguments[1];
     } else {
-      deprecate(&apos;res.send(status, body): Use res.status(status).send(body) instead&apos;);
+      deprecate('res.send(status, body): Use res.status(status).send(body) instead');
       this.statusCode = arguments[0];
       chunk = arguments[1];
     }
   }
 
   // disambiguate res.send(status) and res.send(status, num)
-  if (typeof chunk === &apos;number&apos; &amp;&amp; arguments.length === 1) {
+  if (typeof chunk === 'number' &amp;&amp; arguments.length === 1) {
     // res.send(status) will set status message as text string
-    if (!this.get(&apos;Content-Type&apos;)) {
-      this.type(&apos;txt&apos;);
+    if (!this.get('Content-Type')) {
+      this.type('txt');
     }
 
-    deprecate(&apos;res.send(status): Use res.sendStatus(status) instead&apos;);
+    deprecate('res.send(status): Use res.sendStatus(status) instead');
     this.statusCode = chunk;
     chunk = statuses[chunk]
   }
 
   switch (typeof chunk) {
     // string defaulting to html
-    case &apos;string&apos;:
-      if (!this.get(&apos;Content-Type&apos;)) {
-        this.type(&apos;html&apos;);
+    case 'string':
+      if (!this.get('Content-Type')) {
+        this.type('html');
       }
       break;
-    case &apos;boolean&apos;:
-    case &apos;number&apos;:
-    case &apos;object&apos;:
+    case 'boolean':
+    case 'number':
+    case 'object':
       if (chunk === null) {
-        chunk = &apos;&apos;;
+        chunk = '';
       } else if (Buffer.isBuffer(chunk)) {
-        if (!this.get(&apos;Content-Type&apos;)) {
-          this.type(&apos;bin&apos;);
+        if (!this.get('Content-Type')) {
+          this.type('bin');
         }
       } else {
         return this.json(chunk);
@@ -8384,19 +8377,19 @@ Shaw]
   }
 
   // write strings in utf-8
-  if (typeof chunk === &apos;string&apos;) {
-    encoding = &apos;utf8&apos;;
-    type = this.get(&apos;Content-Type&apos;);
+  if (typeof chunk === 'string') {
+    encoding = 'utf8';
+    type = this.get('Content-Type');
 
     // reflect this in content-type
-    if (typeof type === &apos;string&apos;) {
-      this.set(&apos;Content-Type&apos;, setCharset(type, &apos;utf-8&apos;));
+    if (typeof type === 'string') {
+      this.set('Content-Type', setCharset(type, 'utf-8'));
     }
   }
 
   // determine if ETag should be generated
-  var etagFn = app.get(&apos;etag fn&apos;)
-  var generateETag = !this.get(&apos;ETag&apos;) &amp;&amp; typeof etagFn === &apos;function&apos;
+  var etagFn = app.get('etag fn')
+  var generateETag = !this.get('ETag') &amp;&amp; typeof etagFn === 'function'
 
   // populate Content-Length
   var len
@@ -8414,14 +8407,14 @@ Shaw]
       len = chunk.length
     }
 
-    this.set(&apos;Content-Length&apos;, len);
+    this.set('Content-Length', len);
   }
 
   // populate ETag
   var etag;
   if (generateETag &amp;&amp; len !== undefined) {
     if ((etag = etagFn(chunk, encoding))) {
-      this.set(&apos;ETag&apos;, etag);
+      this.set('ETag', etag);
     }
   }
 
@@ -8430,13 +8423,13 @@ Shaw]
 
   // strip irrelevant headers
   if (204 === this.statusCode || 304 === this.statusCode) {
-    this.removeHeader(&apos;Content-Type&apos;);
-    this.removeHeader(&apos;Content-Length&apos;);
-    this.removeHeader(&apos;Transfer-Encoding&apos;);
-    chunk = &apos;&apos;;
+    this.removeHeader('Content-Type');
+    this.removeHeader('Content-Length');
+    this.removeHeader('Transfer-Encoding');
+    chunk = '';
   }
 
-  if (req.method === &apos;HEAD&apos;) {
+  if (req.method === 'HEAD') {
     // skip body for HEAD
     this.end();
   } else {
@@ -8452,7 +8445,7 @@ Shaw]
 4.10.0 / 2014-10-23
 ===================
 
-* Add support for `app.set(&apos;views&apos;, array)`
+* Add support for `app.set('views', array)`
   - Views are looked up in sequence in array of directories
 * Fix `res.<span class="apidocCodeKeywordSpan">send</span>(status)` to mention `res.sendStatus(status)`
 * Fix handling of invalid empty URLs
@@ -8482,17 +8475,17 @@ Shaw]
   var opts = options || {};
 
   if (!path) {
-    throw new TypeError(&apos;path argument is required to res.sendFile&apos;);
+    throw new TypeError('path argument is required to res.sendFile');
   }
 
   // support function as second arg
-  if (typeof options === &apos;function&apos;) {
+  if (typeof options === 'function') {
     done = options;
     opts = {};
   }
 
   if (!opts.root &amp;&amp; !isAbsolute(path)) {
-    throw new TypeError(&apos;path must be absolute or specify root to res.sendFile&apos;);
+    throw new TypeError('path must be absolute or specify root to res.sendFile');
   }
 
   // create file stream
@@ -8502,17 +8495,17 @@ Shaw]
   // transfer
   sendfile(res, file, opts, function (err) {
     if (done) return done(err);
-    if (err &amp;&amp; err.code === &apos;EISDIR&apos;) return next();
+    if (err &amp;&amp; err.code === 'EISDIR') return next();
 
     // next() all but write errors
-    if (err &amp;&amp; err.code !== &apos;ECONNABORTED&apos; &amp;&amp; err.syscall !== &apos;write&apos;) {
+    if (err &amp;&amp; err.code !== 'ECONNABORTED' &amp;&amp; err.syscall !== 'write') {
       next(err);
     }
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 *   - `headers`  object of headers to serve with file
-*   - `dotfiles` serve dotfiles, defaulting to false; can be `&quot;allow&quot;` to send them
+*   - `dotfiles` serve dotfiles, defaulting to false; can be `"allow"` to send them
 *
 * Other options are passed along to `send`.
 *
@@ -8523,7 +8516,7 @@ Shaw]
 *  dynamic situations. The code backing `res.sendFile()` is actually
 *  the same code, so HTTP cache support etc is identical.
 *
-*     app.get(&apos;/user/:uid/photos/:file&apos;, function(req, res){
+*     app.get('/user/:uid/photos/:file', function(req, res){
 *       var uid = req.params.uid
 *         , file = req.params.file;
 ...</pre></li>
@@ -8542,7 +8535,7 @@ Shaw]
   var body = statuses[statusCode] || String(statusCode)
 
   this.statusCode = statusCode;
-  this.type(&apos;txt&apos;);
+  this.type('txt');
 
   return this.send(body);
 }</pre></li>
@@ -8552,7 +8545,7 @@ Shaw]
 4.10.0 / 2014-10-23
 ===================
 
-* Add support for `app.set(&apos;views&apos;, array)`
+* Add support for `app.set('views', array)`
   - Views are looked up in sequence in array of directories
 * Fix `res.send(status)` to mention `res.<span class="apidocCodeKeywordSpan">sendStatus</span>(status)`
 * Fix handling of invalid empty URLs
@@ -8575,14 +8568,14 @@ Shaw]
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">sendfile = function (arg0, arg1, arg2) {
-&quot;use strict&quot;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
   * add more examples to view-locals
-  * add scheme-relative redirects (`res.redirect(&quot;//foo.com&quot;)`) support
+  * add scheme-relative redirects (`res.redirect("//foo.com")`) support
   * update cookie dep
   * update connect dep
   * update send dep
@@ -8614,13 +8607,13 @@ return fn.apply(this, arguments)
       : String(val);
 
     // add charset to content-type
-    if (field.toLowerCase() === &apos;content-type&apos;) {
+    if (field.toLowerCase() === 'content-type') {
       if (Array.isArray(value)) {
-        throw new TypeError(&apos;Content-Type cannot be set to an Array&apos;);
+        throw new TypeError('Content-Type cannot be set to an Array');
       }
       if (!charsetRegExp.test(value)) {
-        var charset = mime.charsets.lookup(value.split(&apos;;&apos;)[0]);
-        if (charset) value += &apos;; charset=&apos; + charset.toLowerCase();
+        var charset = mime.charsets.lookup(value.split(';')[0]);
+        if (charset) value += '; charset=' + charset.toLowerCase();
       }
     }
 
@@ -8640,7 +8633,7 @@ return fn.apply(this, arguments)
 4.10.0 / 2014-10-23
 ===================
 
-* Add support for `app.<span class="apidocCodeKeywordSpan">set</span>(&apos;views&apos;, array)`
+* Add support for `app.<span class="apidocCodeKeywordSpan">set</span>('views', array)`
   - Views are looked up in sequence in array of directories
 * Fix `res.send(status)` to mention `res.sendStatus(status)`
 * Fix handling of invalid empty URLs
@@ -8667,11 +8660,11 @@ return fn.apply(this, arguments)
     <li>example usage<pre class="apidocCodePre">...
 
 * fix `req.protocol` for proxy-direct connections
-* configurable query parser with `app.set(&apos;query parser&apos;, parser)`
-  - `app.set(&apos;query parser&apos;, &apos;extended&apos;)` parse with &quot;qs&quot; module
-  - `app.set(&apos;query parser&apos;, &apos;simple&apos;)` parse with &quot;querystring&quot; core module
-  - `app.set(&apos;query parser&apos;, false)` disable query string parsing
-  - `app.set(&apos;query parser&apos;, true)` enable simple parsing
+* configurable query parser with `app.set('query parser', parser)`
+  - `app.set('query parser', 'extended')` parse with "qs" module
+  - `app.set('query parser', 'simple')` parse with "querystring" core module
+  - `app.set('query parser', false)` disable query string parsing
+  - `app.set('query parser', true)` enable simple parsing
 * deprecate `res.json(status, obj)` -- use `res.<span class="apidocCodeKeywordSpan">status</span>(status).json(obj)` instead
 * deprecate `res.jsonp(status, obj)` -- use `res.status(status).jsonp(obj)` instead
 * deprecate `res.send(status, body)` -- use `res.status(status).send(body)` instead
@@ -8693,11 +8686,11 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function contentType(type) {
-  var ct = type.indexOf(&apos;/&apos;) === -1
+  var ct = type.indexOf('/') === -1
     ? mime.lookup(type)
     : type;
 
-  return this.set(&apos;Content-Type&apos;, ct);
+  return this.set('Content-Type', ct);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 * Added X-Forwarded-Proto support to `res.redirect()`. Closes #92
@@ -8709,11 +8702,11 @@ return fn.apply(this, arguments)
 * Added `app.render()`
 * Added `res.<span class="apidocCodeKeywordSpan">type</span>()` to replace `res.contentType()`
 * Changed: `res.redirect()` to add relative support
-* Changed: enable &quot;jsonp callback&quot; by default
-* Changed: renamed &quot;case sensitive routes&quot; to &quot;case sensitive routing&quot;
+* Changed: enable "jsonp callback" by default
+* Changed: renamed "case sensitive routes" to "case sensitive routing"
 * Rewrite of all tests with mocha
-* Removed &quot;root&quot; setting
-* Removed `res.redirect(&apos;home&apos;)` support
+* Removed "root" setting
+* Removed `res.redirect('home')` support
 * Removed `req.notify()`
 ...</pre></li>
     </ul>
@@ -8730,7 +8723,7 @@ return fn.apply(this, arguments)
     <li>description and source-code<pre class="apidocCodePre">vary = function (field){
   // checks for back-compat
   if (!field || (Array.isArray(field) &amp;&amp; !field.length)) {
-    deprecate(&apos;res.vary(): Provide a field name&apos;);
+    deprecate('res.vary(): Provide a field name');
     return this;
   }
 
@@ -8774,7 +8767,7 @@ return fn.apply(this, arguments)
     <li>description and source-code<pre class="apidocCodePre">compileETag = function (val) {
   var fn;
 
-  if (typeof val === &apos;function&apos;) {
+  if (typeof val === 'function') {
     return val;
   }
 
@@ -8784,14 +8777,14 @@ return fn.apply(this, arguments)
       break;
     case false:
       break;
-    case &apos;strong&apos;:
+    case 'strong':
       fn = exports.etag;
       break;
-    case &apos;weak&apos;:
+    case 'weak':
       fn = exports.wetag;
       break;
     default:
-      throw new TypeError(&apos;unknown value for etag function: &apos; + val);
+      throw new TypeError('unknown value for etag function: ' + val);
   }
 
   return fn;
@@ -8811,7 +8804,7 @@ return fn.apply(this, arguments)
     <li>description and source-code<pre class="apidocCodePre">function compileQueryParser(val) {
   var fn;
 
-  if (typeof val === &apos;function&apos;) {
+  if (typeof val === 'function') {
     return val;
   }
 
@@ -8822,14 +8815,14 @@ return fn.apply(this, arguments)
     case false:
       fn = newObject;
       break;
-    case &apos;extended&apos;:
+    case 'extended':
       fn = parseExtendedQueryString;
       break;
-    case &apos;simple&apos;:
+    case 'simple':
       fn = querystring.parse;
       break;
     default:
-      throw new TypeError(&apos;unknown value for query parser function: &apos; + val);
+      throw new TypeError('unknown value for query parser function: ' + val);
   }
 
   return fn;
@@ -8847,19 +8840,19 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">compileTrust = function (val) {
-  if (typeof val === &apos;function&apos;) return val;
+  if (typeof val === 'function') return val;
 
   if (val === true) {
     // Support plain true/false
     return function(){ return true };
   }
 
-  if (typeof val === &apos;number&apos;) {
+  if (typeof val === 'number') {
     // Support trusting hop count
     return function(a, i){ return i &lt; val };
   }
 
-  if (typeof val === &apos;string&apos;) {
+  if (typeof val === 'string') {
     // Support comma-separated values
     val = val.split(/ *, */);
   }
@@ -8879,7 +8872,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">contentDisposition = function (arg0, arg1) {
-&quot;use strict&quot;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -8915,7 +8908,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">flatten = function (arg0, arg1) {
-&quot;use strict&quot;
+"use strict"
 log.call(deprecate, message, site)
 return fn.apply(this, arguments)
 }</pre></li>
@@ -8932,9 +8925,9 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isAbsolute = function (path){
-  if (&apos;/&apos; === path[0]) return true;
-  if (&apos;:&apos; === path[1] &amp;&amp; (&apos;\\&apos; === path[2] || &apos;/&apos; === path[2])) return true; // Windows device path
-  if (&apos;\\\\&apos; === path.substring(0, 2)) return true; // Microsoft Azure absolute path
+  if ('/' === path[0]) return true;
+  if (':' === path[1] &amp;&amp; ('\\' === path[2] || '/' === path[2])) return true; // Windows device path
+  if ('\\\\' === path.substring(0, 2)) return true; // Microsoft Azure absolute path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -8949,7 +8942,7 @@ return fn.apply(this, arguments)
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">normalizeType = function (type){
-  return ~type.indexOf(&apos;/&apos;)
+  return ~type.indexOf('/')
     ? acceptParams(type)
     : { value: mime.lookup(type), params: {} };
 }</pre></li>
@@ -9061,15 +9054,15 @@ exports.normalizeTypes = function(types){
   this.root = opts.root;
 
   if (!this.ext &amp;&amp; !this.defaultEngine) {
-    throw new Error(&apos;No default engine was specified and no extension was provided.&apos;);
+    throw new Error('No default engine was specified and no extension was provided.');
   }
 
   var fileName = name;
 
   if (!this.ext) {
     // get extension from default engine name
-    this.ext = this.defaultEngine[0] !== &apos;.&apos;
-      ? &apos;.&apos; + this.defaultEngine
+    this.ext = this.defaultEngine[0] !== '.'
+      ? '.' + this.defaultEngine
       : this.defaultEngine;
 
     fileName += this.ext;
@@ -9078,13 +9071,13 @@ exports.normalizeTypes = function(types){
   if (!opts.engines[this.ext]) {
     // load engine
     var mod = this.ext.substr(1)
-    debug(&apos;require &quot;%s&quot;&apos;, mod)
+    debug('require "%s"', mod)
 
     // default engine export
     var fn = require(mod).__express
 
-    if (typeof fn !== &apos;function&apos;) {
-      throw new Error(&apos;Module &quot;&apos; + mod + &apos;&quot; does not provide a view engine.&apos;)
+    if (typeof fn !== 'function') {
+      throw new Error('Module "' + mod + '" does not provide a view engine.')
     }
 
     opts.engines[this.ext] = fn
@@ -9117,7 +9110,7 @@ exports.normalizeTypes = function(types){
   var path;
   var roots = [].concat(this.root);
 
-  debug(&apos;lookup &quot;%s&quot;&apos;, name);
+  debug('lookup "%s"', name);
 
   for (var i = 0; i &lt; roots.length &amp;&amp; !path; i++) {
     var root = roots[i];
@@ -9162,7 +9155,7 @@ exports.normalizeTypes = function(types){
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function render(options, callback) {
-  debug(&apos;render &quot;%s&quot;&apos;, this.path);
+  debug('render "%s"', this.path);
   this.engine(this.path, options, callback);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -9172,8 +9165,8 @@ exports.normalizeTypes = function(types){
 ==================
 
 * update connect dep
-* fix signed cookies to work with `connect.cookieParser()` (&quot;s:&quot; prefix was missing) [tnydwrds]
-* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of &quot;locals&quot;
+* fix signed cookies to work with `connect.cookieParser()` ("s:" prefix was missing) [tnydwrds]
+* fix `res.<span class="apidocCodeKeywordSpan">render</span>()` clobbering of "locals"
 
 3.0.0rc2 / 2012-08-03
 ==================
@@ -9205,7 +9198,7 @@ exports.normalizeTypes = function(types){
   }
 
   // &lt;path&gt;/index.&lt;ext&gt;
-  path = join(dir, basename(file, ext), &apos;index&apos; + ext);
+  path = join(dir, basename(file, ext), 'index' + ext);
   stat = tryStat(path);
 
   if (stat &amp;&amp; stat.isFile()) {
@@ -9240,3 +9233,4 @@ exports.normalizeTypes = function(types){
     ]
 </div>
 </div>
+</body></html>
